@@ -1,12 +1,3 @@
-<p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/3603793/14390922/a999424c-fd8f-11e5-8fbb-ab908a1d4740.png" width="200">
-</p>
-
-# Kratos Boilerplate
-
-[![license](https://img.shields.io/github/license/LFeh/kratos-boilerplate.svg)](./license.md)
-[![GitHub contributors](https://img.shields.io/github/contributors/LFeh/kratos-boilerplate.svg)](https://github.com/LFeh/kratos-boilerplate/graphs/contributors)
-
 This project uses Pug, Stylus, Gulp and Browsersync.
 
 Maybe you want to read about them:
@@ -26,21 +17,41 @@ For grid system uses [Lost](https://github.com/peterramsing/lost) with some help
 First of all, install the dependencies to run this boilerplate.
 
 - [NodeJS](http://nodejs.org/)
-- [GulpJS](http://gulpjs.com/)
-
 
 ```sh
-# Clone this repository
-$ git clone git@github.com:LFeh/kratos-boilerplate.git
-$ cd kratos-boilerplate
-
-# install gulp globally
-$ npm install -g gulp
-
 # install dependencies
-$ npm run setup
+$ npm i -d
 
 ```
+
+### dev
+
+```sh
+$ npm start
+```
+
+### build
+```sh
+$ npm run build
+```
+
+### Scripts
+
+
+- `npm start`: run all tasks and initialize watch for changes and a server
+- `npm test`: lint javascript and css
+- `npm run fix`: command to fix all eslint errors
+- `npm run reporter`: test css complexity
+- `npm run build`: run all tasks to build and deploy
+
+### Tasks
+
+you may also using `gulp` instead of `npm run xxx`
+
+- `gulp server`: watch and live-reload (this task not build files on start, this mostly used in the situation that you've run `gulp build`)
+- `gulp build`: build html/css/js/images files into build directory
+- `gulp deploy`: inject hash with css/js for production deploy
+
 
 With the commands above, you have everything to start.
 
@@ -49,38 +60,29 @@ With the commands above, you have everything to start.
 ```sh
 ├── README.md
 ├── build
-│   ├── css/
-│   ├── img/
-│   ├── svg/
-│   ├── icons/
-│   ├── js/
-│   ├── styleguide/
+│   ├── css
+│   │   └── style.css
+│   ├── images/
+│   ├── js
+│   │   └──  main.js
 │   ├── index.html
 ├── gulpfile.js
 ├── package.json
 └── src
-    ├── img/
-    ├── svg/
-│   ├── icons/
+    ├── images/
     ├── js/
     ├── styl
-    │   ├── _core/*.styl
-    │   ├── vendors/*.styl
-    │   ├── quarks/*.styl
-    │   ├── atoms/*.styl
-    │   ├── molecules/*.styl
-    │   ├── organisms/*.styl
-    │   ├── pages/*.styl
     │   └── style.styl
-    └── pug
-        └── index.pug
+    └── jade
+        └── index.jade
 ```
 
 Those folders and file will change during the project.
 
+
 ### Code Standards
 
-This project uses my own [Coding Style](https://github.com/LFeh/coding-style) as code reference.
+This project uses this [Coding Style](https://github.com/LFeh/coding-style) as code reference.
 
 This project also uses [Husky](https://github.com/typicode/husky) to prevent commit and push messy and wrong code.
 
@@ -91,21 +93,6 @@ To help you, this project has a `npm run fix` command to fix all eslint errors.
 
 To view a reporter of CSS files, use a `npm run reporter` command.
 
-
-### Tasks
- 
-- `npm start`: run all tasks and initialize watch for changes and a server
-- `npm test`: lint javascript and css 
-- `npm run setup`: install all dependencies
-- `npm run fix`: command to fix all eslint errors
-- `npm run reporter`: test css complexity
-- `npm run build`: run all tasks to build
-- `npm run html`: compile html files
-- `npm run js`: compile js files
-- `npm run css`: compile css files
-- `npm run images`: compress imaages files
-- `npm run svg`: compress svg files
-- `npom run icons`: generate sprite of icons 
 
 ## Credits
 

@@ -10,23 +10,16 @@
     "> 5%",
     "last 2 versions"
   ],
-  "scripts": {
+	"scripts": {
     "start": "gulp",
+    "build": "gulp build && gulp deploy",
     "test": "npm run lint && npm run reporter",
-    "setup": "npm i && gulp build",
-    "fix": "./node_modules/.bin/eslint ./src/ --fix",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "./node_modules/.bin/eslint ./src/",
     "lint:css": "./node_modules/.bin/stylint ./src/",
-    "reporter": "./node_modules/.bin/parker ./build/css/*.css",
     "precommit": "npm run lint",
-    "build": "gulp build",
-    "html": "gulp html",
-    "js": "gulp js",
-    "css": "gulp css",
-    "images": "gulp images",
-    "icons": "gulp icons",
-    "svg": "gulp svg"
+    "reporter": "./node_modules/.bin/parker ./build/css/*.css",
+    "fix": "./node_modules/.bin/eslint ./src/ --fix"
   },
   "keywords": [
     "boilerplate"
@@ -53,10 +46,8 @@
     "fs-promise": "^2.0.3",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
-    "gulp-cheerio": "^0.6.2",
     "gulp-concat": "^2.6.1",
     "gulp-cssnano": "^2.1.2",
-    "gulp-data": "^1.2.1",
     "gulp-group-css-media-queries": "^1.2.0",
     "gulp-imagemin": "^3.3.0",
     "gulp-plumber": "^1.1.0",
@@ -64,8 +55,6 @@
     "gulp-pug": "^3.3.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-stylus": "^2.6.0",
-    "gulp-svgmin": "^1.2.4",
-    "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^3.0.0",
     "husky": "^0.14.3",
     "js-yaml": "^3.9.0",
