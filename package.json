@@ -14,7 +14,7 @@
     "start": "gulp",
     "build": "gulp build && gulp deploy",
     "test": "npm run lint && npm run reporter",
-    "lint": "npm run lint:js && npm run lint:css",
+    "lint": "npm run lint:css",
     "lint:js": "standard",
     "lint:css": "./node_modules/.bin/stylint ./src/",
     "precommit": "npm run lint",
