@@ -1,5 +1,5 @@
 {
-  "name": "kratos-boilerplate",
+  "name": "static-site-boilerplate",
   "version": "1.0.0",
   "description": "A simple and fast boilerplate for static projects using Gulp, Pug, Stylus and PostCSS",
   "repository": {
@@ -14,22 +14,28 @@
     "start": "gulp",
     "build": "gulp build && gulp deploy",
     "test": "npm run lint && npm run reporter",
-    "lint": "npm run lint:css",
-    "lint:js": "./node_modules/.bin/eslint ./src/",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "standard",
     "lint:css": "./node_modules/.bin/stylint ./src/",
     "precommit": "npm run lint",
     "reporter": "./node_modules/.bin/parker ./build/css/*.css",
-    "fix": "./node_modules/.bin/eslint ./src/ --fix"
+    "fix": "standard --fix"
   },
   "keywords": [
     "boilerplate"
   ],
   "author": "Felipe Fialho <hi@felipefialho.com> (http://www.felipefialho.com/)",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/LFeh/kratos-boilerplate/issues"
-  },
-  "homepage": "https://github.com/LFeh/kratos-boilerplate#readme",
+	"standard": {
+		"ignore": [
+				"gulpfile.js",
+				"build/",
+				"dist/",
+				"src/images/",
+				"src/jade/",
+				"src/styl/"
+			]
+	},
   "dependencies": {
     "gulp-rev": "^8.1.1",
     "gulp-rev-collector": "^1.2.4",
@@ -45,7 +51,6 @@
     "babel-preset-es2015-rollup": "^3.0.0",
     "browser-sync": "^2.18.12",
     "del": "^3.0.0",
-    "eslint": "^4.2.0",
     "fs-promise": "^2.0.3",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
@@ -69,6 +74,7 @@
     "poststylus": "^0.2.3",
     "rucksack-css": "^0.9.1",
     "rupture": "^0.6.2",
+    "standard": "^11.0.0",
     "stylint": "^1.5.9"
   }
 }
