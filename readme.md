@@ -6,7 +6,7 @@ Maybe you want to read about them:
 - [Pug](https://github.com/pugjs/pug)
 - [Stylus](http://learnboost.github.io/stylus/)
 - [Browsersync](https://www.browsersync.io/)
-- [StandardJs](https://www.npmjs.com/package/standard)
+- [StandardJS](https://www.npmjs.com/package/standard)
 - [Stylint](https://simenb.github.io/stylint/)
 
 ## Getting Started
@@ -81,10 +81,6 @@ Those folders and file will change during the project.
 
 
 ### Code Standards
-
-<! --
-This project uses this [Coding Style](https://github.com/LFeh/coding-style) as code reference.
--->
 
 This project also uses [Husky](https://github.com/typicode/husky) to prevent commit and push messy and wrong code.
 
