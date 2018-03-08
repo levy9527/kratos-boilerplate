@@ -39,7 +39,8 @@ $ npm run build
 
 
 - `npm start`: run all tasks and initialize watch for changes and a server
-- `npm test`: lint javascript and css
+- `npm test`: lint javascript and css and report your css complexity
+- `npm run lint`: lint your js and css file
 - `npm run fix`: command to fix all eslint errors
 - `npm run reporter`: test css complexity
 - `npm run build`: run all tasks to build and deploy

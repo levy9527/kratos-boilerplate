@@ -19,7 +19,6 @@ const uglify = require('gulp-uglify');
 const pug = require('gulp-pug');
 const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync');
-const cheerio = require('gulp-cheerio');
 const mdcss = require('mdcss');
 const fs = require('fs');
 const del = require('del');
@@ -149,7 +148,7 @@ gulp.task('injectHash', function () {
 })
 
 gulp.task('deploy', () => {
-  // TODO gulp.series 
+  // TODO gulp.series
   runSequence('cleanHash', 'hash', 'injectHash')
 })
 

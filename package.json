@@ -10,11 +10,11 @@
     "> 5%",
     "last 2 versions"
   ],
-	"scripts": {
+  "scripts": {
     "start": "gulp",
     "build": "gulp build && gulp deploy",
     "test": "npm run lint && npm run reporter",
-    "lint": "npm run lint:js && npm run lint:css",
+    "lint": "npm run lint:css",
     "lint:js": "./node_modules/.bin/eslint ./src/",
     "lint:css": "./node_modules/.bin/stylint ./src/",
     "precommit": "npm run lint",
@@ -31,8 +31,11 @@
   },
   "homepage": "https://github.com/LFeh/kratos-boilerplate#readme",
   "dependencies": {
+    "gulp-rev": "^8.1.1",
+    "gulp-rev-collector": "^1.2.4",
     "lazysizes": "^4.0.0-rc3",
-    "picturefill": "^3.0.2"
+    "picturefill": "^3.0.2",
+    "run-sequence": "^2.2.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
