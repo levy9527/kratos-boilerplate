@@ -1,0 +1,24 @@
+extends layout.jade
+block title
+  title FAQ
+  // block link
+  //  link(rel="stylesheet" href="css/faq.css")
+block content
+  div.faq
+    div.container
+      div.menu.important-text
+        div.menu-item.active 什么是营销管理
+        div.menu-item 什么是客户管理i-CDP
+      article.detail
+        h1.large-text 客户管理i-CDP
+        section
+          div.title 一般类问题
+          p 什么是客户管理i-CDP
+          p 客户管理I-CDP是用于管理用户的，通过对客户详细资料的深入分析，来提高客户满意程度，从而提高企业的竞争力的一种手段。客户关系是指围绕客户生命周期发生、发展的信息归集。客户关系管理的核心是客户价值管理，通过"一对一"营销原则，满足不同价值客户的个性化需求，提高客户忠诚度和保有率，实现客户价值持续贡献，从而全面提升企业盈利能力。CRM还包括客户信用管理。
+        section
+          div.title 配置类问题
+          p Windows 2012 如何安装.net framework 3.5？
+          p 打开命令提示行cmd，输入“gpedit.msc” 以打开“组策略”。
+          p 修改windows更新源，打开“计算机配置>管理模板>windows 组件>windows 更新”，双击“指定 Intranet Microsoft 更新服务位置”，复制保存一下“设置检测更新的Intranet更新服务”和“设置Intranet统计服务器”中的值。
+          p 选择“未配置”，然后点击“确定”。
+

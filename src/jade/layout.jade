@@ -25,7 +25,16 @@ html
     block link
 
   body
-    nav
+    header#header
+      nav.nav
+        img.logo(src="http://www.dtyunxi.com/statics/images/yunxi3.0/logo.jpg")
+        ul.menu
+          li.menu-item 首页
+          li.menu-item 产品
+          li.menu-item 解决方案
+          li.menu-item 开放平台
+          li.menu-item 合作与生态
+          li.menu-item 联系我们
 
     block content
 
@@ -37,6 +46,9 @@ html
     //- ==================================================
     //- Scripts
     //- ==================================================
-    div.footer-bg
+    footer#foote
+      a(target="_blank" href="http://www.dtyunxi.com/html/aboutus-company.html") 关于云徒科技
+      a(target="_blank" href="http://www.dtyunxi.com/index.php?m=content&c=index&a=lists&catid=16") 云徒研习社
+      a(target="_blank" href="http://www.dtyunxi.com/html/aboutus-jobs.html") 加入我们
     script(src="js/main.js")
     block script
