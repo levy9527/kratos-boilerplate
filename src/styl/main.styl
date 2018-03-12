@@ -3,9 +3,16 @@ $primary-color = #3366FF
 // 次要按钮边框、表单边框色、分割线色
 $second-color = #e1e1e1
 $import-text-color = #222
+$placeholder-color = #ccc
+$page-bg-color = #F9F9FA
+
+label,
+fieldset,
+input,
+button
+  box-sizing border-box
 
 // 字体有默认大小, 颜色的, 然后再加上语义的区分
-
 // 文字颜色
 html
   font-family "Microsoft Yahei","PingFang SC","Helvetica Neue","Helvetica","Arial","WenQuanYi Micro Hei Mono", "WenQuanYi Micro Hei", "Microsoft Yahei Mono"
@@ -13,7 +20,7 @@ html
   font-size 14px
   line-height 24px
   color #666
-  background-color #F9F9FA
+  background-color $page-bg-color
 
 .important-text
   color $import-text-color
@@ -22,7 +29,20 @@ html
   color #999
 
 .placeholder-text
-  color #ccc
+  color $placeholder-color
+
+::-webkit-input-placeholder  /* WebKit browsers */
+  color $placeholder-color
+
+:-moz-placeholder  /* Mozilla Firefox 4 to 18 */
+  color $placeholder-color
+
+::-moz-placeholder  /* Mozilla Firefox 19+ */
+  color $placeholder-color
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color $placeholder-color
+}
 
 // 文字大小
 .large-text
@@ -31,8 +51,30 @@ html
 .title
   font-size 16px
   color $import-text-color
+.small-text
+  font-size 12px
 
-// TODO 元素内换行
+button
+  outline none
+
+button[type=primary]
+  background-color $primary-color
+  border-color $primary-color
+  color white
+
+// TODO 记得抽取常用样式
+a
+  text-decoration none
+  color $primary-color
+
+.bolder
+  color $import-text-color
+  font-weight bolder
+
+.text-center
+  text-align center
+
+// 元素内换行
 p
   white-space pre
 
@@ -54,7 +96,6 @@ p
 
 // faq
 .faq
-
   .container
     display flex
 
@@ -93,3 +134,64 @@ $header-height = 80px
 
 // footer
 //#footer
+.register
+  .form-box
+    width 370px
+    padding 30px 10px
+    background-color white
+    border 1px solid $second-color
+
+    .error
+      background-color $page-bg-color
+      display none
+      &.active
+        display block
+
+    button[type=primary]
+      display block
+      width 100%
+      margin 18px 0
+      padding 10px
+      font-size 16px
+
+    form
+      margin 24px 0
+
+    fieldset
+      padding 10px
+      margin 0 0 18px
+      border 1px solid $second-color
+
+      label
+        display inline-block
+        width 88px
+        padding-left 10px
+        border-right 1px solid $second-color
+
+      // TODO another child flex ?
+      input
+        padding-left 10px
+        width calc(100% - 88px)
+        border 0
+        outline none
+
+    .get-code
+      padding 0 0 0 10px
+
+      label
+        padding-left 10px
+
+
+      input
+        width auto
+
+      .get-code-btn
+        display inline-block
+        width 111px
+        height 100%
+        line-height 46px
+        background-color $page-bg-color
+        border-color transparent
+        &:active
+          border-color $second-color
+
