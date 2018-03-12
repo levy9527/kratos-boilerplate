@@ -1,16 +1,35 @@
 // 品牌色、重要按钮、操作文字色
 $primary-color = #3366FF
-// 次要按钮边框、表单边框色、分割线色
+// 次要按钮边框、表单边框色、分割线色, 灰色
 $second-color = #e1e1e1
+// 黑色
 $import-text-color = #222
 $placeholder-color = #ccc
+// 页面背景色
 $page-bg-color = #F9F9FA
 
+.container,
 label,
 fieldset,
 input,
 button
   box-sizing border-box
+
+// 背景颜色
+.primary-color
+  color $primary-color
+
+.primary-bg
+  background-color $primary-color
+
+.linear-primary-bg-to-right
+  background-image linear-gradient(-136deg, #0066FF 0%, #0099FF 100%)
+
+.linear-primary-bg-to-bottom
+  background-image linear-gradient(to bottom, #0066FF 0%, #0099FF 100%)
+
+.second-color
+  color $second-color
 
 // 字体有默认大小, 颜色的, 然后再加上语义的区分
 // 文字颜色
@@ -45,6 +64,9 @@ html
 }
 
 // 文字大小
+.huge-text
+  font-size 36px
+  font-weight 400
 .large-text
   font-size 32px
   color $import-text-color
@@ -78,23 +100,14 @@ a
 p
   white-space pre
 
-// 背景颜色
-.primary-color
-  color $primary-color
+// TODO 记得抽取常用样式 end
 
-.primary-bg
-  background-color $primary-color
-
-.linear-primary-bg-to-right
-  background-image linear-gradient(-136deg, #0066FF 0%, #0099FF 100%)
-
-.linear-primary-bg-to-bottom
-  background-image linear-gradient(to bottom, #0066FF 0%, #0099FF 100%)
-
-.second-color
-  color $second-color
+.container
+  max-width 1200px
+  margin 0 auto
 
 // 可复用样式
+// login/register/customer-info 有用
 .form-box
   width 370px
   padding 30px 10px
@@ -141,6 +154,21 @@ p
     select
       text-indent 5px
       background-color white
+
+// cooperation/product/solution 有用
+.first-sight
+  padding 100px 0 120px
+  color white
+  background-color #000
+  .desc
+    margin 48px 0
+    font-size 18px
+  .link-btn
+    width 144px
+    height 32px
+    color white
+    border 1px solid white
+    background-color $import-text-color
 
 // faq
 .faq
