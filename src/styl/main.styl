@@ -94,6 +94,50 @@ p
 .second-color
   color $second-color
 
+// 可复用样式
+.form-box
+  width 370px
+  padding 30px 10px
+  background-color white
+  border 1px solid $second-color
+
+  .error
+    background-color $page-bg-color
+    display none
+    &.active
+      display block
+
+  button[type=primary]
+    display block
+    width 100%
+    margin 18px 0
+    padding 10px
+    font-size 16px
+
+  .form-title
+    font-weight bolder
+
+  form
+    margin 24px 0
+
+  fieldset
+    padding 10px
+    margin 0 0 18px
+    border 1px solid $second-color
+
+    label
+      display inline-block
+      width 88px
+      padding-left 10px
+      border-right 1px solid $second-color
+
+    // TODO another child flex ?
+    input
+      padding-left 10px
+      width calc(100% - 88px)
+      border 0
+      outline none
+
 // faq
 .faq
   .container
@@ -134,64 +178,29 @@ $header-height = 80px
 
 // footer
 //#footer
+
+.login
+  .login-footer
+    margin-bottom 32px
+    display flex
+    justify-content space-between
+
 .register
-  .form-box
-    width 370px
-    padding 30px 10px
-    background-color white
-    border 1px solid $second-color
+  .get-code
+    padding 0 0 0 10px
 
-    .error
+    label
+      padding-left 10px
+
+    input
+      width auto
+
+    .get-code-btn
+      display inline-block
+      width 111px
+      height 100%
+      line-height 46px
       background-color $page-bg-color
-      display none
-      &.active
-        display block
-
-    button[type=primary]
-      display block
-      width 100%
-      margin 18px 0
-      padding 10px
-      font-size 16px
-
-    form
-      margin 24px 0
-
-    fieldset
-      padding 10px
-      margin 0 0 18px
-      border 1px solid $second-color
-
-      label
-        display inline-block
-        width 88px
-        padding-left 10px
-        border-right 1px solid $second-color
-
-      // TODO another child flex ?
-      input
-        padding-left 10px
-        width calc(100% - 88px)
-        border 0
-        outline none
-
-    .get-code
-      padding 0 0 0 10px
-
-      label
-        padding-left 10px
-
-
-      input
-        width auto
-
-      .get-code-btn
-        display inline-block
-        width 111px
-        height 100%
-        line-height 46px
-        background-color $page-bg-color
-        border-color transparent
-        &:active
-          border-color $second-color
-
+      border-color transparent
+      &:active
+        border-color $second-color

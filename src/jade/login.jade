@@ -1,3 +1,21 @@
 extends layout.jade
 block title
   title 登录
+block content
+  section.login
+    div.form-box
+      div.form-title 账号登录
+      form
+        //fieldset.error.bolder.active
+          span x
+          span 登录名或登录密码不正确
+        fieldset
+          label(for="account") 账号
+          input#account(placeholder="请输入您的账号")
+        fieldset
+          label(for="password") 密码
+          input#password(type="password" placeholder="请输入您的密码")
+        button(type="primary") 登录
+        div.login-footer
+          a(href="register.html") 免费注册
+          a(href="" style="float: right").desc-text 忘记密码
