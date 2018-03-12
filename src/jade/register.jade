@@ -3,31 +3,39 @@ block title
   title 注册
 block content
   section.register
-    div.form-box
-      div.form-title 欢迎注册云徙云账号，你将获得免费试用
-      form(action="javascript:;")
-        fieldset
-          label(for="account") 账号
-          input#account(placeholder="请输入您的账号")
-        fieldset
-          label(for="password") 密码
-          input#password(type="password" placeholder="请至少使用两种字符组合,不少于6位")
-        fieldset
-          label(for="confirm") 确认密码
-          input#confirm(type="password" placeholder="请再次输入密码")
-        fieldset
-          label(for="phone") 手机号
-          input#phone(type="tel" placeholder="11位手机号")
-        fieldset.get-code
-          label 验证码
-          input(placeholder="请输入验证码")
-          button.get-code-btn 获取验证码
-        div
-          input(type="checkbox" style="width: auto; margin-right: 10px")
-          a(href="").small-text 《云徙云网站服务条款》
-          span.small-text 和
-          a(href="").small-text 《法律声明和隐私权政策》
-        button(type="primary") 同意条款并注册
-        div.text-center
-          span 已有账号?
-          a(href="login.html") 立即登录
+    div.container
+      div.login-text 
+        p.first-row.important-text 新零售系列产品全新上市
+        span.second-row.orange-color  抢鲜体验
+        span.second-row  用户，有机会领取
+        span.second-row.orange-color  6个月免费套餐
+        p.third-row 活动时间：2018年3月29日 - 4月29日
+    div.container
+      div.form-box
+        div.form-title 欢迎注册云徙云账号，你将获得免费试用
+        form(action="javascript:;")
+          fieldset
+            label(for="account") 账号
+            input#account(placeholder="请输入您的账号")
+          fieldset
+            label(for="password") 密码
+            input#password(type="password" placeholder="请至少使用两种字符组合,不少于6位")
+          fieldset
+            label(for="confirm") 确认密码
+            input#confirm(type="password" placeholder="请再次输入密码")
+          fieldset
+            label(for="phone") 手机号
+            input#phone(type="tel" placeholder="11位手机号")
+          fieldset.get-code
+            label 验证码
+            input(placeholder="请输入验证码")
+            button.get-code-btn 获取验证码
+          div
+            input(type="checkbox" style="width: auto; margin-right: 10px")
+            a(href="").small-text 《云徙云网站服务条款》
+            span.small-text 和
+            a(href="").small-text 《法律声明和隐私权政策》
+          button(type="primary") 同意条款并注册
+          div.text-center
+            span 已有账号?
+            a(href="login.html") 立即登录

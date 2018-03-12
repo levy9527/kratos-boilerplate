@@ -3,19 +3,27 @@ block title
   title 登录
 block content
   section.login
-    div.form-box
-      div.form-title 账号登录
-      form(action="javascript:;")
-        //fieldset.error.bolder.active
-          span x
-          span 登录名或登录密码不正确
-        fieldset
-          label(for="account") 账号
-          input#account(placeholder="请输入您的账号")
-        fieldset
-          label(for="password") 密码
-          input#password(type="password" placeholder="请输入您的密码")
-        button(type="primary") 登录
-        div.login-footer
-          a(href="register.html") 免费注册
-          a(href="" style="float: right").desc-text 忘记密码
+    div.container
+      div.login-text 
+        p.first-row.important-text 新零售系列产品全新上市
+        span.second-row.orange-color  抢鲜体验
+        span.second-row  用户，有机会领取
+        span.second-row.orange-color  6个月免费套餐
+        p.third-row 活动时间：2018年3月29日 - 4月29日
+    div.container 
+      div.form-box
+        div.form-title 账号登录
+        form(action="javascript:;")
+          //fieldset.error.bolder.active
+            span x
+            span 登录名或登录密码不正确
+          fieldset
+            label(for="account") 账号
+            input#account(placeholder="请输入您的账号")
+          fieldset
+            label(for="password") 密码
+            input#password(type="password" placeholder="请输入您的密码")
+          button(type="primary") 登录
+          div.login-footer
+            a(href="register.html") 免费注册
+            a(href="" style="float: right").desc-text 忘记密码
