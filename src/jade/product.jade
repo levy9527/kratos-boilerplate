@@ -8,11 +8,25 @@ block content
         h1.huge-text 营销智能套餐升级
         p.desc 人群圈选精准营销人群圈选精准营销
         button.link-btn 立即体验
-    div.container.show-case
+      div.first-sight-anchor
+        div.container
+          a(href="#section1", class="active") 应用场景
+          a(href="#section2") 产品优势
+          a(href="#section3") 核心功能
+          a(href="#section4") 产品架构
+          a(href="#section5") 案例客户
+    div#section1.container.show-case
       div.show-case-title 应用场景
-    div.container.show-case
+      include components/vertical-tab.jade
+    div#section2.container.show-case
       div.show-case-title 产品优势
       div.table
+    div#section3.container.show-case
+      div.show-case-title 核心功能
+    div#section4.container.show-case
+      div.show-case-title 产品架构
+    div#section5.container.show-case
+      div.show-case-title 案例客户
 
 
 

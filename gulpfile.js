@@ -31,7 +31,7 @@ const srcApp = {
     'src/js/**/*.js'
   ],
   css: 'src/styl/**/*.styl',
-  html: 'src/jade/*.jade',
+  html: 'src/jade/**/*.jade',
   img: 'src/images/**/*',
 };
 
