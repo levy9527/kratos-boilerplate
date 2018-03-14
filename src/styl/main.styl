@@ -1,9 +1,16 @@
 // 品牌色、重要按钮、操作文字色
 $primary-color = #3366FF
+
 // 次要按钮边框、表单边框色、分割线色, 灰色
 $second-color = #e1e1e1
+$border-color = #e1e1e1
+
+$normal-text-color = #666
+
 // 黑色
 $import-text-color = #222
+$dark = #222
+
 $placeholder-color = #ccc
 // 页面背景色
 $page-bg-color = #F9F9FA
@@ -38,7 +45,7 @@ html
   -webkit-font-smoothing antialiased
   font-size 14px
   line-height 24px
-  color #666
+  color $normal-text-color
   background-color $page-bg-color
 
 .important-text
@@ -63,7 +70,7 @@ html
   color $placeholder-color
 }
 
-.orange-color 
+.orange-color
   color #ff4200
 
 // 文字大小
@@ -73,6 +80,8 @@ html
 .large-text
   font-size 32px
   color $import-text-color
+.md-text
+  font-size 18px
 .title
   font-size 16px
   color $import-text-color
@@ -108,6 +117,70 @@ p
 .container
   max-width 1200px
   margin 0 auto
+
+// layout
+.navbar
+  display flex
+  align-items center
+  justify-content space-between
+  height 60px
+  line-height 60px
+  padding 0 20px
+  background-color $import-text-color
+
+  .navbar-section
+    display flex
+
+  .logo
+    display flex
+    align-items center
+    margin-right 120px
+  .logo-img
+    //vertical-align middle
+
+  .nav-item
+    margin-right 30px
+    color white
+    &:hover
+      color $primary-color
+      //cursor auto
+  .btn
+    padding 5px 10px
+    color white
+    background-color $primary-color
+
+#footer
+  background-color $import-text-color
+  .md-text
+    color white
+  .feature
+    display flex
+    height 95px
+    box-shadow 0 1px 0 0 #333333
+  .feature-item
+    display flex
+    align-items center
+    padding 20px 0
+    margin-right 120px
+    .md-text
+      margin 0 0 10px
+
+    .font_family
+      font-size 34px
+      margin-right 20px
+
+    .product
+      display flex
+        .product-item
+          width 240px
+          figure
+          margin 0 0 20px
+        .md-text
+          margin 30px 0
+        .product-link
+          display block
+          margin-bottom 15px
+          color $normal-text-color
 
 // 可复用样式
 // login/register/customer-info 有用
@@ -217,18 +290,15 @@ $header-height = 80px
     display flex
     list-style none
 
-// footer
-// #footer
-
 .login-text
   text-align center
   margin-top 20%
 
-.first-row 
+.first-row
   font-size 30px
   font-weight bold
 
-.second-row 
+.second-row
   font-size 24px
   font-weight bold
 

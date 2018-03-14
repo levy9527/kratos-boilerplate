@@ -20,22 +20,27 @@ html
     //- Stylesheets
     //- ==================================================
 
-    //link(rel="stylesheet" href="https://cdn.bootcss.com/normalize/8.0.0/normalize.min.css")
-    link(rel="stylesheet" href="https://cdn.bootcss.com/spectre.css/0.5.1/spectre.min.css")
+    link(rel="stylesheet" href="https://cdn.bootcss.com/normalize/8.0.0/normalize.min.css")
+    link(rel="stylesheet" href="https://at.alicdn.com/t/font_584589_mh78mwy5cmkro1or.css")
     link(rel="stylesheet" href="css/main.css")
+    // 暂时不适配移动端
+    // link(rel="stylesheet" href="https://cdn.bootcss.com/spectre.css/0.5.1/spectre.min.css")
     block link
 
   body
-    header#header
-      nav.nav
-        img.logo(src="http://www.dtyunxi.com/statics/images/yunxi3.0/logo.jpg")
-        ul.menu
-          li.menu-item 首页
-          li.menu-item 产品
-          li.menu-item 解决方案
-          li.menu-item 开放平台
-          li.menu-item 合作与生态
-          li.menu-item 联系我们
+    header.navbar
+      div.navbar-section
+        a.logo(href="index.html")
+          img(src="../images/logo.png").logo-img
+        a.nav-item 首页
+        a.nav-item 产品
+        a.nav-item 解决方案
+        a.nav-item 开放平台
+        a.nav-item 合作与生态
+        a.nav-item 联系我们
+      div
+        a.nav-item(href="login.html") 登录
+        a(href="register.html").btn 免费注册
 
     block content
 
@@ -47,9 +52,70 @@ html
     //- ==================================================
     //- Scripts
     //- ==================================================
-    footer#foote
-      a(target="_blank" href="http://www.dtyunxi.com/html/aboutus-company.html") 关于云徒科技
-      a(target="_blank" href="http://www.dtyunxi.com/index.php?m=content&c=index&a=lists&catid=16") 云徒研习社
-      a(target="_blank" href="http://www.dtyunxi.com/html/aboutus-jobs.html") 加入我们
+    footer#footer
+      div.container
+        div.feature
+          div.feature-item
+            i.font_family.icon-yewutubiaopei_fuzhi
+            div
+              p.md-text 故障赔付
+              span 先行100倍故障赔付
+          div.feature-item
+            i.font_family.icon-jiaoyupeixun_fuzhi
+            div
+              p.md-text 免费培训
+              span 定期免费培训老师上课
+          div.feature-item
+            i.font_family.icon-viphuiyuanhuangguan_fuzhi
+            div
+              p.md-text VIP服务
+              span 一对一的尊享服务
+          div.feature-item
+            i.font_family.icon-xiaoshiqiantai_fuzhi
+            div
+              p.md-text 7*24
+              span 全天候7x24小时服务
+        div.product
+          div.product-item
+            p.md-text 智能营销
+            a.product-link 客户管理i-CRM
+            a.product-link 广告投放管理
+            a.product-link 营销管理i-DMP
+            a.product-link 电商营销管理
+            a.product-link 门店运营
+            a.product-link 智能营销数据中台
+            a.product-link 数据可视化
+          div.product-item
+            p.md-text 全渠道销售
+            a.product-link BBC商城
+            a.product-link B2B智慧订货
+            a.product-link 电商ERP
+          div.product-item
+            p.md-text 企业数字化平台
+            a.product-link 业务中台
+            a.product-link 数据中台
+            a.product-link 开发平台
+            a.product-link 运营平台
+            a.product-link 运维平台
+            a.product-link 组件市场
+            a.product-link API网关
+          div.product-item
+            p.md-text 开发平台
+            a.product-link API平台
+            a.product-link 应用开发
+          div.product-item
+            p.md-text 关注我们
+            figure
+             img(src="./images/wechat.png")
+             div 产品微信公众号
+            figure
+              img(src="./images/wechat.png")
+              div 产品官方交流微信群
+            figure
+              img(src="./images/wechat.png")
+              div 合作伙伴交流钉钉群
+        //a(target="_blank" href="http://www.dtyunxi.com/html/aboutus-company.html") 关于云徒科技
+        //a(target="_blank" href="http://www.dtyunxi.com/index.php?m=content&c=index&a=lists&catid=16") 云徒研习社
+        //a(target="_blank" href="http://www.dtyunxi.com/html/aboutus-jobs.html") 加入我们
     script(src="js/main.js")
     block script
