@@ -123,6 +123,9 @@ a
 p
   white-space pre-wrap
 
+.flex
+  display flex
+
 // TODO 记得抽取常用样式 end
 
 .container
@@ -277,6 +280,28 @@ p
   color $dark
   background-color white
 
+// 图文样式: 左边是图片, 右边是文字(文字又分上下)。 首页有用
+.figure
+  display flex
+  align-items center
+  padding 25px 0
+
+  .figure-text
+    max-width 155px
+    font-size 12px
+
+  .figure-title
+    margin 0 0 10px
+    font-size 16px
+    color $dark
+
+  .figure-img
+    height 80px
+    margin-right 20px
+
+// 容器下的图文, 自动伸缩
+.container .figure
+  flex 1
 
 @import "index.styl"
 
