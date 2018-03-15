@@ -1,6 +1,5 @@
 {
   "blocks": false,
-  "brackets": false,
   "colons": {
     "expect": "never",
     "error": true
