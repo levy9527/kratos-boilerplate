@@ -1,0 +1,170 @@
+// 首页
+.index
+  .show-case-content {
+    position relative
+  }
+
+  .industry {
+    display flex
+    color white
+
+    .font_family {
+      font-size 38px
+    }
+
+    .icon-dichan {
+      font-size 36px
+    }
+
+    .icon-qiche_fuzhi {
+      font-size 50px
+    }
+
+    .icon-nongye {
+      font-size 42px
+    }
+
+  }
+
+  .industry-item {
+    flex 1
+    box-sizing border-box
+    height 532px
+
+    .item-name {
+      display flex
+      flex-direction column
+      justify-content center
+      height 100%
+    }
+
+    .item-detail {
+      display none
+      padding 70px 30px 24px
+      text-align left
+    }
+
+    &:hover {
+      flex-basis 28.5%
+      max-width 28.5%
+      background $dark
+
+      .item-name {
+        display none
+      }
+
+      .item-detail {
+        display block
+      }
+    }
+  }
+
+  .relative-product {
+    display flex
+
+    .product-item {
+    }
+
+    .circle {
+      display flex
+      align-items center
+      justify-content center
+      width 48px
+      height 48px
+      margin-right 20px
+      border 1px solid white
+      border-radius 50%
+    }
+
+    .font_family {
+      font-size 24px
+    }
+
+  }
+  .dichan {
+    background url(../images/index-dichan.jpg)
+  }
+
+  .kuaixiao {
+    background url(../images/index-kuaixiao.jpg)
+  }
+
+  .qiche {
+    background url(../images/index-qiche.jpg)
+  }
+
+  .nongmu {
+    background url(../images/index-nongmu.jpg)
+  }
+
+  .c3 {
+    background url(../images/index-3c.jpg)
+  }
+
+  .yiyao {
+    background url(../images/index-yiyao.jpg)
+  }
+
+  .trademark {
+    display flex
+
+    border 1px solid $border-color
+
+    &:last-child {
+      border-top 0
+    }
+  }
+
+  .placeholder-box {
+    width 200px
+    height 210px
+    border-right 1px solid $border-color
+
+    &:last-child {
+      border-right 0
+    }
+  }
+
+  .mark-item {
+    width 100%
+    height 100%
+
+    &:hover {
+      position absolute
+      top -50px
+      width 340px
+      height 420px
+      box-shadow 0 0 1px 1px $border-color
+      background-color white
+      z-index 10
+
+      .item-img {
+        width 128px
+      }
+
+      .link-btn,
+      .item-text {
+        opacity 1
+        display block
+        margin-left auto
+        margin-right auto
+      }
+
+    }
+
+    .item-img {
+      margin-top 52px
+      width 92px
+    }
+
+    .item-text {
+      width 224px
+      margin 35px auto
+      display none
+    }
+
+    .link-btn {
+      opacity 0
+    }
+  }
+
