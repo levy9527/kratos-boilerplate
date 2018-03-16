@@ -50,6 +50,10 @@ button
 
 .red
   color #ff0000
+.white-bg
+  background-color white
+.white
+  color white !important
 
 // 字体有默认大小, 颜色的, 然后再加上语义的区分
 // 文字颜色
@@ -106,6 +110,9 @@ html
   color $import-text-color
 .small-text
   font-size 12px
+// margin-bottom
+.mb60
+  margin-bottom 60px !important
 
 button
   outline 0
@@ -278,16 +285,18 @@ p
   .link-btn
     width 144px
     height $btn-height
+    line-height $btn-height - 2px
     color white
     border 1px solid white
     background-color $import-text-color
 // 客户案例
 .show-case
-  padding 90px 0
+  padding 80px 0
   .show-case-title
     margin-bottom 20px
     text-align center
     font-size 28px
+    color $dark
   .show-case-content
     margin-top 90px
 // a 元素 使用 link-btn 样式
@@ -331,6 +340,7 @@ p
   border-bottom 1px solid $border-color
 
 @import "index.styl"
+@import "solution.styl"
 
 // product 产品
 .product

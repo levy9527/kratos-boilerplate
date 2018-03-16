@@ -1,0 +1,125 @@
+.solution {
+  .ad {
+    .container-item {
+      box-sizing border-box
+      padding 48px 42px 66px
+      height 300px
+      border-right 1px solid $border-color
+      border-bottom 1px solid $border-color
+
+      &:first-child {
+        border-left 1px solid $border-color
+      }
+
+      .md-text {
+        margin 28px 0 20px
+      }
+    }
+  }
+
+  .total-view {
+    background-color white
+
+    .total-view-img {
+      //width 300px
+      //height 320px
+      margin-right 80px
+    }
+
+    .figure-box {
+      margin-top 96px
+    }
+
+    .figure-img {
+      height auto
+    }
+
+    .figure-text {
+      max-width unset
+    }
+  }
+
+  .core-business {
+    background-color $dark
+
+    .business-item {
+      box-sizing border-box
+      display flex
+      align-items center
+      justify-content center
+      height 80px
+      margin-bottom 20px
+      border-top 1px solid white
+      border-bottom 1px solid white
+      border-right 1px solid white
+
+      &.active {
+        background-image linear-gradient(to bottom, #0066FF 0, #0099FF 100%)
+      }
+
+      &:first-child {
+        border-left 1px solid white
+      }
+    }
+    .font_family {
+      margin-right 20px
+    }
+
+    .tab-content {
+      height 640px
+      align-items center
+    }
+    .text {
+      margin-left 60px
+      max-width 440px
+    }
+  }
+
+  .scale-item {
+    flex 1
+    box-sizing border-box
+    padding 48px 0 32px
+    background-color white
+    text-align center
+    border-top 1px solid $border-color
+    border-bottom 1px solid $border-color
+    border-right 1px solid $border-color
+
+    .md-text {
+      color $dark
+    }
+
+    &:hover {
+      color white
+      background-image linear-gradient(-180deg, #0069FF 0%, #4FACFE 100%)
+
+      .md-text {
+        color white
+      }
+
+      .link-btn {
+        color #4EACFE
+      }
+    }
+
+    &:first-child {
+      border-left 1px solid white
+    }
+
+    .font_family {
+      display inline-block
+      margin-bottom 24px
+    }
+
+    .text {
+      width 200px
+      margin 24px auto 34px
+      text-align left
+    }
+
+    .link-btn {
+      border-color transparent
+    }
+  }
+
+}
