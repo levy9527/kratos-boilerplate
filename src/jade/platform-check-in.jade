@@ -1,0 +1,66 @@
+extends layout.jade
+block title
+  title 平台接入
+block content
+  div.platform-check-in
+    div.first-sight
+      div.container
+        h1.huge-text 开放共赢，携手共建企业数字化
+        div.msg 赋能企业转型，携手企业发展，引领企业创新，成功案例
+        div: a.link-btn 立即加入合作伙伴
+    include snippet/we-do.jade
+    div.divider
+    div.two-sight
+      div.container
+        div.card-with-link
+          img(src="./images/i-marketing.png")
+          div.card-name 营销智能
+          div.card-desc 精准快速触达用户
+          a().link-btn 立即接入
+        div.card-with-link
+          img(src="./images/i-sale.png")
+          div.card-name 全渠道销售
+          div.card-desc 多方位、全渠道、一体化
+          a().link-btn 立即接入
+        div.card-with-link
+          img(src="./images/i-platform.png")
+          div.card-name 企业数字化平台
+          div.card-desc 打造数字化平台、应对市场
+          a().link-btn 立即接入
+        div.card-with-link
+          img(src="./images/i-cloud.png")
+          div.card-name 云管平台
+          div.card-desc 云管理平台、对接数据
+          a().link-btn 立即接入
+    div.three-sight
+      div.container.show-case
+        div.show-case-title 开发流程
+        div.dev-process
+          div.step
+            div.step-img.icon-step1
+            div.step-name
+              span.badge 1
+              span.name 入驻开放平台
+            div.step-desc 注册个人或企业t号
+          div.step.icon-arrow
+          div.step
+            div.step-img.icon-step2
+            div.step-name
+              span.badge 2
+              span.name 创建应用
+            div.step-desc 进入开放者中心创建应用
+          div.step.icon-arrow
+          div.step
+            div.step-img.icon-step3
+            div.step-name
+              span.badge 3
+              span.name 测试开发
+            div.step-desc 完成应用开发，进行功能测试
+          div.step.icon-arrow
+          div.step
+            div.step-img.icon-step4
+            div.step-name
+              span.badge 4
+              span.name 审核发布
+            div.step-desc 发布应用上线
+

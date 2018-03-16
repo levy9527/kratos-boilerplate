@@ -1,6 +1,6 @@
 // TODO 总结 规范要有: 颜色, 字体, 链接, 按钮
-@import 'mixin.styl'
-@import 'media.styl'
+@import "mixin.styl"
+@import "media.styl"
 // 品牌色、重要按钮、操作文字色
 $primary-color = #3366FF
 
@@ -113,6 +113,10 @@ html
 // margin-bottom
 .mb60
   margin-bottom 60px !important
+
+.block {
+  display block
+}
 
 button
   outline 0
@@ -309,6 +313,8 @@ p
   text-align center
   color $dark
   background-color white
+  cursor pointer
+
 
 // 图文样式: 左边是图片, 右边是文字(文字又分上下)。 首页有用
 .figure
@@ -338,7 +344,6 @@ p
   width 100%
   height 1px
   border-bottom 1px solid $border-color
-
 @import "index.styl"
 @import "solution.styl"
 
@@ -510,3 +515,5 @@ $header-height = 80px
       margin-right 15px
     }
   }
+// 接入平台
+@import "platform-check-in.styl"
