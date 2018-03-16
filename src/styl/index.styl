@@ -24,9 +24,146 @@
     position relative
   }
 
+  .i-product-container {
+    margin-top 80px
+    height 100px
+    overflow visible
+  }
+
+  .i-product {
+    display flex
+    align-items center
+    justify-content center
+    position relative
+    //height 100px
+    color white
+    background-color $dark
+
+    //&:not(:last-child) {
+    //  border-right 1px solid $border-color
+    //}
+
+    &.active {
+      transform translateY(-10px)
+      height 110px
+      background-image linear-gradient(-35deg, #0099ff 0%, #0066ff 100%), linear-gradient( #00a2ca, #00a2ca)
+      background-blend-mode normal, normal
+    }
+
+    .f16 {
+      font-weight 300
+    }
+  }
+
+  .product-figure {
+    padding 50px 0
+    border-bottom 1px solid $border-color
+
+    .figure-img {
+      width 105px
+      height 105px
+    }
+
+    .figure-text {
+      text-align left
+      margin-right 95px
+      max-width 688px
+    }
+
+    .figure-title {
+      margin-bottom 20px
+      font-size 30px
+    }
+
+    .link-btn {
+      align-self flex-end
+      margin-bottom 10px
+      border-color $dark
+      background-color $dark
+      color white
+    }
+  }
+
+  .service-provider {
+    background-image url(../images/index-service-banner.jpg)
+    background-repeat no-repeat
+    background-size 100% 238px
+  }
+  .service {
+    margin-top 60px
+
+    .service-item {
+      box-sizing border-box
+      width 360px
+      height 80px
+      padding 20px
+      align-items center
+      justify-content space-between
+      text-align left
+      border-left 1px solid transparent
+
+      .item-flex {
+        display flex
+        align-items center
+      }
+
+      .arrow-right {
+        opacity 0
+      }
+
+      &:hover {
+        background-color white
+        border-left 1px solid $primary-color
+        cursor pointer
+
+        .arrow-right {
+          opacity 1
+        }
+      }
+    }
+
+    .label {
+      position relative
+      display inline-block
+      box-sizing border-box
+      width 70px
+      height 20px
+      line-height 20px
+      margin-left 14px
+      text-align center
+      color white
+      font-size 12px
+
+      &::before {
+        content ''
+        position  absolute
+        right  100%
+        top  50%
+        transform translateY(-50%)
+        width  0
+        height  0
+        border-top  3px solid transparent
+        border-right  6px solid $primary-color
+        border-bottom  3px solid transparent
+      }
+
+      &.green {
+        background-color $green
+
+        &::before {
+          border-right-color $green
+        }
+      }
+    }
+  }
+
+  .solution {
+    background-image url(../images/index-solution-banner.png)
+    color white
+  }
+
   .industry {
     display flex
-    color white
 
     .font_family {
       font-size 38px

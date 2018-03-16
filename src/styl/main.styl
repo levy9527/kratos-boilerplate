@@ -18,6 +18,8 @@ $placeholder-color = #ccc
 // 页面背景色
 $page-bg-color = #F9F9FA
 
+$green = #33cc00
+
 $btn-height = 34px
 
 .container,
@@ -88,13 +90,17 @@ html
 .huge-text
   font-size 36px
   font-weight 400
-.f24
-  font-size 24px
 .large-text
   font-size 32px
   color $import-text-color
+// 无奈之举。UI各种字体都有
+.f24
+  font-size 24px
+.f18,
 .md-text
   font-size 18px
+.f16
+  font-size 16px
 .title
   font-size 16px
   color $import-text-color
@@ -133,6 +139,9 @@ p
 .container
   max-width 1200px
   margin 0 auto
+
+  .container-item
+    flex 1
 
 // layout
 .navbar
@@ -200,6 +209,15 @@ p
       color $normal-text-color
 
 // 可复用样式
+.arrow-right {
+  width 9px
+  height @width
+  border-top 1px solid
+  border-right 1px solid
+  border-color $border-color
+  transform rotate(45deg)
+}
+
 // login/register/customer-info 有用
 .form-box
   width 370px
