@@ -1,4 +1,6 @@
 // TODO 总结 规范要有: 颜色, 字体, 链接, 按钮
+@import 'mixin.styl'
+@import 'media.styl'
 // 品牌色、重要按钮、操作文字色
 $primary-color = #3366FF
 
@@ -253,7 +255,8 @@ p
   background-color #000
   .desc
     margin 48px 0
-    font-size 18px
+    font-size 16px
+    max-width 600px
   .link-btn
     width 144px
     height $btn-height
@@ -311,20 +314,56 @@ p
 
 @import "index.styl"
 
-// product
+// product 产品
 .product
   .first-sight
     padding-bottom 0
   .first-sight-anchor
     margin-top 70px
-    background-color: rgba(32, 35, 41, .6)
+    background-color rgba(32, 35, 41, .6)
     height 50px
     line-height 50px
     .container
       display flex
       justify-content space-between
       a
-        color $primary-color
+        color #fff
+        &.active
+          color $primary-color
+  #four-sight {
+    background url("../images/product-s2-bg.jpg") no-repeat center
+    color #fff
+    .media-wrap {
+      display flex
+    }
+    .media {
+      width 50%
+      display inline-block
+      margin-bottom 30px
+    }
+    .media-left {
+      padding-right 40px
+    }
+    .media-object {
+      display flex
+      align-items center
+      justify-content center
+      width 160px
+      height 160px
+      border-radius 50%
+      border 1px solid $border-color
+      .font_family {
+        font-size 72px
+      }
+    }
+    .media-heading {
+      padding 20px 0
+      margin-bottom 0
+    }
+    .media-body {
+      width 318px
+    }
+  }
 // faq
 .faq
   .container
@@ -392,3 +431,54 @@ $header-height = 80px
       border-color transparent
       &:active
         border-color $second-color
+ // tab 组件
+  .component-tabs-wrap {
+    .component-tabs {
+      display flex
+      justify-content space-between
+      height 80px
+      padding 0 42px
+      border 1px solid transparent
+      border-bottom 1px solid $border-color
+    }
+    .component-tab {
+      display flex
+      align-items center
+      cursor pointer
+      .word-block {
+        position relative
+        display flex
+        align-self stretch
+        align-items center
+      }
+      &:hover,
+      &.active{
+        color $primary-color
+        .word-block {
+          &:after{
+            content ""
+            width 80%
+            height 2px
+            position absolute
+            background $primary-color
+            bottom 0
+            left 10%
+          }
+        }
+      }
+    }
+    .component-tab-content {
+      .left-side,
+      .right-side {
+        display table-cell
+        vertical-align top
+      }
+      .right-side {
+        padding 60px
+      }
+    }
+    .font_family {
+      font-size 30px
+      margin-right 15px
+    }
+  }

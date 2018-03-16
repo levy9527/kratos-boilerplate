@@ -5,28 +5,71 @@ block content
   section.product
     div.first-sight
       div.container
-        h1.huge-text 营销智能套餐升级
-        p.desc 人群圈选精准营销人群圈选精准营销
+        h1.huge-text 营销智能 i-Marketing
+        p.desc 北极星是一个全链路多业态的智能化营销平台；解决企业在全链路数据化营销上单一业态到多业态营销链路断裂，以及数据应用和业务应用分裂等问题；帮助企业将数据在具体的运用场景中统一，主要服务垂直行业中的中小型行业代理商和代运营商。
         button.link-btn 立即体验
       div.first-sight-anchor
         div.container
-          a(href="#section1", class="active") 应用场景
-          a(href="#section2") 产品优势
-          a(href="#section3") 核心功能
-          a(href="#section4") 产品架构
-          a(href="#section5") 案例客户
-    div#section1.container.show-case
-      div.show-case-title 应用场景
-      include components/vertical-tab.jade
-    div#section2.container.show-case
-      div.show-case-title 产品优势
-      div.table
-    div#section3.container.show-case
-      div.show-case-title 核心功能
-    div#section4.container.show-case
-      div.show-case-title 产品架构
-    div#section5.container.show-case
-      div.show-case-title 案例客户
+          a(href="#two-sight", class="active") 应用场景
+          a(href="#three-sight") 产品优势
+          a(href="#four-sight") 核心功能
+          a(href="#five-sight") 产品架构
+          a(href="#six-sight") 产品推荐
+          a(href="#seven-sight") 案例客户
+    div#two-sight
+      div.container.show-case
+        div.show-case-title 应用场景
+        include components/tab/tab.jade
+    div#three-sight
+      div.container.show-case
+        div.show-case-title 产品优势
+        div.table
+    div#four-sight
+      div.container.show-case
+        div.show-case-title 核心功能
+        div.media-warp
+          div.media
+            div.media-left
+              div.media-object
+            div.media-body
+              h4.media-heading 广告投放管理
+              div.media-content.
+                全环节的监控与分析
+                可按照投放计划、受众、创意、媒体、分类等多个角度查看展示、点击、转化率、消耗等效果明细及趋势。TB级别的数据秒级延迟。
+          div.media
+            div.media-left
+              div.media-object
+            div.media-body
+              h4.media-heading 门店营销
+              div.media-content.
+                线下流量数据化
+                分析线下客流的趋势、来访频次、停留时间、门店动线、人群特征等信息，将线下流量数据化，直观掌握门店客流情况。
+          div.media
+            div.media-left
+              div.media-object
+                i.font_family.icon-jiaoyupeixun_fuzhi
+            div.media-body
+              h4.media-heading 客户管理
+              div.media-content.
+                全生命周期管理
+                结合行业特征，依据行业场景，以客户全生命周期为维度，去梳理和制定指标。让指标更贴近行业、更贴近行业客户，实现更精准的细分人群、广告投放。
+          div.media
+            div.media-left
+              div.media-object
+            div.media-body
+              h4.media-heading 营销管理
+              div.media-content.
+                快速配置执行
+                通过丰富的营销模版，直接配置营销时间、对象、活动内容、触达方式、分析内容等规则，快速配置执行，无需程序介入二次开发。实现敏捷、灵活、低门槛的自动化营销。
+    div#five-sight
+      div.container.show-case
+        div.show-case-title 产品架构
+    div#six-sight
+      div.container.show-case
+        div.show-case-title 产品推荐
+    div#seven-sight
+      div.container.show-case
+        div.show-case-title 案例客户
 
 
 

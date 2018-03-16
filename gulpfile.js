@@ -92,11 +92,11 @@ gulp.task('html', () => {
 gulp.task('images', () => {
   return gulp.src(srcApp.img)
     .pipe(plumber())
-    .pipe(imagemin({
-      optimizationLevel: 3,
-      progressive: true,
-      interlaced: true
-    }))
+    // .pipe(imagemin({ // todo win10下插件运行报错，先不使用
+    //   optimizationLevel: 3,
+    //   progressive: true,
+    //   interlaced: true
+    // }))
     .pipe(gulp.dest(buildApp.img));
 });
 
