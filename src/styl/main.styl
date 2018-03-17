@@ -229,6 +229,15 @@ p
   transform rotate(45deg)
 }
 
+.arrow-left {
+  width 9px
+  height @width
+  border-top 1px solid
+  border-left 1px solid
+  border-color $border-color
+  transform rotate(-45deg)
+}
+
 // login/register/customer-info 有用
 .form-box
   width 370px
@@ -313,7 +322,6 @@ p
   text-align center
   color $dark
   background-color white
-  cursor pointer
 
 
 // 图文样式: 左边是图片, 右边是文字(文字又分上下)。 首页有用
@@ -323,7 +331,7 @@ p
   padding 25px 0
 
   .figure-text
-    max-width 155px
+    width 155px
     font-size 12px
 
   .figure-title
@@ -344,8 +352,12 @@ p
   width 100%
   height 1px
   border-bottom 1px solid $border-color
+
 @import "index.styl"
+// 解决方案
 @import "solution.styl"
+// 接入平台
+@import "platform-check-in.styl"
 
 // product 产品
 .product
@@ -517,25 +529,23 @@ $header-height = 80px
   }
 
 //customer-info
-.customer-info 
- .container 
-    margin 60px auto 100px 
+.customer-info
+ .container
+    margin 60px auto 100px
 
-  .first-sight 
+  .first-sight
     padding 60px 0
-  
-  .content 
+
+  .content
     width 80%
     margin auto
     display flex
-  
+
   .content-half
     width 50%
 
-    .form-box 
+    .form-box
       margin auto
-      
+
 // 接入平台
 @import "platform-check-in.styl"
-
-
