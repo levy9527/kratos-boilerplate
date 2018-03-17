@@ -372,6 +372,12 @@ p
   color $dark
   background-color white
 
+  &.primary {
+    background-color $primary-color
+    color white
+    border-color $primary-color
+  }
+
 
 // 图文样式: 左边是图片, 右边是文字(文字又分上下)。 首页有用
 .figure
@@ -407,6 +413,8 @@ p
 @import "solution.styl"
 // 接入平台
 @import "platform-check-in.styl"
+// 合作与生态
+@import "cooperation"
 
 // product 产品
 .product
