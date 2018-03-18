@@ -237,6 +237,7 @@ p
   border-color $border-color
   transform rotate(-45deg)
 }
+
 // solution && product 案例客户可复用
 .slider {
   justify-content space-between
@@ -307,6 +308,55 @@ p
     margin-right 12px
   }
 }
+
+// 产品、i-marketing详情 都有用到
+  .first-sight-anchor
+    margin-top 70px
+    background-color rgba(32, 35, 41, .6)
+    height 50px
+    line-height 50px
+
+    .container
+      display flex
+      justify-content space-between
+
+      a
+        color #fff
+        &.active
+          color $primary-color
+  
+  .product-media
+    background url("../images/product-s2-bg.jpg") no-repeat center
+    color #fff
+
+    .media-wrap 
+      display flex
+    
+    .media 
+      width 50%
+      display inline-block
+      margin-bottom 30px
+    
+    .media-left 
+      padding-right 40px
+    
+    .media-object 
+      display flex
+      align-items center
+      justify-content center
+      width 160px
+      height 160px
+      border-radius 50%
+      border 1px solid $border-color
+      .font_family 
+        font-size 72px
+    
+    .media-heading 
+      padding 20px 0
+      margin-bottom 0
+    
+    .media-body 
+      width 318px
 
 // solution/cooperation 都有
 // 一般来说, 容器会添加class: .container.flex
@@ -490,52 +540,7 @@ p
 .product
   .first-sight
     padding-bottom 0
-  .first-sight-anchor
-    margin-top 70px
-    background-color rgba(32, 35, 41, .6)
-    height 50px
-    line-height 50px
-    .container
-      display flex
-      justify-content space-between
-      a
-        color #fff
-        &.active
-          color $primary-color
-  #four-sight {
-    background url("../images/product-s2-bg.jpg") no-repeat center
-    color #fff
-    .media-wrap {
-      display flex
-    }
-    .media {
-      width 50%
-      display inline-block
-      margin-bottom 30px
-    }
-    .media-left {
-      padding-right 40px
-    }
-    .media-object {
-      display flex
-      align-items center
-      justify-content center
-      width 160px
-      height 160px
-      border-radius 50%
-      border 1px solid $border-color
-      .font_family {
-        font-size 72px
-      }
-    }
-    .media-heading {
-      padding 20px 0
-      margin-bottom 0
-    }
-    .media-body {
-      width 318px
-    }
-  }
+
 // faq
 .faq
   .container
@@ -672,4 +677,7 @@ $header-height = 80px
     .form-box
       margin auto
 
+.i-marketing 
 
+  .first-sight
+    padding-bottom 0
