@@ -1,10 +1,77 @@
 .cooperation {
+  .adv {
+    border-bottom 1px solid $border-color
+  }
+
   .plain {
     padding 60px 120px
     background-color $page-bg-color
 
     .show-case-title {
       text-align left
+    }
+  }
+
+  .steps {
+    justify-content space-between
+
+    .step {
+      position relative
+      text-align center
+      margin-bottom 50px
+      width 126px
+
+      $step-arrow-color = #B8B8B8
+
+      &:last-child {
+        &:before,
+        &:after {
+          content none
+        }
+      }
+
+      &:before {
+        content ''
+        position absolute
+        top 41px
+        right -100px
+        width 7.1px
+        height @width
+        border-top 1px solid
+        border-right 1px solid
+        border-color $step-arrow-color
+        transform rotate(45deg)
+      }
+
+      &:after {
+        content ''
+        position absolute
+        top 44px
+        right -96px
+        width 108px
+        border-top 1px dashed $step-arrow-color
+      }
+    }
+
+
+    .step-img {
+      width 88px
+    }
+
+    .circle {
+      width 32px
+      height @width
+      line-height @width
+      margin 20px auto 10px
+      border-radius 50%
+      text-align center
+      color white
+      background-color $normal-text-color
+    }
+
+    .step-desc {
+      font-size 18px
+      font-weight 400
     }
   }
 }
