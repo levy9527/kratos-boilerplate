@@ -18,6 +18,7 @@ $placeholder-color = #ccc
 // 页面背景色
 $page-bg-color = #F9F9FA
 
+$red = #c42e00
 $green = #33cc00
 
 $btn-height = 34px
@@ -155,12 +156,13 @@ p
     flex 1
 
 // layout
+$navbar-height = 60px
 .navbar
   display flex
   align-items center
   justify-content space-between
-  height 60px
-  line-height 60px
+  height $navbar-height
+  line-height $navbar-height
   padding 0 20px
   background-color $import-text-color
 
@@ -174,12 +176,83 @@ p
   .logo-img
     // vertical-align middle
 
+
+  .nav-item:hover + .product-menu
+    opacity 1
+    z-index 10
+
+
+  .product-menu
+    opacity 0
+    z-index -1
+    position absolute
+    left 0
+    right 0
+    width 1200px
+    margin auto
+    top $navbar-height
+    border-top 1px solid #2a2a2a
+    background-color $dark
+
+    &:hover
+      opacity 1
+      z-index 10
+
+  .product-box
+    box-sizing border-box
+    min-width 300px
+    padding 0 10px 20px 40px
+    line-height 1.15
+
+    .product-item
+      display block
+      padding 20px 0 0 0
+
+      &:hover
+        color $primary-color
+
+        .item-title
+          color $primary-color
+
+        .small-text
+          color $primary-color
+
+      .item-title
+        display inline-block
+        margin 0 0 5px
+        color white
+
+      .small-text
+        color $normal-text-color
+
+
+    .product-title
+      padding 30px 0
+      border-bottom 1px solid #2a2a2a
+
+    .md-text
+      margin-right 12px
+
+
   .nav-item
+    position relative
+    display inline-block
     margin-right 30px
     color white
+
+    &:after
+      position absolute
+      left 0
+      bottom 0
+      content ''
+      width 100%
+      border-top 2px solid transparent
+
     &:hover
       color $primary-color
       // cursor auto
+      &:after
+        border-color $primary-color
   .btn
     padding 5px 10px
     color white
@@ -220,6 +293,47 @@ p
       color $normal-text-color
 
 // 可复用样式
+.label {
+  position relative
+  display inline-block
+  box-sizing border-box
+  width 70px
+  height 20px
+  line-height 20px
+  margin-left 14px
+  text-align center
+  color white
+  font-size 12px
+
+  &::before {
+    content ''
+    position  absolute
+    right  100%
+    top  50%
+    transform translateY(-50%)
+    width  0
+    height  0
+    border-top  3px solid transparent
+    border-right  6px solid $primary-color
+    border-bottom  3px solid transparent
+  }
+
+  &.green {
+    background-color $green
+
+    &::before {
+      border-right-color $green
+    }
+  }
+
+  &.red {
+    background-color $red
+
+    &::before {
+      border-right-color $red
+    }
+  }
+}
 .arrow-right {
   width 9px
   height @width
@@ -324,23 +438,23 @@ p
         color #fff
         &.active
           color $primary-color
-  
+
   .product-media
     background url("../images/product-s2-bg.jpg") no-repeat center
     color #fff
 
-    .media-wrap 
+    .media-wrap
       display flex
-    
-    .media 
+
+    .media
       width 50%
       display inline-block
       margin-bottom 30px
-    
-    .media-left 
+
+    .media-left
       padding-right 40px
-    
-    .media-object 
+
+    .media-object
       display flex
       align-items center
       justify-content center
@@ -348,14 +462,14 @@ p
       height 160px
       border-radius 50%
       border 1px solid $border-color
-      .font_family 
+      .font_family
         font-size 72px
-    
-    .media-heading 
+
+    .media-heading
       padding 20px 0
       margin-bottom 0
-    
-    .media-body 
+
+    .media-body
       width 318px
 
 // solution/cooperation 都有
@@ -677,7 +791,7 @@ $header-height = 80px
     .form-box
       margin auto
 
-.i-marketing 
+.i-marketing
 
   .first-sight
     padding-bottom 0

@@ -123,39 +123,6 @@
       }
     }
 
-    .label {
-      position relative
-      display inline-block
-      box-sizing border-box
-      width 70px
-      height 20px
-      line-height 20px
-      margin-left 14px
-      text-align center
-      color white
-      font-size 12px
-
-      &::before {
-        content ''
-        position  absolute
-        right  100%
-        top  50%
-        transform translateY(-50%)
-        width  0
-        height  0
-        border-top  3px solid transparent
-        border-right  6px solid $primary-color
-        border-bottom  3px solid transparent
-      }
-
-      &.green {
-        background-color $green
-
-        &::before {
-          border-right-color $green
-        }
-      }
-    }
   }
 
   .solution {
