@@ -138,15 +138,20 @@ block content
     div.show-case.white-bg
       div.show-case-title.dark.mb60 案例客户
       div.slider.flex.container
-        div.arrow-box
+        div.arrow-box.arrow-left-box
           i.arrow-left
-        div.slider-content
-          div.slider-figure.flex
+        div.slider-container
+          div.slider-figure.active
             img.figure-img(src="./images/wechat.png")
             div.figure-text
               div.figure-title BBC商城
               span 91琴趣致力于打造钢琴互联网数字化服务平台，与钢琴用户对接，掌握用户需求，为用户提供物流配送、钢琴调律、钢琴维修、钢琴租赁买卖、产品咨询、钢琴教育、音乐比赛、表演社交、广告、大数据、金融等多种增值服务，打造全球首个“云上钢琴服务”生态系统。
-        div.arrow-box
+          div.slider-figure
+            img.figure-img(src="./images/wechat.png")
+            div.figure-text
+              div.figure-title 2 title
+              span 2 span
+        div.arrow-box.arrow-right-box
           i.arrow-right
 block script
   script.
@@ -159,5 +164,30 @@ block script
       $this.siblings().removeClass('active')
 
     })
+
+    // slider
+    var slider = new Siema({
+        selector: '.slider-container',
+        duration: 300,
+        easing: 'ease-out',
+        perPage: 1,
+        startIndex: 0,
+        draggable: true,
+        multipleDrag: false,
+        threshold: 20,
+        loop: true,
+        rtl: false
+    })
+
+
+    $('.arrow-right-box').on('click', function (e) {
+      slider.next()
+    })
+
+    $('.arrow-left-box').on('click', function (e) {
+      slider.prev()
+    })
+
+
 
 
