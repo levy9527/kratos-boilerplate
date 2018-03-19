@@ -39,6 +39,44 @@
     }
   }
 
+   // tab 切换取代js关键样式 start
+  .hide {
+    display none
+  }
+  .tab-content-label {
+    position relative
+    cursor pointer
+  }
+
+  .tab-content {
+    display none
+  }
+
+  // 两个label只能点击一个
+  .tab-controller-label {
+    position absolute
+    width 100%
+    height 100%
+    z-index -1
+    opacity 0
+  }
+
+  [name=tabContentRadio] {
+    display none
+
+    &:checked + .tab-content {
+      display flex
+    }
+  }
+
+  [name=tabLabelRadio]:checked + .tab-content-label {
+    background-image linear-gradient(to bottom, #0066FF 0, #0099FF 100%)
+  }
+
+  // tab 切换样式 end
+
+
+
   .core-business {
     background url(../images/index-banner.jpg) no-repeat center
     .business-item {
@@ -50,14 +88,15 @@
       margin-bottom 20px
       border-top 1px solid white
       border-bottom 1px solid white
-      border-right 1px solid white
+      border-left 1px solid white
 
+      // 这个需要js
       &.active {
         background-image linear-gradient(to bottom, #0066FF 0, #0099FF 100%)
       }
 
-      &:first-child {
-        border-left 1px solid white
+      &:last-child {
+        border-right 1px solid white
       }
     }
     .font_family {

@@ -54,23 +54,62 @@ block content
               span 采用分布式块存储块Snapshot，感受极速备份以及恢复体验。
     div.show-case.core-business
       div.show-case-title.mb60.white 核心业务场景
+      // tab controller
       div.container.flex.white
-        div.container-item.business-item
+        //input(type="radio" name="tabLabelRadio" checked="checked")#controller1.hide
+        label(for="content1").container-item.business-item.tab-content-label
           i.font_family.icon-dichan
           span.f16 门店管家
-        div.container-item.business-item.active
+          label(for="controller1").tab-controller-label
+
+        //input(type="radio" name="tabLabelRadio")#controller2.hide
+        label(for="content2").container-item.business-item.tab-content-label
           i.font_family.icon-dichan
           span.f16 BBC商城
-        div.container-item.business-item
+          label(for="controller2").tab-controller-label
+
+        //input(type="radio" name="tabLabelRadio")#controller3.hide
+        label(for="content3").container-item.business-item.tab-content-label
           i.font_family.icon-dichan
           span.f16 B2B智慧订货
-        div.container-item.business-item
+          label(for="controller3").tab-controller-label
+
+        //input(type="radio" name="tabLabelRadio")#controller4.hide
+        label(for="content4").container-item.business-item.tab-content-label
           i.font_family.icon-dichan
           span.f16 电商ERP
-      div.container.tab-content.flex.white-bg
+          label(for="controller4").tab-controller-label
+      // tab selected flag
+      input(type="radio" value="1" name="tabContentRadio")#content1
+      // tab content
+      div.container.tab-content.white-bg
+        img(src="./images/solution-pline1_3.jpg")
+        div.text
+          p.md-text.dark 门店管家
+          p DT时代，新零售重构人-货-场，消费者消费行为变迁，货、场和服务也随之发生改变。
+          p 消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间。
+
+      input(type="radio" value="2" name="tabContentRadio" checked="checked")#content2
+      div.container.tab-content.white-bg
         img(src="./images/solution-pline1_3.jpg")
         div.text
           p.md-text.dark BBC商城
+          p DT时代，新零售重构人-货-场，消费者消费行为变迁，货、场和服务也随之发生改变。
+          p 消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间。
+
+      input(type="radio" value="3" name="tabContentRadio")#content3
+      div.container.tab-content.white-bg
+        img(src="./images/solution-pline1_3.jpg")
+        div.text
+          p.md-text.dark B2B智慧订货
+          p DT时代，新零售重构人-货-场，消费者消费行为变迁，货、场和服务也随之发生改变。
+          p 消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间。
+
+      input(type="radio" value="4" name="tabContentRadio")#content4
+      div.container.tab-content.white-bg
+        img(src="./images/solution-pline1_3.jpg")
+        div.text
+          p.md-text.dark 电商ERP
           p DT时代，新零售重构人-货-场，消费者消费行为变迁，货、场和服务也随之发生改变。
           p 消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间。
     div.show-case
@@ -109,5 +148,16 @@ block content
               span 91琴趣致力于打造钢琴互联网数字化服务平台，与钢琴用户对接，掌握用户需求，为用户提供物流配送、钢琴调律、钢琴维修、钢琴租赁买卖、产品咨询、钢琴教育、音乐比赛、表演社交、广告、大数据、金融等多种增值服务，打造全球首个“云上钢琴服务”生态系统。
         div.arrow-box
           i.arrow-right
+block script
+  script.
+    var labels = $('.tab-content-label')
+
+    labels.on('click', function (e) {
+      var $this = $(this)
+
+      $this.addClass('active')
+      $this.siblings().removeClass('active')
+
+    })
 
 
