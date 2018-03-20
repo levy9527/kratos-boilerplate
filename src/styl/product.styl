@@ -1,4 +1,4 @@
-.product {
+.product
   .first-sight
     padding-bottom 0
 
@@ -36,5 +36,40 @@
     .media-body
       width 318px
 
-}
+  .wide-figure {
+    display flex
+    justify-content space-between
+    align-items center
+    margin-top 40px
+
+    .figure-text {
+      width auto
+    }
+
+    .font_family {
+      height auto
+    }
+  }
+
+  .artichet {
+    .tab-content {
+      display none
+    }
+
+    .artichet-radio:checked + .tab-content {
+      display block
+    }
+
+    .tab-controller {
+      width 140px
+      margin-right 20px
+      cursor pointer
+      border-color $normal-text-color
+
+      &.active {
+        color white
+        background-color $normal-text-color
+      }
+    }
+  }
 
