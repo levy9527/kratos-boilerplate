@@ -16,14 +16,30 @@ block content
           a(href="#five-sight") 产品架构
           a(href="#six-sight") 产品推荐
           a(href="#seven-sight") 案例客户
-    div#two-sight
+    div#two-sight.white-bg
       div.container.show-case
         div.show-case-title 应用场景
         include components/tab/tab.jade
     div#three-sight
       div.container.show-case
         div.show-case-title 产品优势
-        div.table
+        div.flex
+          div.scale-item
+            i.font_family.icon-dichan
+            div.md-text.dark 大数据洞察
+            div.text 智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。
+          div.scale-item
+            i.font_family.icon-dichan
+            div.md-text.dark 智能决策模型
+            div.text 多维客人分群模型支持客户进行分群，并分析客群特征，以及基于客群画像，提供客户运营建议，并为商品企划决策提供参考。
+          div.scale-item
+            i.font_family.icon-dichan
+            div.md-text 标签体系
+            div.text 基于不同行业长期实践与总结，形成覆盖客人与商品的广泛多维标签体系，支持与CRM客户关系管理深度集成，实现自动化的精准营销。
+          div.scale-item
+            i.font_family.icon-dichan
+            div.md-text.dark 数字化营销
+            div.text 整合行业资源、帮助企业达成资源的优势互补、合作共赢，从而实现高性价比的营销，精准模式实现全渠道投放，全链路的监控，及投放策略的优化。
     div#four-sight.product-media
       div.container.show-case
         div.show-case-title 核心功能
@@ -88,21 +104,26 @@ block content
             div.md-text.dark 门店运营 i-SmartsStore
             div.text 实现平台自营，线上商城和线下多门店并重，支持商家、个人店铺入驻；商城、门店、卖家、买家均有独立管理中心，全程可监控。
             a.link-btn 立即体验
-    div#seven-sight.white-bg
-      div.container.show-case
-        div.show-case-title.dark.mb60 案例客户
-        div.slider.flex.container
-          div.arrow-box
-            i.arrow-left
-          div.slider-content
-            div.slider-figure.flex
-              img.figure-img(src="./images/wechat.png")
-              div.figure-text
-                div.figure-title BBC商城
-                span 91琴趣致力于打造钢琴互联网数字化服务平台，与钢琴用户对接，掌握用户需求，为用户提供物流配送、钢琴调律、钢琴维修、钢琴租赁买卖、产品咨询、钢琴教育、音乐比赛、表演社交、广告、大数据、金融等多种增值服务，打造全球首个“云上钢琴服务”生态系统。
-          div.arrow-box
-            i.arrow-right
-
+    div.show-case.white-bg#seven-sight
+      div.show-case-title.dark.mb60 案例客户
+      div.slider.flex.container
+        div.arrow-box.arrow-left-box
+          i.arrow-left
+        div.slider-container
+          div.slider-figure.active
+            img.figure-img(src="./images/wechat.png")
+            div.figure-text
+              div.figure-title BBC商城
+              span 91琴趣致力于打造钢琴互联网数字化服务平台，与钢琴用户对接，掌握用户需求，为用户提供物流配送、钢琴调律、钢琴维修、钢琴租赁买卖、产品咨询、钢琴教育、音乐比赛、表演社交、广告、大数据、金融等多种增值服务，打造全球首个“云上钢琴服务”生态系统。
+          div.slider-figure
+            img.figure-img(src="./images/wechat.png")
+            div.figure-text
+              div.figure-title 2 title
+              span 2 span
+        div.arrow-box.arrow-right-box
+          i.arrow-right
+block script
+  include snippet/slider.jade
 
 
 

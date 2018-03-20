@@ -431,53 +431,54 @@ $navbar-height = 60px
 }
 
 // 产品、i-marketing详情 都有用到
-  .first-sight-anchor
-    margin-top 70px
-    background-color rgba(32, 35, 41, .6)
-    height 50px
-    line-height 50px
+.first-sight-anchor
+  position sticky
+  margin-top 70px
+  background-color rgba(32, 35, 41, .6)
+  height 50px
+  line-height 50px
 
-    .container
-      display flex
-      justify-content space-between
+  .container
+    display flex
+    justify-content space-between
 
-      a
-        color #fff
-        &.active
-          color $primary-color
+    a
+      color #fff
+      &.active
+        color $primary-color
 
-  .product-media
-    background url("../images/product-s2-bg.jpg") no-repeat center
-    color #fff
+.product-media
+  background url("../images/product-s2-bg.jpg") no-repeat center
+  color #fff
 
-    .media-wrap
-      display flex
+  .media-wrap
+    display flex
 
-    .media
-      width 50%
-      display inline-block
-      margin-bottom 30px
+  .media
+    width 50%
+    display inline-block
+    margin-bottom 30px
 
-    .media-left
-      padding-right 40px
+  .media-left
+    padding-right 40px
 
-    .media-object
-      display flex
-      align-items center
-      justify-content center
-      width 160px
-      height 160px
-      border-radius 50%
-      border 1px solid $border-color
-      .font_family
-        font-size 72px
+  .media-object
+    display flex
+    align-items center
+    justify-content center
+    width 160px
+    height 160px
+    border-radius 50%
+    border 1px solid $border-color
+    .font_family
+      font-size 72px
 
-    .media-heading
-      padding 20px 0
-      margin-bottom 0
+  .media-heading
+    padding 20px 0
+    margin-bottom 0
 
-    .media-body
-      width 318px
+  .media-body
+    width 318px
 
 // solution/cooperation 都有
 // 一般来说, 容器会添加class: .container.flex
@@ -510,6 +511,7 @@ $navbar-height = 60px
 
     .link-btn {
       color #4EACFE
+      border-color @color
     }
   }
 
@@ -524,7 +526,7 @@ $navbar-height = 60px
   }
 
   .link-btn {
-    border-color transparent
+    border-color $border-color
   }
 }
 
@@ -765,57 +767,65 @@ $header-height = 80px
       border-color transparent
       &:active
         border-color $second-color
- // tab 组件
-  .component-tabs-wrap {
-    .component-tabs {
+// tab 组件
+.component-tabs-wrap {
+  .component-tabs {
+    display flex
+    justify-content space-between
+    height 70px
+    padding 20px 42px 0
+    border 1px solid transparent
+    border-bottom 1px solid $border-color
+  }
+  .component-tab {
+    display flex
+    align-items center
+    cursor pointer
+    .word-block {
+      position relative
       display flex
-      justify-content space-between
-      height 80px
-      padding 0 42px
-      border 1px solid transparent
-      border-bottom 1px solid $border-color
-    }
-    .component-tab {
-      display flex
+      align-self stretch
       align-items center
-      cursor pointer
+    }
+
+    &:hover,
+    &.active{
+      color $primary-color
       .word-block {
-        position relative
-        display flex
-        align-self stretch
-        align-items center
-      }
-      &:hover,
-      &.active{
-        color $primary-color
-        .word-block {
-          &:after{
-            content ""
-            width 80%
-            height 2px
-            position absolute
-            background $primary-color
-            bottom 0
-            left 10%
-          }
+        &:after{
+          content ""
+          width 80%
+          height 2px
+          position absolute
+          background $primary-color
+          bottom 0
+          left 10%
         }
       }
     }
-    .component-tab-content {
-      .left-side,
-      .right-side {
-        display table-cell
-        vertical-align top
-      }
-      .right-side {
-        padding 60px
-      }
+  }
+
+  .component-tab-content {
+    padding-top 40px
+
+    .md-text {
+      margin-bottom 20px
     }
-    .font_family {
-      font-size 30px
-      margin-right 15px
+
+    .left-side,
+    .right-side {
+      display table-cell
+      vertical-align middle
+    }
+    .right-side {
+      padding 60px
     }
   }
+  .font_family {
+    font-size 30px
+    margin-right 15px
+  }
+}
 
 
 // customer-info
