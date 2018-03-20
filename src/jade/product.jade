@@ -19,7 +19,62 @@ block content
     div#two-sight.white-bg
       div.container.show-case
         div.show-case-title 应用场景
-        include components/tab/tab.jade
+        div.component-tabs-wrap
+          div.component-tabs
+            label.component-tab.tab-controller.active(for="tab1")
+              i.font_family.icon-jiaoyupeixun_fuzhi
+              div.word-block 用户全生命周期管理
+            label.component-tab.tab-controller(for="tab2")
+              i.font_family
+              div.word-block 客户线上分析
+            label.component-tab.tab-controller(for="tab3")
+              i.font_family
+              div.word-block 线下门店分析
+            label.component-tab.tab-controller(for="tab4")
+              i.font_family
+              div.word-block 广告投放分析
+          div
+            input(type="radio" name="tabRadio" checked="checked")#tab1
+            div.component-tab-content
+              div.left-side
+                img(src="../../images/product-s1-kehuxianshang.jpg")
+              div.right-side
+                div.md-text.dark 用户全生命周期管理
+                div.content.
+                  根据不同的企业需求，灵活组合产品形态。针对电商场景，提供用户的营销触达、埋点分析、会员信息管理服务，
+                  记录下客户的点滴行为。根据不同的企业需求，灵活组合产品形态。针对电商场景，
+                  提供用户的营销触达、埋点分析、会员信息管理服务针对电商场景，提供用户的营销触达、埋点分析、会员信息管理服务，记录下客户的点滴行为。
+
+            input(type="radio" name="tabRadio")#tab2
+            div.component-tab-content
+              div.left-side
+                img(src="../../images/product-s1-kehuxianshang.jpg")
+              div.right-side
+                div.md-text.dark 客户线上分析
+                div.content.
+                  根据不同的企业需求，灵活组合产品形态。针对电商场景，提供用户的营销触达、埋点分析、会员信息管理服务，
+                  记录下客户的点滴行为。根据不同的企业需求，灵活组合产品形态。针对电商场景，
+                  提供用户的营销触达、埋点分析、会员信息管理服务针对电商场景，提供用户的营销触达、埋点分析、会员信息管理服务，记录下客户的点滴行为。
+            input(type="radio" name="tabRadio")#tab3
+            div.component-tab-content
+              div.left-side
+                img(src="../../images/product-s1-kehuxianshang.jpg")
+              div.right-side
+                div.md-text.dark 线下门店分析
+                div.content.
+                  根据不同的企业需求，灵活组合产品形态。针对电商场景，提供用户的营销触达、埋点分析、会员信息管理服务，
+                  记录下客户的点滴行为。根据不同的企业需求，灵活组合产品形态。针对电商场景，
+                  提供用户的营销触达、埋点分析、会员信息管理服务针对电商场景，提供用户的营销触达、埋点分析、会员信息管理服务，记录下客户的点滴行为。
+            input(type="radio" name="tabRadio")#tab4
+            div.component-tab-content
+              div.left-side
+                img(src="../../images/product-s1-kehuxianshang.jpg")
+              div.right-side
+                div.md-text.dark 广告投放分析
+                div.content.
+                  根据不同的企业需求，灵活组合产品形态。针对电商场景，提供用户的营销触达、埋点分析、会员信息管理服务，
+                  记录下客户的点滴行为。根据不同的企业需求，灵活组合产品形态。针对电商场景，
+                  提供用户的营销触达、埋点分析、会员信息管理服务针对电商场景，提供用户的营销触达、埋点分析、会员信息管理服务，记录下客户的点滴行为。
     div#three-sight
       div.container.show-case
         div.show-case-title.mb60 产品优势
