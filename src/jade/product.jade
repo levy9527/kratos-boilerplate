@@ -22,7 +22,7 @@ block content
         include components/tab/tab.jade
     div#three-sight
       div.container.show-case
-        div.show-case-title 产品优势
+        div.show-case-title.mb60 产品优势
         div.flex
           div.scale-item
             i.font_family.icon-dichan
@@ -42,11 +42,12 @@ block content
             div.text 整合行业资源、帮助企业达成资源的优势互补、合作共赢，从而实现高性价比的营销，精准模式实现全渠道投放，全链路的监控，及投放策略的优化。
     div#four-sight.product-media
       div.container.show-case
-        div.show-case-title 核心功能
+        div.show-case-title.white.mb60 核心功能
         div.media-warp
           div.media
             div.media-left
               div.media-object
+                i.font_family.icon-jiaoyupeixun_fuzhi
             div.media-body
               h4.media-heading 广告投放管理
               div.media-content.
@@ -55,6 +56,7 @@ block content
           div.media
             div.media-left
               div.media-object
+                i.font_family.icon-jiaoyupeixun_fuzhi
             div.media-body
               h4.media-heading 门店营销
               div.media-content.
@@ -72,17 +74,29 @@ block content
           div.media
             div.media-left
               div.media-object
+                i.font_family.icon-jiaoyupeixun_fuzhi
             div.media-body
               h4.media-heading 营销管理
               div.media-content.
                 快速配置执行
                 通过丰富的营销模版，直接配置营销时间、对象、活动内容、触达方式、分析内容等规则，快速配置执行，无需程序介入二次开发。实现敏捷、灵活、低门槛的自动化营销。
-    div#five-sight
-      div.container.show-case
-        div.show-case-title 产品架构
+    div#five-sight.white-bg
+      div.container.show-case.artichet
+        div.show-case-title.mb60 产品架构
+        div.tab-controller
+          label.link-btn(for="productArt")
+          label.link-btn(for="techArt")
+        div.tab-content-container
+          input(type="radio" name="artichet")#productArt.hide
+          div.tab-content
+
+          input(type="radio" name="artichet")#techArt.hide
+          div.tab-content
+
+
     div#six-sight
       div.container.show-case
-        div.show-case-title 产品推荐
+        div.show-case-title.mb60 产品推荐
         div.flex
           div.scale-item
             i.font_family.icon-dichan

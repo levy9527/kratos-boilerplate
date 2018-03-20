@@ -447,39 +447,6 @@ $navbar-height = 60px
       &.active
         color $primary-color
 
-.product-media
-  background url("../images/product-s2-bg.jpg") no-repeat center
-  color #fff
-
-  .media-wrap
-    display flex
-
-  .media
-    width 50%
-    display inline-block
-    margin-bottom 30px
-
-  .media-left
-    padding-right 40px
-
-  .media-object
-    display flex
-    align-items center
-    justify-content center
-    width 160px
-    height 160px
-    border-radius 50%
-    border 1px solid $border-color
-    .font_family
-      font-size 72px
-
-  .media-heading
-    padding 20px 0
-    margin-bottom 0
-
-  .media-body
-    width 318px
-
 // solution/cooperation 都有
 // 一般来说, 容器会添加class: .container.flex
 .scale-item {
@@ -694,11 +661,8 @@ $navbar-height = 60px
 @import "cooperation.styl"
 // 案例详情
 @import "case-detail.styl"
-
-// product 产品
-.product
-  .first-sight
-    padding-bottom 0
+// 产品相关
+@import "product.styl"
 
 // faq
 .faq
@@ -713,30 +677,6 @@ $navbar-height = 60px
     &.active
       color $primary-color
       border-left 2px solid $primary-color
-
-// header
-$header-height = 80px
-#header
-  position relative
-  height $header-height
-  line-height $header-height
-
-  .nav
-    position fixed
-    left 0
-    right 0
-    margin auto
-    height $header-height
-    width 1100px
-    display flex
-    align-items center
-
-  .logo
-    height 48px
-
-  .menu
-    display flex
-    list-style none
 
 .login
   display flex
