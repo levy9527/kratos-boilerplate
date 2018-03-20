@@ -588,6 +588,40 @@ $navbar-height = 60px
     color white
     border 1px solid white
     background-color $import-text-color
+// platform-check-in/case-detail 有用
+.card-with-link {
+  display flex
+  flex-direction column
+  align-items center
+  border 1px solid $border-color
+  padding 50px 0
+  width 23%
+  margin-right 2.666%
+
+  &:hover {
+    border-color $primary-color
+  }
+
+  img {
+    width 60px
+    height 60px
+    display block
+  }
+
+  .card-name {
+    margin-top 30px
+    font-size 18px
+    font-weight 600
+  }
+
+  .card-desc {
+    margin 15px 0 20px
+  }
+
+  .link-btn {
+    border-color $border-color
+  }
+}
 // 客户案例
 .show-case
   padding 80px 0
@@ -651,7 +685,9 @@ $navbar-height = 60px
 // 接入平台
 @import "platform-check-in.styl"
 // 合作与生态
-@import "cooperation"
+@import "cooperation.styl"
+// 案例详情
+@import "case-detail.styl"
 
 // product 产品
 .product

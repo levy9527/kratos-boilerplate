@@ -1,0 +1,127 @@
+.case-detail {
+  .first-sight {
+    .container {
+      position relative
+    }
+
+    .customer-logo {
+      position absolute
+      right 0
+      top -34px
+      display flex
+      flex-direction column
+      align-items center
+      background white
+      width 320px
+      height 320px
+      color $normal-text-color + #333
+      border-radius 4px
+      box-shadow 0 0 15px #ddd
+
+      img {
+        width 228px
+        padding-top 37px
+      }
+    }
+
+    .customer-title {
+      margin-top -20px
+    }
+  }
+
+  .case-detail-main {
+    .container {
+      padding 78px 30px 100px 30px
+      background: #fff
+    }
+  }
+
+  .customer-name {
+    margin 0 0 38px 0
+  }
+
+  .filed {
+    padding-right 28px
+  }
+
+  .sub-detail {
+    margin-bottom 78px
+  }
+
+  .sub-title {
+    position relative
+    padding-left 18px
+    font-weight bold
+    margin-bottom 30px
+
+    &:before {
+      content ''
+      position absolute
+      left 0
+      top 6px
+      width 12px
+      height 12px
+      background $primary-color
+      border-radius 50%
+    }
+  }
+
+  .caption {
+    font-weight bold
+
+  margin-bottom 16px
+}
+
+.desc {
+  margin-bottom 62px
+}
+  .use-product {
+    margin-top 30px
+
+    .container {
+      background #ffff
+      padding 30px
+      margin-bottom 60px
+    }
+
+    .sub-title {
+      padding-left 10px
+
+      &:before {
+        top 5px
+        height 16px
+        width 4px
+        border-radius 0
+      }
+    }
+    .product-box{
+      margin-right -2.666%
+      display flex
+      justify-content initial
+    }
+
+    .divider {
+      width 80%
+    }
+
+    .card-with-link {
+      padding-bottom 0
+
+      img {
+        width 90px
+        height 90px
+      }
+    }
+
+    .card-name {
+      margin 30px 0 42px 0
+      font-weight normal
+      color $normal-text-color + #333
+    }
+
+    .link-btn {
+      border 0
+      margin 15px 0
+    }
+  }
+}
