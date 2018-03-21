@@ -1,0 +1,157 @@
+mixin renderProduct (data)
+  block content
+    section.product
+      div.first-sight
+        div.container
+          h1.huge-text #{data.title}
+          p.desc #{data.desc}
+          a.link-btn(href=data.href) 立即体验
+      div.first-sight-anchor
+        div.container
+          a(href="#two-sight") 应用场景
+          a(href="#three-sight") 产品优势
+          a(href="#four-sight") 核心功能
+          a(href="#five-sight") 产品架构
+          a(href="#seven-sight") 案例客户
+      div#two-sight.white-bg
+        div.container.show-case
+          div.show-case-title 应用场景
+          div.component-tabs-wrap
+            div.component-tabs
+              each item, index in data.situations
+                if index === 0
+                  label.component-tab.tab-controller.active(for="tab" + index)
+                    i.font_family(class=item.icon)
+                    div.word-block #{item.name}
+                else
+                  label.component-tab.tab-controller(for='tab' + index)
+                    i.font_family(class=item.icon)
+                    div.word-block #{item.name}
+            div
+              each item, index in data.situations
+                input(type="radio" name="tabRadio" checked="checked" id="tab" + index)
+                div.component-tab-content
+                  div.left-side
+                    img(src=item.img)
+                  div.right-side
+                    div.md-text.dark #{item.name}
+                    div.content #{item.desc}
+
+      div#three-sight
+        div.container.show-case
+          div.show-case-title.mb60 产品优势
+          div.flex
+            each item in data.advantages
+              div.scale-item
+                i.font_family(class=item.icon)
+                div.md-text.dark #{item.title}
+                div.text #{item.desc}
+
+      div#four-sight.product-media
+        div.container.show-case
+          div.show-case-title.white.mb60 核心功能
+          div.media-warp
+            each f in data.coreFuns
+              div.media
+                div.media-left
+                  div.media-object
+                    i.font_family(class=f.icon)
+                div.media-body
+                  h4.media-heading #{f.title}
+                  div.media-content #{f.desc}
+
+      // TODO 产品架构有待商榷
+      div#five-sight.white-bg
+        div.container.show-case.artichet
+          div.show-case-title.mb60 产品架构
+          div.text-center
+            label.tab-controller.link-btn(for="businessArt").active 业务架构
+            label.tab-controller.link-btn(for="techArt") 技术架构
+          div.tab-content-container
+            input(type="radio" name="artichet" checked="checked")#businessArt.hide.artichet-radio
+            div.tab-content
+              div.wide-figure
+                div.figure-box
+                  p.md-text.dark 高性能弹性云数据库服务 支持多个云服务器高并发访问
+                  div(style="margin-bottom: 40px") 满足业务连续性和可扩展性的高性能云数据库服务
+                  div.figure
+                    i.font_family.icon-dichan.figure-img
+                    div.figure-text
+                      div.figure-title 解决方案核心说明1
+                      span 新零售销售场景中，企业与顾客均可通过在线连接，在线订单将会超越线下订单。
+                  div.figure
+                    i.font_family.icon-dichan.figure-img
+                    div.figure-text
+                      div.figure-title 解决方案核心说明1
+                      span Active-Active Failover高可用方案，自动故障恢复。
+                  div.figure
+                    i.font_family.icon-dichan.figure-img
+                    div.figure-text
+                      div.figure-title 解决方案核心说明1
+                      span 除了CPU、内存的Scale Up能力外，还支持存储自动扩容。
+                  div.figure
+                    i.font_family.icon-dichan.figure-img
+                    div.figure-text
+                      div.figure-title 解决方案核心说明1
+                      span 采用分布式块存储块Snapshot，感受极速备份以及恢复体验。
+                img(src="./images/solution-pline1_3.jpg")
+
+            input(type="radio" name="artichet")#techArt.hide.artichet-radio
+            div.tab-content
+              div.wide-figure
+                div.figure-box
+                  p.md-text.dark 另一个tab内容
+                  div(style="margin-bottom: 40px") 满足业务连续性和可扩展性的高性能云数据库服务
+                  div.figure
+                    i.font_family.icon-dichan.figure-img
+                    div.figure-text
+                      div.figure-title 解决方案核心说明1
+                      span 新零售销售场景中，企业与顾客均可通过在线连接，在线订单将会超越线下订单。
+                  div.figure
+                    i.font_family.icon-dichan.figure-img
+                    div.figure-text
+                      div.figure-title 解决方案核心说明1
+                      span Active-Active Failover高可用方案，自动故障恢复。
+                  div.figure
+                    i.font_family.icon-dichan.figure-img
+                    div.figure-text
+                      div.figure-title 解决方案核心说明1
+                      span 除了CPU、内存的Scale Up能力外，还支持存储自动扩容。
+                  div.figure
+                    i.font_family.icon-dichan.figure-img
+                    div.figure-text
+                      div.figure-title 解决方案核心说明1
+                      span 采用分布式块存储块Snapshot，感受极速备份以及恢复体验。
+                img(src="./images/solution-pline1_3.jpg")
+
+      div.show-case.white-bg#seven-sight
+        div.show-case-title.dark.mb60 案例客户
+        div.slider.flex.container
+          div.arrow-box.arrow-left-box
+            i.arrow-left
+          div.slider-container
+            each item, index in data.cases
+              if index === 0
+                div.slider-figure.active
+                  img.figure-img(src=item.img)
+                  div.figure-text
+                    div.figure-title #{item.title}
+                    span #{item.desc}
+              else
+                div.slider-figure
+                  img.figure-img(src=item.img)
+                  div.figure-text
+                    div.figure-title #{item.title}
+                    span #{item.desc}
+          div.arrow-box.arrow-right-box
+            i.arrow-right
+  block script
+    script.
+      $('.tab-controller').on('click', function (e) {
+        var $this = $(this)
+
+        $this.addClass('active')
+        $this.siblings().removeClass('active')
+      })
+    include ../snippet/slider.jade
+
