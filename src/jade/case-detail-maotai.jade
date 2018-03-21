@@ -1,51 +1,57 @@
 extends layout.jade
 block title
-  title 客户案例-茅台
+  title 客户案例-茅台云商
 block content
+  -
+    var data = {
+      logo: './images/case-detail-maotai-logo.png',
+      customerName: '茅台云商',
+      // 简介
+      abstract: '茅台酒是我国的国酒，因其独一无二的酿造工艺和深厚的历史底蕴，茅台在白酒行业是顶级的品牌了。作为中国十大奢侈品牌之首，茅台酒一直都是招待贵宾的名酒，在200年前作为朝贡圣品，现在也是招待国家级贵宾的国礼。作为世界三大名酒之一，茅台酒在世界上享有鼎鼎大名。',
+      // 背景故事
+      background: '大数据和互联网时代的到来，正悄然改变传统的消费场景、消费行为，正急剧颠覆传统的商业模式、营销模式。目前茅台酒的消费者结构转型已基本成功，实现了公务消费向大众消费的转变，但营销模式尚未进行有效的升级，还在依赖于传统营销手段、方式和思维，对新理念、新技术的应用尚不广泛，对消费者行为的研究尚不深入，对消费者画像的勾勒尚不清晰，对消费者购买心理的分析尚不精准，营销政策制定和实施滞后，被动的情况依然存在，市场管理和营销服务亟待转型和升级。',
+      // 实现价值
+      value: 'DT时代下的国酒茅台“智慧营销”，是基于业务在线化、智能化营销管理与服务的新型营销模式。它通过充分集成运用阿里巴巴云计算、大数据、人工智能等新技术，重构茅台云商新零售体系，为内部管理创造效率；为消费者创造更加舒适、便利、快捷的现代化、智慧化购物条件；在互联网上创建真实的营销互动，最大限度地满足客户们地需求，围绕线上线下共建更加和谐地新商业生态，从而赢得信息经济新时代地市场先机。',
+      solution: '',
+      products: [
+        {img: './images/i-sale.png', name: 'iSale', href: ''},
+        {img: './images/i-platform.png', name: 'iDigitalPlatform', href: ''},
+        {img: './images/i-cloud.png', name: 'iCloudPlatform', href: ''},
+      ]
+    }
+
   div.case-detail.case-detail-maotai
     div.first-sight
       div.container
         h1.huge-text 客户案例
         div.msg 赋能企业转型，携手企业发展，引领企业创新，成功案例
         div.customer-logo
-          img(src="./images/case-detail-maotai-logo.png" alt="茅台集团").block
-          div.customer-title 茅台集团
+          img(src=data.logo alt=data.customerName).block
+          div.customer-title #{data.customerName}
     div.case-detail-main
       div.container
-        h1.customer-name.large-text 茅台云商
-        div.sub-detail
+        h1.customer-name.large-text #{data.customerName}
+        //div.sub-detail
           span.filed 快消行业
           span.link https://www.cmaotai.com/
         div.f16.sub-title 客户简介
-        p.desc 贵州茅台酒股份有限公司茅台酒年生产量四万吨；43°、38°、33°茅台酒拓展了茅台酒家族低度酒的发展空间；茅台王子酒、茅台迎宾酒满足了中低档消费者的需求；15年、30年、50年、80年陈年茅台酒填补了我国极品酒、年份酒、陈年老窖的空白；在国内独创年代梯级式的产品开发模式。
+        p.desc #{data.abstract}
         div.f16.sub-title 成功故事
         div.caption 故事背景
-        p.desc 形意上：三条曲线—寓意有机茅台、科技茅台、人文茅台；中部弧线—表现川流不息、源远流长的赤水河是企业的源泉，也寓意企业如同赤水河一浪推动一浪，一浪更比一浪高。色意上：黄色—是身份与地位的象征，是茅台特有的文化、特有的历史、特有的品质、特有的地位和“人文茅台”所特有的整合价值。绿色—是企业“绿色时代”造就的结晶体“绿色茅台”和“有机茅台”。银灰色—象征企业融合传统工艺与现代科技，不断探索、研究、开发、实施“科技茅台”战略。
-        div.caption 解决方案
-        p.desc 形意上：三条曲线—寓意有机茅台、科技茅台、人文茅台；中部弧线—表现川流不息、源远流长的赤水河是企业的源泉，也寓意企业如同赤水河一浪推动一浪，一浪更比一浪高。色意上：黄色—是身份与地位的象征，是茅台特有的文化、特有的历史、特有的地位和“人文茅台”所特有的整合价值。
+        p.desc #{data.background}
+        if data.solution
+          div.caption 解决方案
+          p.desc #{data.solution}
         div.caption 实现价值
-        p.desc 形意上：三条曲线—寓意有机茅台、科技茅台、人文茅台；中部弧线—表现川流不息、源远流长的赤水河是企业的源泉，也寓意企业如同赤水河一浪推动一浪，一浪更比一浪高。色意上：黄色—是身份与地位的象征，是茅台特有的文化、特有的历史、特有的品质、特有的地位和“人文茅台”所特有的整合价值。绿色—是企业“绿色时代”造就的结晶体“绿色茅台”和“有机茅台”。银灰色—象征企业融合传统工艺与现代科技，不断探索、研究、开发、实施“科技茅台”战略。
+        p.desc #{data.value}
     div.use-product
       div.container
         div.sub-title 使用产品
         div.product-box
-          div.card-with-link
-            img(src="./images/i-sale.png")
-            div.card-name 数据中台
-            div.divider
-            a().link-btn 查看详情 >
-          div.card-with-link
-            img(src="./images/i-platform.png")
-            div.card-name 业务中台
-            div.divider
-            a().link-btn 查看详情 >
-          div.card-with-link
-            img(src="./images/i-cloud.png")
-            div.card-name BBC商城
-            div.divider
-            a().link-btn 查看详情 >
-
-
-
-
+          each item in data.products
+            div.card-with-link
+              img(src=item.img)
+              div.card-name #{item.name}
+              div.divider
+              a(href=item.href).link-btn 查看详情 >
 
