@@ -2,6 +2,7 @@ extends layout.jade
 block title
   title 客户案例-茅台云商
 block content
+  include mixin/render-case-detail
   -
     var data = {
       logo: './images/case-detail-maotai-logo.png',
@@ -19,39 +20,4 @@ block content
         {img: './images/i-cloud.png', name: 'iCloudPlatform', href: ''},
       ]
     }
-
-  div.case-detail.case-detail-maotai
-    div.first-sight
-      div.container
-        h1.huge-text 客户案例
-        div.msg 赋能企业转型，携手企业发展，引领企业创新，成功案例
-        div.customer-logo
-          img(src=data.logo alt=data.customerName).block
-          div.customer-title #{data.customerName}
-    div.case-detail-main
-      div.container
-        h1.customer-name.large-text #{data.customerName}
-        //div.sub-detail
-          span.filed 快消行业
-          span.link https://www.cmaotai.com/
-        div.f16.sub-title 客户简介
-        p.desc #{data.abstract}
-        div.f16.sub-title 成功故事
-        div.caption 故事背景
-        p.desc #{data.background}
-        if data.solution
-          div.caption 解决方案
-          p.desc #{data.solution}
-        div.caption 实现价值
-        p.desc #{data.value}
-    div.use-product
-      div.container
-        div.sub-title 使用产品
-        div.product-box
-          each item in data.products
-            div.card-with-link
-              img(src=item.img)
-              div.card-name #{item.name}
-              div.divider
-              a(href=item.href).link-btn 查看详情 >
-
+  +renderCaseDetail(data)
