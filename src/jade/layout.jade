@@ -32,8 +32,10 @@ html
       div.navbar-section
         a.logo(href="index.html")
           img(src="../images/logo.png").logo-img
-        a.nav-item(href="index.html") 首页
-        a.nav-item(href="product.html") 产品
+        div.nav-item
+          a.nav-item-link(href="index.html") 首页
+        div.nav-item
+          a.nav-item-link(href="product.html") 产品
         div.product-menu.flex
           div.product-box
             div.product-title
@@ -132,7 +134,7 @@ html
               span.small-text 统一管理API请求
             a.product-item
               div
-                sapn.item-title 易开发EasyDev
+                sapn.item-title 易开发 EasyDev
               span.small-text 帮助企业快速开发
             a.product-item
               div
@@ -150,7 +152,8 @@ html
               div
                 sapn.item-title 云管平台 ICP
               span.small-text 供、销、售商业闭环应用
-        a.nav-item(href="solution.html") 解决方案
+        div.nav-item
+          a.nav-item-link(href="solution.html") 解决方案
         div.product-menu.flex
           div.product-box
             a.product-item(href="platform-check-in.html")
@@ -184,15 +187,18 @@ html
               div
                 sapn.item-title 汽车行业
               span.small-text 汽车行业数字化创新解决方案
-        a.nav-item 开放平台
+        div.nav-item
+          a.nav-item-link 开放平台
         div.product-menu.flex
           div.product-box
             a.product-item(href="platform-check-in.html")
               div
                 sapn.item-title 平台接入
               span.small-text 快速构建开发平台
-        a.nav-item(href="cooperation.html") 合作与生态
-        a.nav-item(href="customer-info.html") 联系我们
+        div.nav-item
+          a.nav-item-link(href="cooperation.html") 合作与生态
+        div.nav-item
+          a.nav-item-link(href="customer-info.html") 联系我们
       //div
         a.nav-item(href="login.html") 登录
         a(href="register.html").btn 免费注册
@@ -232,7 +238,7 @@ html
               span 全天候7x24小时服务
         div.product
           div.product-item
-            p.md-text 智能营销
+            p.md-text 营销智能
             a.product-link 客户管理 i-CRM
             a.product-link 广告投放管理
             a.product-link 营销管理 i-DMP

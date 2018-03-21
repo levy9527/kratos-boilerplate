@@ -239,24 +239,29 @@ $navbar-height = 60px
 
 
   .nav-item
-    position relative
     display inline-block
-    margin-right 30px
+    padding-right 30px
     color white
 
-    &:after
-      position absolute
-      left 0
-      bottom 0
-      content ''
-      width 100%
-      border-top 2px solid transparent
+    .nav-item-link
+      position relative
+      display inline-block
+      color white
+
+      &:after
+        position absolute
+        left 0
+        bottom 0
+        content ''
+        width 100%
+        border-top 2px solid transparent
 
     &:hover
-      color $primary-color
-      // cursor auto
-      &:after
-        border-color $primary-color
+      .nav-item-link
+        color $primary-color
+
+        &:after
+          border-color $primary-color
   .btn
     padding 5px 10px
     color white
