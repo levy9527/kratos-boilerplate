@@ -3,6 +3,7 @@ extends layout.jade
 block title
   title 云徙科技
 block content
+  include var/solutions.jade
   div.index
     div.first-sight
       div.container
@@ -314,82 +315,33 @@ block content
       span 数字智能时代，企业转型、消费升级，专注6大行业企业转型解决方案覆盖300+业务场景全栈解决方案
       div.show-case-content
         div.industry
-          div.industry-item.dichan
-            div.item-name
-              i.font_family.icon-dichan
-              p.f24 地产行业
-            div.item-detail
-              p.f24 地产行业
-              p 随着云计算、大数据的渐渐普及发展，越来越多的传统行业也开始积极拥抱互联网，积极探索互联网带给企业的更多价值。 房地产行业解决方案，集合了丰富的行业解决方案场景，帮助企业快速地参与到云计算的大潮中
-              p.md-text 相关产品
-              div.relative-product
-                div
-                  div.circle
-                    i.font_family.icon-gong
-                  p 门店管家
-                div
-                  div.circle
-                    i.font_family.icon-shop
-                  p BBC商城
-                div
-                  div.circle
-                    i.font_family.icon-fang
-                  p 电商ERP
-                div
-                  div.circle
-                    i.font_family.icon-oth
-                  p B2B智慧订货
-              a.link-btn 查看详情
-          div.industry-item.kuaixiao
-            div.item-name
-              i.font_family.icon-kuaixiao
-              p.f24 日化行业
-            div.item-detail
-              p.f24 日化行业
-              p 随着云计算、大数据的渐渐普及发展，越来越多的传统行业也开始积极拥抱互联网，积极探索互联网带给企业的更多价值。 房地产行业解决方案，集合了丰富的行业解决方案场景，帮助企业快速地参与到云计算的大潮中
-              p.md-text 相关产品
-              div.relative-product
-                div
-                  div.circle
-                    i.font_family.icon-gong
-                  p 门店管家
-                div
-                  div.circle
-                    i.font_family.icon-shop
-                  p BBC商城
-                div
-                  div.circle
-                    i.font_family.icon-fang
-                  p 电商ERP
-                div
-                  div.circle
-                    i.font_family.icon-oth
-                  p B2B智慧订货
-              a.link-btn 查看详情
-          div.industry-item.nongmu
-            div.item-name
-              i.font_family.icon-nongye
-              p.f24 农牧行业新零售
-            div.item-detail
-              p.f24 农牧行业新零售
-          div.industry-item.yiyao
-            div.item-name
-              i.font_family.icon-yiyaoxiang
-              p.f24 医药保健品新零售
-            div.item-detail
-              p.f24 医药保健品新零售
-          div.industry-item.c3
-            div.item-name
-              i.font_family.icon-c_fuzhi_fuzhi
-              p.f24 3C行业新零售
-            div.item-detail
-              p.f24 3C行业新零售
-          div.industry-item.qiche
-            div.item-name
-              i.font_family.icon-qiche_fuzhi
-              p.f24 汽车行业新零售
-            div.item-detail
-              p.f24 汽车行业新零售
+          each item in solutions
+            div.industry-item.dichan
+              div.item-name
+                i.font_family(class=item.icon)
+                p.f24 #{item.title}
+              div.item-detail
+                p.f24 #{item.title}
+                p #{item.desc}
+                p.md-text 相关产品
+                div.relative-product
+                  div
+                    div.circle
+                      i.font_family.icon-gong
+                    p 门店管家
+                  div
+                    div.circle
+                      i.font_family.icon-shop
+                    p BBC商城
+                  div
+                    div.circle
+                      i.font_family.icon-fang
+                    p 电商ERP
+                  div
+                    div.circle
+                      i.font_family.icon-oth
+                    p B2B智慧订货
+                a.link-btn(href=item.href) 查看详情
     div.container.show-case.text-center
       div.show-case-title.dark 客户案例
       span 目前已支持20家行业龙头企业，帮助企业实现技术革新，提升企业运作效率，降低企业成本

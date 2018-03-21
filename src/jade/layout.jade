@@ -27,8 +27,10 @@ html
     // link(rel="stylesheet" href="https://cdn.bootcss.com/spectre.css/0.5.1/spectre.min.css")
     block link
 
+  include var/solutions.jade
+
   -
-    // TODO miffy完成后干掉本注释
+    // TODO miffy完成后干掉本注释, 可以搜索 renderProductItem
     var iMarketing = [
     {title: '客户管理 CRM', desc: '商客关系应用管理', labelClass: ['green'], label: '免费体验'},
     {title: '广告投放管理 SmartAd', desc: '营销实时投放、集中管理' },
@@ -47,6 +49,7 @@ html
     var iCloudPlatform = [
     {title: '云管平台 ICP', desc: '供、销、售商业闭环应用' },
     ]
+
 
   mixin renderProductItem (items)
     each item in items
@@ -146,38 +149,12 @@ html
         div.nav-item
           a.nav-item-link(href="solution.html") 解决方案
         div.product-menu.flex
-          div.product-box
-            a.product-item(href="platform-check-in.html")
-              div
-                sapn.item-title 地产行业
-              span.small-text 地产行业数字化创新解决方案
-            a.product-item(href="platform-check-in.html")
-              div
-                sapn.item-title 日化行业
-              span.small-text 日化行业数字化创新解决方案
-          div.product-box
-            a.product-item(href="platform-check-in.html")
-              div
-                sapn.item-title 酒饮行业
-              span.small-text 酒饮行业数字化创新解决方案
-            a.product-item(href="platform-check-in.html")
-              div
-                sapn.item-title 农牧行业
-              span.small-text 农牧行业数字化创新解决方案
-          div.product-box
-            a.product-item(href="platform-check-in.html")
-              div
-                sapn.item-title 医药行业
-              span.small-text 医药行业数字化创新解决方案
-            a.product-item(href="platform-check-in.html")
-              div
-                sapn.item-title 3C行业
-              span.small-text 3C行业数字化创新解决方案
-          div.product-box
-            a.product-item(href="platform-check-in.html")
-              div
-                sapn.item-title 汽车行业
-              span.small-text 汽车行业数字化创新解决方案
+          each item in solutions
+            div.product-box
+              a.product-item(href=item.href)
+                div
+                  sapn.item-title #{item.title}
+                span.small-text #{item.desc}
         div.nav-item
           a.nav-item-link 开放平台
         div.product-menu.flex
