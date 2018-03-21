@@ -1,0 +1,226 @@
+extends layout.jade
+block title
+  title 开发平台 Stonehenge
+block content
+  section.product
+    div.first-sight
+      div.container
+        h1.huge-text 营销智能 i-Marketing
+        p.desc 北极星是一个全链路多业态的智能化营销平台；解决企业在全链路数据化营销上单一业态到多业态营销链路断裂，以及数据应用和业务应用分裂等问题；帮助企业将数据在具体的运用场景中统一，主要服务垂直行业中的中小型行业代理商和代运营商。
+        button.link-btn 立即体验
+    div.first-sight-anchor
+      div.container
+        a(href="#two-sight") 应用场景
+        a(href="#three-sight") 产品优势
+        a(href="#four-sight") 核心功能
+        a(href="#five-sight") 产品架构
+        a(href="#seven-sight") 案例客户
+    div#two-sight.white-bg
+      div.container.show-case
+        div.show-case-title 应用场景
+        div.component-tabs-wrap
+          div.component-tabs
+            label.component-tab.tab-controller.active(for="tab1")
+              i.font_family.icon-jiaoyupeixun_fuzhi
+              div.word-block 用户全生命周期管理
+            label.component-tab.tab-controller(for="tab2")
+              i.font_family
+              div.word-block 客户线上分析
+            label.component-tab.tab-controller(for="tab3")
+              i.font_family
+              div.word-block 线下门店分析
+            label.component-tab.tab-controller(for="tab4")
+              i.font_family
+              div.word-block 广告投放分析
+          div
+            input(type="radio" name="tabRadio" checked="checked")#tab1
+            div.component-tab-content
+              div.left-side
+                img(src="../../images/product-s1-kehuxianshang.jpg")
+              div.right-side
+                div.md-text.dark 用户全生命周期管理
+                div.content.
+                  根据不同的企业需求，灵活组合产品形态。针对电商场景，提供用户的营销触达、埋点分析、会员信息管理服务，
+                  记录下客户的点滴行为。根据不同的企业需求，灵活组合产品形态。针对电商场景，
+                  提供用户的营销触达、埋点分析、会员信息管理服务针对电商场景，提供用户的营销触达、埋点分析、会员信息管理服务，记录下客户的点滴行为。
+
+            input(type="radio" name="tabRadio")#tab2
+            div.component-tab-content
+              div.left-side
+                img(src="../../images/product-s1-kehuxianshang.jpg")
+              div.right-side
+                div.md-text.dark 客户线上分析
+                div.content.
+                  根据不同的企业需求，灵活组合产品形态。针对电商场景，提供用户的营销触达、埋点分析、会员信息管理服务，
+                  记录下客户的点滴行为。根据不同的企业需求，灵活组合产品形态。针对电商场景，
+                  提供用户的营销触达、埋点分析、会员信息管理服务针对电商场景，提供用户的营销触达、埋点分析、会员信息管理服务，记录下客户的点滴行为。
+            input(type="radio" name="tabRadio")#tab3
+            div.component-tab-content
+              div.left-side
+                img(src="../../images/product-s1-kehuxianshang.jpg")
+              div.right-side
+                div.md-text.dark 线下门店分析
+                div.content.
+                  根据不同的企业需求，灵活组合产品形态。针对电商场景，提供用户的营销触达、埋点分析、会员信息管理服务，
+                  记录下客户的点滴行为。根据不同的企业需求，灵活组合产品形态。针对电商场景，
+                  提供用户的营销触达、埋点分析、会员信息管理服务针对电商场景，提供用户的营销触达、埋点分析、会员信息管理服务，记录下客户的点滴行为。
+            input(type="radio" name="tabRadio")#tab4
+            div.component-tab-content
+              div.left-side
+                img(src="../../images/product-s1-kehuxianshang.jpg")
+              div.right-side
+                div.md-text.dark 广告投放分析
+                div.content.
+                  根据不同的企业需求，灵活组合产品形态。针对电商场景，提供用户的营销触达、埋点分析、会员信息管理服务，
+                  记录下客户的点滴行为。根据不同的企业需求，灵活组合产品形态。针对电商场景，
+                  提供用户的营销触达、埋点分析、会员信息管理服务针对电商场景，提供用户的营销触达、埋点分析、会员信息管理服务，记录下客户的点滴行为。
+    div#three-sight
+      div.container.show-case
+        div.show-case-title.mb60 产品优势
+        div.flex
+          div.scale-item
+            i.font_family.icon-dichan
+            div.md-text.dark 大数据洞察
+            div.text 智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。
+          div.scale-item
+            i.font_family.icon-dichan
+            div.md-text.dark 智能决策模型
+            div.text 多维客人分群模型支持客户进行分群，并分析客群特征，以及基于客群画像，提供客户运营建议，并为商品企划决策提供参考。
+          div.scale-item
+            i.font_family.icon-dichan
+            div.md-text 标签体系
+            div.text 基于不同行业长期实践与总结，形成覆盖客人与商品的广泛多维标签体系，支持与CRM客户关系管理深度集成，实现自动化的精准营销。
+          div.scale-item
+            i.font_family.icon-dichan
+            div.md-text.dark 数字化营销
+            div.text 整合行业资源、帮助企业达成资源的优势互补、合作共赢，从而实现高性价比的营销，精准模式实现全渠道投放，全链路的监控，及投放策略的优化。
+    div#four-sight.product-media
+      div.container.show-case
+        div.show-case-title.white.mb60 核心功能
+        div.media-warp
+          div.media
+            div.media-left
+              div.media-object
+                i.font_family.icon-jiaoyupeixun_fuzhi
+            div.media-body
+              h4.media-heading 广告投放管理
+              div.media-content.
+                全环节的监控与分析
+                可按照投放计划、受众、创意、媒体、分类等多个角度查看展示、点击、转化率、消耗等效果明细及趋势。TB级别的数据秒级延迟。
+          div.media
+            div.media-left
+              div.media-object
+                i.font_family.icon-jiaoyupeixun_fuzhi
+            div.media-body
+              h4.media-heading 门店营销
+              div.media-content.
+                线下流量数据化
+                分析线下客流的趋势、来访频次、停留时间、门店动线、人群特征等信息，将线下流量数据化，直观掌握门店客流情况。
+          div.media
+            div.media-left
+              div.media-object
+                i.font_family.icon-jiaoyupeixun_fuzhi
+            div.media-body
+              h4.media-heading 客户管理
+              div.media-content.
+                全生命周期管理
+                结合行业特征，依据行业场景，以客户全生命周期为维度，去梳理和制定指标。让指标更贴近行业、更贴近行业客户，实现更精准的细分人群、广告投放。
+          div.media
+            div.media-left
+              div.media-object
+                i.font_family.icon-jiaoyupeixun_fuzhi
+            div.media-body
+              h4.media-heading 营销管理
+              div.media-content.
+                快速配置执行
+                通过丰富的营销模版，直接配置营销时间、对象、活动内容、触达方式、分析内容等规则，快速配置执行，无需程序介入二次开发。实现敏捷、灵活、低门槛的自动化营销。
+    div#five-sight.white-bg
+      div.container.show-case.artichet
+        div.show-case-title.mb60 产品架构
+        div.text-center
+          label.tab-controller.link-btn(for="businessArt").active 业务架构
+          label.tab-controller.link-btn(for="techArt") 技术架构
+        div.tab-content-container
+          input(type="radio" name="artichet" checked="checked")#businessArt.hide.artichet-radio
+          div.tab-content
+            div.wide-figure
+              div.figure-box
+                p.md-text.dark 高性能弹性云数据库服务 支持多个云服务器高并发访问
+                div(style="margin-bottom: 40px") 满足业务连续性和可扩展性的高性能云数据库服务
+                div.figure
+                  i.font_family.icon-dichan.figure-img
+                  div.figure-text
+                    div.figure-title 解决方案核心说明1
+                    span 新零售销售场景中，企业与顾客均可通过在线连接，在线订单将会超越线下订单。
+                div.figure
+                  i.font_family.icon-dichan.figure-img
+                  div.figure-text
+                    div.figure-title 解决方案核心说明1
+                    span Active-Active Failover高可用方案，自动故障恢复。
+                div.figure
+                  i.font_family.icon-dichan.figure-img
+                  div.figure-text
+                    div.figure-title 解决方案核心说明1
+                    span 除了CPU、内存的Scale Up能力外，还支持存储自动扩容。
+                div.figure
+                  i.font_family.icon-dichan.figure-img
+                  div.figure-text
+                    div.figure-title 解决方案核心说明1
+                    span 采用分布式块存储块Snapshot，感受极速备份以及恢复体验。
+              img(src="./images/solution-pline1_3.jpg")
+
+          input(type="radio" name="artichet")#techArt.hide.artichet-radio
+          div.tab-content
+            div.wide-figure
+              div.figure-box
+                p.md-text.dark 另一个tab内容
+                div(style="margin-bottom: 40px") 满足业务连续性和可扩展性的高性能云数据库服务
+                div.figure
+                  i.font_family.icon-dichan.figure-img
+                  div.figure-text
+                    div.figure-title 解决方案核心说明1
+                    span 新零售销售场景中，企业与顾客均可通过在线连接，在线订单将会超越线下订单。
+                div.figure
+                  i.font_family.icon-dichan.figure-img
+                  div.figure-text
+                    div.figure-title 解决方案核心说明1
+                    span Active-Active Failover高可用方案，自动故障恢复。
+                div.figure
+                  i.font_family.icon-dichan.figure-img
+                  div.figure-text
+                    div.figure-title 解决方案核心说明1
+                    span 除了CPU、内存的Scale Up能力外，还支持存储自动扩容。
+                div.figure
+                  i.font_family.icon-dichan.figure-img
+                  div.figure-text
+                    div.figure-title 解决方案核心说明1
+                    span 采用分布式块存储块Snapshot，感受极速备份以及恢复体验。
+              img(src="./images/solution-pline1_3.jpg")
+    div.show-case.white-bg#seven-sight
+      div.show-case-title.dark.mb60 案例客户
+      div.slider.flex.container
+        div.arrow-box.arrow-left-box
+          i.arrow-left
+        div.slider-container
+          div.slider-figure.active
+            img.figure-img(src="./images/wechat.png")
+            div.figure-text
+              div.figure-title BBC商城
+              span 91琴趣致力于打造钢琴互联网数字化服务平台，与钢琴用户对接，掌握用户需求，为用户提供物流配送、钢琴调律、钢琴维修、钢琴租赁买卖、产品咨询、钢琴教育、音乐比赛、表演社交、广告、大数据、金融等多种增值服务，打造全球首个“云上钢琴服务”生态系统。
+          div.slider-figure
+            img.figure-img(src="./images/wechat.png")
+            div.figure-text
+              div.figure-title 2 title
+              span 2 span
+        div.arrow-box.arrow-right-box
+          i.arrow-right
+block script
+  script.
+    $('.tab-controller').on('click', function (e) {
+      var $this = $(this)
+
+      $this.addClass('active')
+      $this.siblings().removeClass('active')
+    })
+  include snippet/slider.jade
+
