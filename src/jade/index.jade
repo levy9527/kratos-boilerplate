@@ -4,6 +4,19 @@ block title
   title 云徙科技
 block content
   include var/solutions.jade
+  include var/products.jade
+
+  mixin renderProductItem (items)
+    each item in items
+      a.service-item.flex(href=item.href)
+        div
+          div.item-flex
+            span.title #{item.title}
+            if item.label
+              span.label(class=item.labelClass) #{item.label}
+          span.desc-text #{item.desc}
+        i.arrow-right
+
   div.index
     div.first-sight
       div.container
@@ -20,13 +33,13 @@ block content
         div.container-item.i-product(data-tab="tab1").active
           div.f18 营销智能
           span.f16 i－Marketing
-        div.container-item.i-product(data-tab="tab4")
+        div.container-item.i-product(data-tab="tab2")
           div.f18 全渠道销售
           span.f16 i－Sales
-        div.container-item.i-product(data-tab="tab2")
+        div.container-item.i-product(data-tab="tab3")
           div.f18 企业数字化平台
           span.f16 i-Digital Platform
-        div.container-item.i-product(data-tab="tab1")
+        div.container-item.i-product(data-tab="tab4")
           div.f18 云管平台
           span.f16 i－Cloud Platform
       div
@@ -39,67 +52,7 @@ block content
             a.link-btn 立即试用 >>
           div.service.container
             div.service-row.flex
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                    span.label.green 免费体验
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-            div.service-row.flex
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                    //span.label.green 免费体验
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                    //span.label.green 免费体验
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-            div.service-row.flex
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                    //span.label.green 免费体验
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 数据可视化
-                    span.label.primary-bg 推荐
-                  span.desc-text 可视化数据呈现、提供数据作战方案
-                i.arrow-right
+              +renderProductItem(iMarketing)
         div.tab-content#tab2
           div.container.figure.product-figure
             img(src="./images/wechat.png").figure-img
@@ -109,67 +62,7 @@ block content
             a.link-btn 立即试用 >>
           div.service.container
             div.service-row.flex
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                    span.label.green 免费体验
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                    span.label.green 免费体验
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-            div.service-row.flex
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                    //span.label.green 免费体验
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-            div.service-row.flex
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                    //span.label.green 免费体验
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 数据可视化
-                    span.label.primary-bg 推荐
-                  span.desc-text 可视化数据呈现、提供数据作战方案
-                i.arrow-right
+              +renderProductItem(iSales)
         div.tab-content#tab3
           div.container.figure.product-figure
             img(src="./images/wechat.png").figure-img
@@ -179,67 +72,7 @@ block content
             a.link-btn 立即试用 >>
           div.service.container
             div.service-row.flex
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                    span.label.green 免费体验
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-            div.service-row.flex
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                    //span.label.green 免费体验
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                    //span.label.green 免费体验
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-            div.service-row.flex
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                    //span.label.green 免费体验
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 数据可视化
-                    span.label.primary-bg 推荐
-                  span.desc-text 可视化数据呈现、提供数据作战方案
-                i.arrow-right
+              +renderProductItem(iDigitalPlatform)
         div.tab-content#tab4
           div.container.figure.product-figure
             img(src="./images/wechat.png").figure-img
@@ -249,67 +82,7 @@ block content
             a.link-btn 立即试用 >>
           div.service.container
             div.service-row.flex
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                    span.label.green 免费体验
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-            div.service-row.flex
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                    //span.label.green 免费体验
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                    //span.label.green 免费体验
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-            div.service-row.flex
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 营销智能
-                    //span.label.green 免费体验
-                  span.desc-text 商客关系应用管理
-                i.arrow-right
-              div.service-item.flex
-                div
-                  div.item-flex
-                    span.title 数据可视化
-                    span.label.primary-bg 推荐
-                  span.desc-text 可视化数据呈现、提供数据作战方案
-                i.arrow-right
+              +renderProductItem(iCloudPlatform)
     div.show-case.text-center(style="padding-bottom: 0").solution
       div.show-case-title.white 行业解决方案
       span 数字智能时代，企业转型、消费升级，专注6大行业企业转型解决方案覆盖300+业务场景全栈解决方案

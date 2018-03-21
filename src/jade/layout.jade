@@ -28,31 +28,7 @@ html
     block link
 
   include var/solutions.jade
-
-  -
-    // miffy 看这里: 完成后干掉注释
-    // TODO 1.对应tower上的任务, 可以搜索 renderProductItem
-    // TODO 2.本页改造完成后, 试试进阶任务: 把相关变量抽取出来, 放到var/products.jade中, 并把变量在index.jade中使用(index.jade的四个tab的内容也使用函数来渲染)
-    // TODO 3.不懂就问
-    var iMarketing = [
-    {title: '客户管理 CRM', desc: '商客关系应用管理', labelClass: ['green'], label: '免费体验'},
-    {title: '广告投放管理 SmartAd', desc: '营销实时投放、集中管理' },
-    {title: '营销管理 DMM', desc: '市场营销收集' },
-    {title: '营销数据分析 SmartDA', desc: '数据智能化分析' },
-    ]
-
-    var iSales = [
-    {title: '数字商城 DMall', desc: '供、销、售商业闭环应用' },
-    ]
-
-    var iDigitalPlatform = [
-    {title: '开发平台 Stonehenge', desc: '提供对外开发接口', href: 'product-stonehenge.html' },
-    ]
-
-    var iCloudPlatform = [
-    {title: '云管平台 ICP', desc: '供、销、售商业闭环应用' },
-    ]
-
+  include var/products.jade
 
   mixin renderProductItem (items)
     each item in items
@@ -87,63 +63,11 @@ html
               span.white.md-text 全渠道销售
               span.small-text.primary-color i－Sales
             +renderProductItem(iSales)
-            a.product-item
-              div
-                sapn.item-title 数字门店 Dstore
-              span.small-text 提供智能化门店
-            a.product-item
-              div
-                sapn.item-title 社会化分销 SDP
-              span.small-text 提供智能化分销
-            a.product-item
-              div
-                sapn.item-title 智能客服 CSC
-              span.small-text 提供智能化客服
-            a.product-item
-              div
-                sapn.item-title 收银&POS DCC
-              span.small-text 零售收银、POS应用等
-            a.product-item
-              div
-                sapn.item-title 智慧订货 SCM
-              span.small-text 提供智能化订货
-            a.product-item
-              div
-                sapn.item-title 电商ERP DERP
-              span.small-text 电商在线一体化管理
           div.product-box
             div.product-title
               span.white.md-text 企业数字化平台
               span.small-text.primary-color i－Digital Platform
             +renderProductItem(iDigitalPlatform)
-            a.product-item(href="product-tourbillon.html")
-              div
-                sapn.item-title 运营平台 Tourbillon
-              span.small-text 让用户轻松便捷管理企业
-            a.product-item(href="product-colosseum.html")
-              div
-                sapn.item-title 运维平台 Colosseum
-              span.small-text 让用户轻松便捷管理企业
-            a.product-item(href="product-pyramid.html")
-              div
-                sapn.item-title 组件市场 Pyramid
-              span.small-text 自由构建业务系统
-            a.product-item(href="product-greatwall.html")
-              div
-                sapn.item-title API网关 Greatwall
-              span.small-text 统一管理API请求
-            a.product-item
-              div
-                sapn.item-title 易开发 EasyDev
-              span.small-text 帮助企业快速开发
-            a.product-item(href="product-baton.html")
-              div
-                sapn.item-title 微服务治理 Baton
-              span.small-text 提供微服务治理服务
-            a.product-item
-              div
-                sapn.item-title 主数据管理 IMDM
-              span.small-text 提供数据管理服务
           div.product-box
             div.product-title
               span.white.md-text 云管平台
