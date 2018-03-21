@@ -27,6 +27,40 @@ html
     // link(rel="stylesheet" href="https://cdn.bootcss.com/spectre.css/0.5.1/spectre.min.css")
     block link
 
+  -
+    // TODO miffy完成后干掉本注释
+    var iMarketing = [
+    {title: '客户管理 CRM', desc: '商客关系应用管理', labelClass: ['green'], label: '免费体验'},
+    {title: '广告投放管理 SmartAd', desc: '营销实时投放、集中管理' },
+    {title: '营销管理 DMM', desc: '市场营销收集' },
+    {title: '营销数据分析 SmartDA', desc: '数据智能化分析' },
+    ]
+
+    var iSales = [
+    {title: '数字商城 DMall', desc: '供、销、售商业闭环应用' },
+    ]
+
+    var iDigitalPlatform = [
+    {title: '开发平台 Stonehenge', desc: '提供对外开发接口', href: 'product-stonehenge.html' },
+    ]
+
+    var iCloudPlatform = [
+    {title: '云管平台 ICP', desc: '供、销、售商业闭环应用' },
+    ]
+
+  mixin renderProductItem (items)
+    each item in items
+      a.product-item(href=item.href)
+        div
+          sapn.item-title #{item.title}
+          if item.label
+            span.label(class=item.labelClass) #{item.label}
+        span.small-text #{item.desc}
+  mixin renderProductLink (items)
+    each item in items
+      a.product-link(href=item.href) #{item.title}
+
+
   body
     header.navbar
       div.navbar-section
@@ -41,55 +75,23 @@ html
             div.product-title
               span.white.md-text 营销智能
               span.small-text.primary-color i－Marketing
-            a.product-item
-              div
-                sapn.item-title 客户管理 i-CRM
-                span.label.green 免费体验
-              span.small-text 商客关系应用管理
-            a.product-item
-              div
-                sapn.item-title 广告投放管理 i-SmartAd
-              span.small-text 营销实时投放、集中管理
-            a.product-item
-              div
-                sapn.item-title 营销管理 i-DMM
-              span.small-text 市场营销收集
-            a.product-item
-              div
-                sapn.item-title 营销数据分析 i-SmartDA
-              span.small-text 数据智能化分析
-            //a.product-item
-              div
-                sapn.item-title 智能营销数据中台
-              span.small-text 大数据作战系统
-            //a.product-item
-              div
-                sapn.item-title 门店运营
-              span.small-text 门店宣传、运营方式和模式
-            //a.product-item
-              div
-                sapn.item-title 数据可视化
-              span.small-text 可视化数据呈现、提供数据作战方案
+            +renderProductItem(iMarketing)
           div.product-box
             div.product-title
               span.white.md-text 全渠道销售
               span.small-text.primary-color i－Sales
+            +renderProductItem(iSales)
             a.product-item
               div
-                sapn.item-title 数字商城 i-DMall
-                span.label.green 免费体验
-              span.small-text 供、销、售商业闭环应用
-            a.product-item
-              div
-                sapn.item-title 数字门店 i-Dstore
+                sapn.item-title 数字门店 Dstore
               span.small-text 提供智能化门店
             a.product-item
               div
-                sapn.item-title 社会化分销 i-SDP
+                sapn.item-title 社会化分销 SDP
               span.small-text 提供智能化分销
             a.product-item
               div
-                sapn.item-title 智能客服 i-CSC
+                sapn.item-title 智能客服 CSC
               span.small-text 提供智能化客服
             a.product-item
               div
@@ -97,25 +99,17 @@ html
               span.small-text 零售收银、POS应用等
             a.product-item
               div
-                sapn.item-title 智慧订货 i-SCM
+                sapn.item-title 智慧订货 SCM
               span.small-text 提供智能化订货
             a.product-item
               div
-                sapn.item-title 电商ERP i-DERP
+                sapn.item-title 电商ERP DERP
               span.small-text 电商在线一体化管理
-            //  重复?
-            a.product-item
-              div
-                sapn.item-title 销售数据分析 i-SDA
-              span.small-text 数据智能化分析
           div.product-box
             div.product-title
               span.white.md-text 企业数字化平台
               span.small-text.primary-color i－Digital Platform
-            a.product-item(href="product-stonehenge.html")
-              div
-                sapn.item-title 开发平台 Stonehenge
-              span.small-text 提供对外开发接口
+            +renderProductItem(iDigitalPlatform)
             a.product-item(href="product-tourbillon.html")
               div
                 sapn.item-title 运营平台 Tourbillon
@@ -148,10 +142,7 @@ html
             div.product-title
               span.white.md-text 云管平台
               span.small-text.primary-color i－Cloud Platform
-            a.product-item
-              div
-                sapn.item-title 云管平台 ICP
-              span.small-text 供、销、售商业闭环应用
+            +renderProductItem(iCloudPlatform)
         div.nav-item
           a.nav-item-link(href="solution.html") 解决方案
         div.product-menu.flex
@@ -239,31 +230,16 @@ html
         div.product
           div.product-item
             p.md-text 营销智能
-            a.product-link 客户管理 i-CRM
-            a.product-link 广告投放管理
-            a.product-link 营销管理 i-DMP
-            a.product-link 电商营销管理
-            a.product-link 门店运营
-            a.product-link 智能营销数据中台
-            a.product-link 数据可视化
+            +renderProductLink(iMarketing)
           div.product-item
             p.md-text 全渠道销售
-            a.product-link BBC商城
-            a.product-link B2B智慧订货
-            a.product-link 电商ERP
+            +renderProductLink(iSales)
           div.product-item
             p.md-text 企业数字化平台
-            a.product-link 业务中台
-            a.product-link 数据中台
-            a.product-link 开发平台
-            a.product-link 运营平台
-            a.product-link 运维平台
-            a.product-link 组件市场
-            a.product-link API网关
+            +renderProductLink(iDigitalPlatform)
           div.product-item
-            p.md-text 开发平台
-            a.product-link API平台
-            a.product-link 应用开发
+            p.md-text 云管平台
+            +renderProductLink(iCloudPlatform)
           div.product-item
             p.md-text 关注我们
             figure
