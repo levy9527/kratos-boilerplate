@@ -245,23 +245,18 @@
 
   .trademark {
     display flex
+    flex-wrap wrap
 
-    border 1px solid $border-color
-
-    &:last-child {
-      border-top 0
-    }
+    //border 1px solid $border-color
   }
 
-  .placeholder-box {
+  .placeholder-box
+    box-sizing border-box
     width 200px
     height 210px
     border-right 1px solid $border-color
+    border-top 1px solid $border-color
 
-    &:last-child {
-      border-right 0
-    }
-  }
 
   .mark-item {
     width 100%

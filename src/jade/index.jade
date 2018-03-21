@@ -347,67 +347,27 @@ block content
       span 目前已支持20家行业龙头企业，帮助企业实现技术革新，提升企业运作效率，降低企业成本
       div.show-case-content
         div.trademark
-          div.placeholder-box
-            div.mark-item.text-center
-              img(src="./images/case-detail-maotai-logo.png" alt="茅台集团").item-img
-              div.item-text 占据了白酒市场制高点，称雄于中国品占据了白酒市场制高点，称雄于中国极品酒市场酒市场占据了白酒市场制高点，称雄于中国品。
-              a(href="case-detail-maotai.html").link-btn 了解更多
-          div.placeholder-box
-            div.mark-item.text-center
-              img(src="./images/case-detail-pg.jpg" alt="").item-img
-              div.item-text
-              a().link-btn 了解更多
-          div.placeholder-box
-            div.mark-item.text-center
-              img(src="./images/case-detail-unkown.jpg" alt="").item-img
-              div.item-text 占据了白酒市场制高点，称雄于中国品占据了白酒市场制高点，称雄于中国极品酒市场酒市场占据了白酒市场制高点，称雄于中国品。
-              a().link-btn 了解更多
-          div.placeholder-box
-            div.mark-item.text-center
-              img(src="./images/case-detail-changan.jpg" alt="").item-img
-              div.item-text
-              a().link-btn 了解更多
-          div.placeholder-box
-            div.mark-item.text-center
-              img(src="./images/case-detail-zhupi.jpg" alt="图片加载中...").item-img
-              div.item-text 占据了白酒市场制高点，称雄于中国品占据了白酒市场制高点，称雄于中国极品酒市场酒市场占据了白酒市场制高点，称雄于中国品。
-              a().link-btn 了解更多
-          div.placeholder-box
-            div.mark-item.text-center
-              img(src="./images/case-detail-jili.jpg" alt="图片加载中...").item-img
-              div.item-text
-              a().link-btn 了解更多
-        div.trademark
-          div.placeholder-box
-            div.mark-item.text-center
-              img(src="./images/case-detail-gangqin.jpg" alt="图片加载中...").item-img
-              div.item-text 占据了白酒市场制高点，称雄于中国品占据了白酒市场制高点，称雄于中国极品酒市场酒市场占据了白酒市场制高点，称雄于中国品。
-              a().link-btn 了解更多
-          div.placeholder-box
-            div.mark-item.text-center
-              img(src="./images/case-detail-fuli.jpg" alt="图片加载中...").item-img
-              div.item-text
-              a().link-btn 了解更多
-          div.placeholder-box
-            div.mark-item.text-center
-              img(src="./images/case-detail-yangxiang.jpg" alt="图片加载中...").item-img
-              div.item-text 占据了白酒市场制高点，称雄于中国品占据了白酒市场制高点，称雄于中国极品酒市场酒市场占据了白酒市场制高点，称雄于中国品。
-              a().link-btn 了解更多
-          div.placeholder-box
-            div.mark-item.text-center
-              img(src="./images/case-detail-yiqi.jpg" alt="图片加载中...").item-img
-              div.item-text
-              a().link-btn 了解更多
-          div.placeholder-box
-            div.mark-item.text-center
-              img(src="./images/case-detail-zhengda.jpg" alt="图片加载中...").item-img
-              div.item-text 占据了白酒市场制高点，称雄于中国品占据了白酒市场制高点，称雄于中国极品酒市场酒市场占据了白酒市场制高点，称雄于中国品。
-              a().link-btn 了解更多
-          div.placeholder-box
-            div.mark-item.text-center
-              img(src="./images/case-detail-hengfu.jpg" alt="图片加载中...").item-img
-              div.item-text
-              a().link-btn 了解更多
+          -
+            var cases = [
+            {img: './images/case-detail-maotai-logo.png', desc: '占据了白酒市场制高点，称雄于中国品占据了白酒市场制高点，称雄于中国极品酒市场酒市场占据了白酒市场制高点，称雄于中国品。', href: 'case-detail-maotai.html'},
+            {img: './images/case-detail-pg.jpg', desc: '', href: 'case-detail-pg.html'},
+            {img: './images/case-detail-unkown.jpg', desc: '', href: 'case-detail-unkown.html'},
+            {img: './images/case-detail-changan.jpg', desc: '', href: 'case-detail-changan.html'},
+            {img: './images/case-detail-zhupi.jpg', desc: '', href: 'case-detail-zhupi.html'},
+            {img: './images/case-detail-jili.jpg', desc: '', href: 'case-detail-jili.html'},
+            {img: './images/case-detail-gangqin.jpg', desc: '', href: 'case-detail-gangqin.html'},
+            {img: './images/case-detail-fuli.jpg', desc: '', href: 'case-detail-fuli.html'},
+            {img: './images/case-detail-yangxiang.jpg', desc: '', href: 'case-detail-yangxiang.html'},
+            {img: './images/case-detail-yiqi.jpg', desc: '', href: 'case-detail-yiqi.html'},
+            {img: './images/case-detail-zhengda.jpg', desc: '', href:'case-detail-zhengda.html'},
+            {img: './images/case-detail-hengfu.jpg', desc: '', href: 'case-detail-hengfu.html'},
+            ]
+          each item in cases
+            div.placeholder-box
+              div.mark-item.text-center
+                img(src=item.img).item-img
+                div.item-text #{item.desc}
+                a(href=item.href).link-btn 了解更多
     div.fixed-btn
       i.font_family.icon-paimaizixun_fuzhi
       div(onclick="location.href='customer-info.html'") 业务咨询
