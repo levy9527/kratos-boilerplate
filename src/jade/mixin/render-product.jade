@@ -29,7 +29,7 @@ mixin renderProduct (data)
                     div.word-block #{item.name}
             div
               each item, index in data.situations
-                input(type="radio" name="tabRadio" checked="checked" id="tab" + index)
+                input(type="radio" name="tabRadio" checked=(index === 0) id="tab" + index)
                 div.component-tab-content
                   div.left-side
                     img(src=item.img)
