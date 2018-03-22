@@ -97,24 +97,18 @@ block content
                 p.f24 #{item.title}
                 p #{item.desc}
                 p.md-text 相关产品
-                div.relative-product
-                  div
-                    div.circle
-                      i.font_family.icon-gong
-                    p 门店管家
-                  div
-                    div.circle
-                      i.font_family.icon-shop
-                    p BBC商城
-                  div
-                    div.circle
-                      i.font_family.icon-fang
-                    p 电商ERP
-                  div
-                    div.circle
-                      i.font_family.icon-oth
-                    p B2B智慧订货
-                a.link-btn(href=item.href) 查看详情
+                if item.relativeProducts
+                  div.relative-product
+                    each d in item.relativeProducts
+                      div
+                        div.circle
+                          i.font_family(class=d.icon)
+                        p #{d.desc}
+                  a.link-btn(href=item.href) 查看详情
+                else
+                  div 敬请期待
+
+
     div.container.show-case.text-center
       div.show-case-title.dark 客户案例
       span 目前已支持20家行业龙头企业，帮助企业实现技术革新，提升企业运作效率，降低企业成本
