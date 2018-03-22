@@ -72,57 +72,29 @@ mixin renderProduct (data)
             div.tab-content
               div.wide-figure
                 div.figure-box
-                  p.md-text.dark 高性能弹性云数据库服务 支持多个云服务器高并发访问
-                  div(style="margin-bottom: 40px") 满足业务连续性和可扩展性的高性能云数据库服务
-                  div.figure
-                    i.font_family.icon-dichan.figure-img
-                    div.figure-text
-                      div.figure-title 解决方案核心说明1
-                      span 新零售销售场景中，企业与顾客均可通过在线连接，在线订单将会超越线下订单。
-                  div.figure
-                    i.font_family.icon-dichan.figure-img
-                    div.figure-text
-                      div.figure-title 解决方案核心说明1
-                      span Active-Active Failover高可用方案，自动故障恢复。
-                  div.figure
-                    i.font_family.icon-dichan.figure-img
-                    div.figure-text
-                      div.figure-title 解决方案核心说明1
-                      span 除了CPU、内存的Scale Up能力外，还支持存储自动扩容。
-                  div.figure
-                    i.font_family.icon-dichan.figure-img
-                    div.figure-text
-                      div.figure-title 解决方案核心说明1
-                      span 采用分布式块存储块Snapshot，感受极速备份以及恢复体验。
-                img(src="./images/solution-pline1_3.jpg")
+                  p.md-text.dark #{data.businessArt.title}
+                  div(style="margin-bottom: 40px") #{data.businessArt.desc}
+                  each item in data.businessArt.solutions
+                    div.figure
+                      i.font_family.figure-img(class=item.icon)
+                      div.figure-text
+                        div.figure-title #{item.title}
+                        span #{item.desc}
+                img(src=data.businessArt.img)
 
             input(type="radio" name="artichet")#techArt.hide.artichet-radio
             div.tab-content
               div.wide-figure
                 div.figure-box
-                  p.md-text.dark 另一个tab内容
-                  div(style="margin-bottom: 40px") 满足业务连续性和可扩展性的高性能云数据库服务
-                  div.figure
-                    i.font_family.icon-dichan.figure-img
-                    div.figure-text
-                      div.figure-title 解决方案核心说明1
-                      span 新零售销售场景中，企业与顾客均可通过在线连接，在线订单将会超越线下订单。
-                  div.figure
-                    i.font_family.icon-dichan.figure-img
-                    div.figure-text
-                      div.figure-title 解决方案核心说明1
-                      span Active-Active Failover高可用方案，自动故障恢复。
-                  div.figure
-                    i.font_family.icon-dichan.figure-img
-                    div.figure-text
-                      div.figure-title 解决方案核心说明1
-                      span 除了CPU、内存的Scale Up能力外，还支持存储自动扩容。
-                  div.figure
-                    i.font_family.icon-dichan.figure-img
-                    div.figure-text
-                      div.figure-title 解决方案核心说明1
-                      span 采用分布式块存储块Snapshot，感受极速备份以及恢复体验。
-                img(src="./images/solution-pline1_3.jpg")
+                  p.md-text.dark #{data.techArt.title}
+                  div(style="margin-bottom: 40px") #{data.techArt.desc}
+                  each item in data.techArt.solutions
+                    div.figure
+                      i.font_family.figure-img(class=item.icon)
+                      div.figure-text
+                        div.figure-title #{item.title}
+                        span #{item.desc}
+                img(src=data.techArt.img)
 
       div.show-case.white-bg#seven-sight
         div.show-case-title.dark.mb60 案例客户
