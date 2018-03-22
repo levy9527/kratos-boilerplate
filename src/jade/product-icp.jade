@@ -1,0 +1,92 @@
+extends layout.jade
+block title
+  -
+    var data = {
+    // 产品名
+    title: '云管平台  ICP',
+    // 产品定义
+    desc: '云徙云管理平台核心目的是“集中管理”。通过统一管控公有云、私有云资源，实现云资源、资产、运维、监控、流程管控的一体化管理，为企业在DT时代提供敏捷（开发）、高效（运维）、精准（运营）的云服务。作为第三代是融合的云服务，通过一体化的整体交付、不仅交付计算资源、存储资源、网络资源还有基础软件、数据库、中间件以及混合云的交付和管理。',
+    // 立即体验链接
+    href: '',
+    // 应用场景
+    // 如果要换行, 在需要换行处加 \n
+    situations: [
+    {
+    name: '多业务系统支持',
+    desc: 'i-Cloud Platform可为大型数据数据中心的资源提供统一管理平台，管理多个开源或者异构的云计算技术或产品，支撑较多的业务系统。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi'
+    },
+    {
+    name: '多虚拟化平台支持',
+    desc: '大型企业可能存在多种不同的虚拟平台，如Vmware、KVM等，但是各个虚拟化平台都各自提供管理平台，导致资源管理不便， i-Cloud Platform可为多种虚拟化平台提供统一的管理支持。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi'
+    },
+    {
+    name: '多个云支持',
+    desc: '企业多个部门实施了多朵私有云，需要统一集成管理， i-Cloud Platform可为企业提供统一的管理平台。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi'
+    },
+    {
+    name: '混合云支持',
+    desc: '通常基于Web的业务都可以不属于公有云，而处于安全或合规需要，ERP等核心业务部署于私有云， i-Cloud Platform可为这种融合的混合云提供统一的管理平台。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi'
+    }
+    ],
+    // 产品优势
+    advantages: [
+    {title: '多云选择', desc: '支持多种云，如公有云、私有云、混合云等，提供了一个灵活的、可扩展的基础架构以满足当前和未来的需要。', icon: 'icon-dichan'},
+    {title: '自动运维', desc: '基础资源自动部署、自动回收；数据库自动备份、自动巡检；用户自助流程申请等自动化运维方式，大大提高了云服务效率。', icon: 'icon-dichan'},
+    {title: '快速响应', desc: '可以即时响应业务需求，快速部署应用，大幅降低交付时间，在最短时间内完成云服务输出。', icon: 'icon-dichan'},
+    {title: 'IaaS+支持', desc: '深度整合了IaaS与PaaS层资源，结合中间件可实现上层应用的敏捷开发和高效扩展，减少重复性基础运维工作，解放人力，支持业务创新，加速企业信息化转型进程。', icon: 'icon-dichan'}
+    ],
+    // 核心功能
+    coreFuns: [
+    {title: '管理云', desc: '统一管理公有云和私有云；统一管理物理机、虚拟机、容器、存储资源、网络资源、数据库。\n可以对资源进行容量预测，并根据业务或部门进行成本分析，预测、分析结果可以报表导出，为管理者提供运营支持。\n可以对用户秘钥、主机秘钥、数据库秘钥统一进行管理，秘钥无需保存在excel或记事本中，便于变更追踪，提升安全防护。', icon: 'icon-dichan'},
+    {title: '使用云', desc: '统一测试、开发、生产环境部署，部署过程可视化，实施展示部署进程。\n用户角色化，不同的角色分配不同的权限，并可对用户行为进行事后审计。\n自助服务，用户可以自助发起资源申请或业务发布流程，流程审批规范化、标准化。', icon: 'icon-dichan'},
+    {title: '维护云  ', desc: '资源监控，可以对cpu、内存、磁盘、网络、数据库、应用等资源进行实时监控。\n数据库一键部署、自动备份、自动巡检，为云平台IaaS+的融合奠定基础。\nCMDB的引入解决了配置信息孤立甚至多头维护的问题，让配置管理不再成为技术人员的负担。 ', icon: 'icon-dichan'}
+    ],
+    // 案例客户
+    cases: [
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', img: './images/wechat.png'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', img: './images/wechat.png'}
+    ],
+    // 技术架构
+    techArt: {
+    // 标题
+    title: '高性能弹性云数据库服务 支持多个云服务器高并发访问',
+    // 描述
+    desc: '满足业务连续性和可扩展性的高性能云数据库服务',
+    // 架构图
+    img: './images/solution-pline1_3.jpg',
+    // 解决方案说明, 架构图描述
+    solutions: [
+    {title: '', desc: '基础架构主要体现为对于计算、存储、网络资源的虚拟化，通过虚拟化实现对于物理资源的逻辑化并与硬件解耦', icon: ''},
+    {title: '', desc: '资源层主要包括生命周期管理、配置与变更管理、性能管理、容量管理、计费管理', icon: ''},
+    {title: '', desc: '服务层包括服务目录、自服务管理、流程管理', icon: ''},
+    {title: '', desc: '用户层主要体现为用户角色、权限管理', icon: ''}
+    ]
+    },
+    // 业务架构
+    businessArt: {
+    // 标题
+    title: '高性能弹性云数据库服务 支持多个云服务器高并发访问',
+    // 描述
+    desc: '满足业务连续性和可扩展性的高性能云数据库服务',
+    // 架构图
+    img: './images/solution-pline1_3.jpg',
+    // 解决方案说明, 架构图描述
+    solutions: [
+    {title: '', desc: '统一纳管物理机、虚拟机、公有云、私有云、Docker', icon: ''},
+    {title: '', desc: '数据库自动部署、自动巡检、备份还原、高可用支持', icon: ''},
+    {title: '', desc: '以服务目录形式自动化交付IT资源', icon: ''},
+    {title: '', desc: '以CMDB为核心，支撑整个云平台业务模块实现', icon: ''},
+    {title: '', desc: '对基础设施资源管理和流程审批做到流程化、规范化、标准化', icon: ''}
+    ]
+    }
+    }
+  title #{data.title}
+  include mixin/render-product.jade
