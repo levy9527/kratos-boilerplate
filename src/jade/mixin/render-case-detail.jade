@@ -16,13 +16,15 @@ mixin renderCaseDetail (data)
         div.f16.sub-title 客户简介
         p.desc #{data.abstract}
         div.f16.sub-title 成功故事
-        div.caption 故事背景
-        p.desc #{data.background}
+        if data.background
+          div.caption 故事背景
+          p.desc #{data.background}
         if data.solution
           div.caption 解决方案
           p.desc #{data.solution}
-        div.caption 实现价值
-        p.desc #{data.value}
+        if data.value
+          div.caption 实现价值
+          p.desc #{data.value}
     div.use-product
       div.container
         div.sub-title 使用产品
