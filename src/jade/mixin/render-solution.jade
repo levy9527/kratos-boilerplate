@@ -1,0 +1,84 @@
+mixin renderSolution (data)
+  block content
+    section.solution
+      div.first-sight
+        div.container
+          h1.huge-text #{data.title}
+          p.desc
+          a.link-btn(href=data.href) 立即咨询
+      div.container.ad.flex
+        each item in data.advantages
+          div.container-item.text-center
+            i.font_family(class=item.icon)
+            p.md-text.dark #{item.title}
+            span #{item.desc}
+
+      div.show-case.total-view
+        div.show-case-title.mb60 解决方案全景洞察
+        div.flex.container
+          img(src=data.solution.img).total-view-img
+          div.figure-box
+            each d in data.solution.details
+              div.figure
+                i.font_family.figure-img(class=d.icon)
+                div.figure-text
+                  div.figure-title #{d.title}
+                  span #{d.desc}
+
+      div.show-case.core-business
+        div.show-case-title.mb60.white 核心业务场景
+        // tab controller
+        div.container.flex.white
+          each d,index in data.situations
+            label(for='tab' + index class=(index === 0 ? 'active' : '')).container-item.business-item.tab-content-label
+              i.font_family(class=d.icon)
+              span.f16 #{d.name}
+
+        each d,index in data.situations
+          input(type="radio" value="1" name="tabContentRadio" checked=(index === 0) id="tab" + index)
+          div.container.tab-content.white-bg
+            img(src=d.img)
+            div.text
+              p.md-text.dark #{d.name}
+              p #{d.desc}
+
+      div.show-case
+        div.show-case-title.dark.mb60 相关产品推荐
+        div.container.flex
+          each d in data.relativeProducts
+            div.scale-item
+              i.font_family(class=d.icon)
+              div.md-text.dark #{d.title}
+              div.text #{d.desc}
+              a.link-btn(href=d.href) 立即体验
+
+      div.show-case.white-bg
+        div.show-case-title.dark.mb60 案例客户
+        div.slider.flex.container
+          div.arrow-box.arrow-left-box
+            i.arrow-left
+          div.slider-container
+            each item, index in data.cases
+              div.slider-figure(class=(index === 0 ? 'active' : ''))
+                img.figure-img(src=item.img)
+                div.figure-text
+                  div.figure-title #{item.title}
+                  span #{item.desc}
+          div.arrow-box.arrow-right-box
+            i.arrow-right
+  block script
+    script.
+      var labels = $('.tab-content-label')
+
+      labels.on('click', function (e) {
+        var $this = $(this)
+
+        $this.addClass('active')
+        $this.siblings().removeClass('active')
+
+      })
+    include ../snippet/slider.jade
+
+
+
+

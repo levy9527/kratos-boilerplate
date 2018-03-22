@@ -1,171 +1,67 @@
 extends layout.jade
 block title
-  title 解决方案
-block content
-  section.solution
-    div.first-sight
-      div.container
-        h1.huge-text 酒饮行业新零售解决方案
-        p.desc
-          | 酒饮行业全域立体智慧营销，BBC商城、B2B智慧订货、门店管家、电商ERP；
-          | 助力消费品企业转型搭上新零售快车 数字化智能化
-        button.link-btn 立即咨询
-    div.container.ad.flex
-      div.container-item.text-center
-        i.font_family.icon-dichan
-        p.md-text.dark 全渠道
-        span 线上线下全触点融合融通，商品、库存、会员、服务等环节皆贯穿为一个整体。
-      div.container-item.text-center
-        i.font_family.icon-dichan
-        p.md-text.dark 数字化/智能化
-        span 企业与商家应通过技术与硬件重构零售卖场空间，数字化与智能化终端改造，实现数字化运营。
-      div.container-item.text-center
-        i.font_family.icon-dichan
-        p.md-text.dark 新型店铺
-        span 门店除售卖的功能，更应富有体验、社交功能，商品多元陈列展示。
-      div.container-item.text-center
-        i.font_family.icon-dichan
-        p.md-text.dark 订单统一在线化
-        span 新零售销售场景中，企业与顾客均可通过在线连接，在线订单将会超越线下订单。
-    div.show-case.total-view
-      div.show-case-title.mb60 解决方案全景洞察
-      div.flex.container
-        img(src="./images/solution-pline1_3.jpg").total-view-img
-        div.figure-box
-          div.figure
-            i.font_family.icon-dichan.figure-img
-            div.figure-text
-              div.figure-title 解决方案核心说明1
-              span 新零售销售场景中，企业与顾客均可通过在线连接，在线订单将会超越线下订单。
-          div.figure
-            i.font_family.icon-dichan.figure-img
-            div.figure-text
-              div.figure-title 解决方案核心说明1
-              span Active-Active Failover高可用方案，自动故障恢复。
-          div.figure
-            i.font_family.icon-dichan.figure-img
-            div.figure-text
-              div.figure-title 解决方案核心说明1
-              span 除了CPU、内存的Scale Up能力外，还支持存储自动扩容。
-          div.figure
-            i.font_family.icon-dichan.figure-img
-            div.figure-text
-              div.figure-title 解决方案核心说明1
-              span 采用分布式块存储块Snapshot，感受极速备份以及恢复体验。
-    div.show-case.core-business
-      div.show-case-title.mb60.white 核心业务场景
-      // tab controller
-      div.container.flex.white
-        //input(type="radio" name="tabLabelRadio" checked="checked")#controller1.hide
-        label(for="content1").container-item.business-item.tab-content-label.active
-          i.font_family.icon-dichan
-          span.f16 门店管家
-          label(for="controller1").tab-controller-label
-
-        //input(type="radio" name="tabLabelRadio")#controller2.hide
-        label(for="content2").container-item.business-item.tab-content-label
-          i.font_family.icon-dichan
-          span.f16 BBC商城
-          label(for="controller2").tab-controller-label
-
-        //input(type="radio" name="tabLabelRadio")#controller3.hide
-        label(for="content3").container-item.business-item.tab-content-label
-          i.font_family.icon-dichan
-          span.f16 B2B智慧订货
-          label(for="controller3").tab-controller-label
-
-        //input(type="radio" name="tabLabelRadio")#controller4.hide
-        label(for="content4").container-item.business-item.tab-content-label
-          i.font_family.icon-dichan
-          span.f16 电商ERP
-          label(for="controller4").tab-controller-label
-      // tab selected flag
-      input(type="radio" value="1" name="tabContentRadio" checked="checked")#content1
-      // tab content
-      div.container.tab-content.white-bg
-        img(src="./images/solution-pline1_3.jpg")
-        div.text
-          p.md-text.dark 门店管家
-          p DT时代，新零售重构人-货-场，消费者消费行为变迁，货、场和服务也随之发生改变。
-          p 消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间。
-
-      input(type="radio" value="2" name="tabContentRadio" )#content2
-      div.container.tab-content.white-bg
-        img(src="./images/solution-pline1_3.jpg")
-        div.text
-          p.md-text.dark BBC商城
-          p DT时代，新零售重构人-货-场，消费者消费行为变迁，货、场和服务也随之发生改变。
-          p 消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间。
-
-      input(type="radio" value="3" name="tabContentRadio")#content3
-      div.container.tab-content.white-bg
-        img(src="./images/solution-pline1_3.jpg")
-        div.text
-          p.md-text.dark B2B智慧订货
-          p DT时代，新零售重构人-货-场，消费者消费行为变迁，货、场和服务也随之发生改变。
-          p 消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间。
-
-      input(type="radio" value="4" name="tabContentRadio")#content4
-      div.container.tab-content.white-bg
-        img(src="./images/solution-pline1_3.jpg")
-        div.text
-          p.md-text.dark 电商ERP
-          p DT时代，新零售重构人-货-场，消费者消费行为变迁，货、场和服务也随之发生改变。
-          p 消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间消费升级让新零售的尝试和创新有了更大的空间和机会。消费升级带来的增量，让新零售的创新迎来无限的想象空间。
-    div.show-case
-      div.show-case-title.dark.mb60 相关产品推荐
-      div.container.flex
-        div.scale-item
-          i.font_family.icon-dichan
-          div.md-text.dark BBC商城
-          div.text 实现平台自营，线上商城和线下多门店并重，支持商家、个人店铺入驻；商城、门店、卖家、买家均有独立管理中心，全程可监控。
-          a.link-btn 立即体验
-        div.scale-item
-          i.font_family.icon-dichan
-          div.md-text.dark B2B智慧订货
-          div.text 实现平台自营，线上商城和线下多门店并重，支持商家、个人店铺入驻；商城、门店、卖家、买家均有独立管理中心，全程可监控。
-          a.link-btn 立即体验
-        div.scale-item
-          i.font_family.icon-dichan
-          div.md-text 门店管家
-          div.text 实现平台自营，线上商城和线下多门店并重，支持商家、个人店铺入驻；商城、门店、卖家、买家均有独立管理中心，全程可监控。
-          a.link-btn 立即体验
-        div.scale-item
-          i.font_family.icon-dichan
-          div.md-text.dark 电商ERP
-          div.text 实现平台自营，线上商城和线下多门店并重，支持商家、个人店铺入驻；商城、门店、卖家、买家均有独立管理中心，全程可监控。
-          a.link-btn 立即体验
-    div.show-case.white-bg
-      div.show-case-title.dark.mb60 案例客户
-      div.slider.flex.container
-        div.arrow-box.arrow-left-box
-          i.arrow-left
-        div.slider-container
-          div.slider-figure.active
-            img.figure-img(src="./images/wechat.png")
-            div.figure-text
-              div.figure-title BBC商城
-              span 91琴趣致力于打造钢琴互联网数字化服务平台，与钢琴用户对接，掌握用户需求，为用户提供物流配送、钢琴调律、钢琴维修、钢琴租赁买卖、产品咨询、钢琴教育、音乐比赛、表演社交、广告、大数据、金融等多种增值服务，打造全球首个“云上钢琴服务”生态系统。
-          div.slider-figure
-            img.figure-img(src="./images/wechat.png")
-            div.figure-text
-              div.figure-title 2 title
-              span 2 span
-        div.arrow-box.arrow-right-box
-          i.arrow-right
-block script
-  script.
-    var labels = $('.tab-content-label')
-
-    labels.on('click', function (e) {
-      var $this = $(this)
-
-      $this.addClass('active')
-      $this.siblings().removeClass('active')
-
-    })
-  include snippet/slider.jade
-
-
-
-
+  -
+    var data = {
+    title: '酒饮行业新零售解决方案',
+    desc: '酒饮行业全域立体智慧营销，BBC商城、B2B智慧订货、门店管家、电商ERP；助力消费品企业转型搭上新零售快车 数字化智能化',
+    href: '',
+    // 产品优势
+    advantages: [
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', icon: 'icon-dichan'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', icon: 'icon-dichan'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', icon: 'icon-dichan'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', icon: 'icon-dichan'},
+    ],
+    // 解决方案
+    solution: {
+    img: './images/solution-pline1_3.jpg',
+    details: [
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', icon: 'icon-dichan'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', icon: 'icon-dichan'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', icon: 'icon-dichan'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', icon: 'icon-dichan'},
+    ]
+    },
+    // 业务场景
+    // 如果要换行, 在需要换行处加 \n
+    situations: [
+      {
+      name: '技术革新',
+      desc: '拥抱前沿技术，开拓新的可能\n遵循标准规范，保持风格一致\n进行单元测试，保证代码质量\n开发自运维，打破开发与运维之间的壁垒，加上自动化工具，新功能可以快速交付，团队可以低成本享受开发成果',
+      img: '../images/product-s1-kehuxianshang.jpg',
+      icon: 'icon-jiaoyupeixun_fuzhi',
+      },
+      {
+      name: '快速开始',
+      desc: '还在开发相似的接口？\n还在刻画相似的页面？\n开发套件支持通过配置自动生成接口以及页面，免去了重复劳动\n如果现有模板不满足个性化需求，还可以一键导出生成好的文件，稍做修改即可使用',
+      img: '../images/product-s1-kehuxianshang.jpg',
+      icon: 'icon-jiaoyupeixun_fuzhi',
+      },
+      {
+      name: '技术革新',
+      desc: '拥抱前沿技术，开拓新的可能\n遵循标准规范，保持风格一致\n进行单元测试，保证代码质量\n开发自运维，打破开发与运维之间的壁垒，加上自动化工具，新功能可以快速交付，团队可以低成本享受开发成果',
+      img: '../images/product-s1-kehuxianshang.jpg',
+      icon: 'icon-jiaoyupeixun_fuzhi',
+      },
+      {
+      name: '技术革新',
+      desc: '拥抱前沿技术，开拓新的可能\n遵循标准规范，保持风格一致\n进行单元测试，保证代码质量\n开发自运维，打破开发与运维之间的壁垒，加上自动化工具，新功能可以快速交付，团队可以低成本享受开发成果',
+      img: '../images/product-s1-kehuxianshang.jpg',
+      icon: 'icon-jiaoyupeixun_fuzhi',
+      },
+    ],
+    // 相关产品推荐
+    relativeProducts: [
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', icon: 'icon-dichan'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', icon: 'icon-dichan'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', icon: 'icon-dichan'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', icon: 'icon-dichan'},
+    ],
+    // 案例客户
+    cases: [
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', img: './images/wechat.png'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', img: './images/wechat.png'},
+    ],
+    }
+  title #{data.title}
+  include mixin/render-solution.jade
