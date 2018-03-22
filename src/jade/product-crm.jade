@@ -1,0 +1,92 @@
+extends layout.jade
+block title
+  -
+    var data = {
+    // 产品名
+    title: '客户管理 CRM',
+    // 产品定义
+    desc: '客户管理（CRM）一个融合业务管理和数据分析的客户全生命周期管理平台；在业务上，帮助企业提高客户管理效率；在数据上，帮助企业多维度洞察客户特性；解决企业多系统客户数据割裂，以及数据应用和业务应用分裂等问题；帮助垂直行业中的中小型企业以及行业代理，快速搭建完整的客户管理系统。',
+    // 立即体验链接
+    href: '',
+    // 应用场景
+    // 如果要换行, 在需要换行处加 \n
+    situations: [
+    {
+    name: '客户管理 CRM',
+    desc: '通过对客户生命周期进行拆解，对处于不同生命周期的客户提供不同营销工具，对各生命周期的客户进行精准预测，业务人员只需根据系统生成的名单即可进行营销，更高效、精准。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi'
+    },
+    {
+    name: '会员维系',
+    desc: '业务人员根据客户特性进行筛选分组后，可通过配置营销规则为群组客户进行触达，且自动化执行，执行期间群组不断更新符合条件的客户，实现营销自动化。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi'
+    },
+    {
+    name: '忠诚度管理',
+    desc: '客户信息记录后自动采集更新客户行为，根据不同的客户行为进行忠诚度分组，并为业务人员提供客户跟进管理与流失预警服务。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi'
+    },
+    {
+    name: '流失客户预警',
+    desc: '由业务人员设置流失条件，客户信息记录后自动采集更新客户行为，将符合条件的客户进行分组，为业务人员进行流失预警，通知业务人员尽快挽留。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi'
+    }
+    ],
+    // 产品优势
+    advantages: [
+    {title: '定制化指标', desc: '深度贴合行业场景的定制化指标', icon: 'icon-dichan'},
+    {title: '精细化分群', desc: '庞大客户指标体系，指导实现精细化分群', icon: 'icon-dichan'},
+    {title: '多维度画像', desc: '整合多方数据，通过多维度进行精准客户画像', icon: 'icon-dichan'},
+    {title: '数据安全保密', desc: '采用复杂加密处理，将数据泄露风险降到最低', icon: 'icon-dichan'}
+    ],
+    // 核心功能
+    coreFuns: [
+    {title: '会员与潜客管理', desc: '采集与整合客户全域数据，将基础信息、购物信息、行为信息等数据自动汇总。掌握企业会员与潜客的全维度数据。', icon: 'icon-dichan'},
+    {title: '用户分组', desc: '依据行业特征、结合业务场景，梳理与制定有行业特定，符合业务需求的定制化指标。通过此类指标，直观反映用户的特征。', icon: 'icon-dichan'},
+    {title: '客户全景视图', desc: '打通线上与线下的客户数据，对人群的基础属性、地理属性、购买偏好、行为偏好、兴趣偏好等信息有进行全方位的了解，掌握客户多维特征。 ', icon: 'icon-dichan'},
+    {title: '忠诚度管理', desc: '灵活的会员等级体系配置与多元化积分规则引擎，支持交易类与非交易类积分体系，统一支撑全渠道忠诚度管理不同场景的需求。', icon: 'icon-dichan'}
+    ],
+    // 案例客户
+    cases: [
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', img: './images/wechat.png'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', img: './images/wechat.png'}
+    ],
+    // 技术架构
+    techArt: {
+    // 标题
+    title: '高性能弹性云数据库服务 支持多个云服务器高并发访问',
+    // 描述
+    desc: '满足业务连续性和可扩展性的高性能云数据库服务',
+    // 架构图
+    img: './images/solution-pline1_3.jpg',
+    // 解决方案说明, 架构图描述
+    solutions: [
+    {title: '', desc: '', icon: ''},
+    {title: '', desc: '', icon: ''},
+    {title: '', desc: '', icon: ''},
+    {title: '', desc: '', icon: ''}
+    ]
+    },
+    // 业务架构
+    businessArt: {
+    // 标题
+    title: '高性能弹性云数据库服务 支持多个云服务器高并发访问',
+    // 描述
+    desc: '满足业务连续性和可扩展性的高性能云数据库服务',
+    // 架构图
+    img: './images/solution-pline1_3.jpg',
+    // 解决方案说明, 架构图描述
+    solutions: [
+    {title: '统一管理', desc: '实现统一的客户视图、统一的交易与行为跟踪、全程的客户生命周期管理', icon: ''},
+    {title: '客户全景视图', desc: '基本属性，有丰富的采集方式与技术，更直观感受客户。购物与行为属性，完整的信息记录与管理，更全面了解客户倾向与兴趣偏好', icon: ''},
+    {title: '忠诚度管理', desc: '灵活的会员等级体系配置与多元化积分规则引擎，支持交易类与非交易类积分体系，统一支撑全渠道忠诚度管理不同场景的需求', icon: ''},
+    {title: '账号权限体系归企业所有', desc: '账号权限体系以开源方式输出，可直接使用或自由定制；其中账号数据存储在企业数据库', icon: ''}
+    ]
+    }
+    }
+  title #{data.title}
+  include mixin/render-product.jade

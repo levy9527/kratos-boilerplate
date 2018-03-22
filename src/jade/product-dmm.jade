@@ -1,0 +1,92 @@
+extends layout.jade
+block title
+  -
+    var data = {
+    // 产品名
+    title: '营销管理 DMM',
+    // 产品定义
+    desc: '营销管理（DMM）是一个针对行业定制的，并将营销全流程简化成可灵活配置的管理平台；解决企业营销对象精准性、重复研发时间成本高、营销效果缺乏监控等问题；帮助企业搭建简单、灵活、全面的营销能力，服务于对精准营销、营销自动化有需求的中小型企业。',
+    // 立即体验链接
+    href: '',
+    // 应用场景
+    // 如果要换行, 在需要换行处加 \n
+    situations: [
+    {
+    name: '灵活配置规则',
+    desc: '灵活可视化的营销规则配置，只需进行简单的时间、目标客户、活动以及推送方式的选择即可生成规则自动执行。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi'
+    },
+    {
+    name: '用户关怀',
+    desc: '根据各特殊节日提供场景定制化模板，选择模板后只需配置活动与目标群体即可生成节日专属规则，并自动执行。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi'
+    },
+    {
+    name: '活动监控',
+    desc: '活动开始后，自动对活动流量情况进行监控，对活动情况掌握第一手信息，实时了解活动动态。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi'
+    },
+    {
+    name: '分析报告优化策略',
+    desc: '活动结束后自动生成分析报告，多维度全方面的分析活动为业务带来的增长，为业务人员优化营销策略提供数据支撑。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi'
+    }
+    ],
+    // 产品优势
+    advantages: [
+    {title: '行业定制', desc: '定制化的营销模板、用户标签，深度贴合行业', icon: 'icon-dichan'},
+    {title: '全流程可视化配置', desc: '全链路营销业务全程可视化配置，降低企业成本', icon: 'icon-dichan'},
+    {title: '模版化', desc: '营销场景模板化，使企业快速使用成熟营销方案', icon: 'icon-dichan'},
+    {title: '运营门槛低', desc: '营销过程自动化，减少人工出错可能性，降低运营门槛', icon: 'icon-dichan'}
+    ],
+    // 核心功能
+    coreFuns: [
+    {title: '标签圈选', desc: '依据行业特征，业务场景定制的标签，总结用户价值、活跃度、流失率、重视度、积极性等特征，直观反映客户对应产品或者服务的认可度。', icon: 'icon-dichan'},
+    {title: '营销规则', desc: '营销全环节可视化配置，无需技术人员参与研发。运营人员直接配置营销的时间、对象、内容、方式，全流程自动化执行。', icon: 'icon-dichan'},
+    {title: '活动管理', desc: '营销活动开始后，自动对活动进行实时监控与分析。运营人员能实时查看营销活动全流程数据，不放过任何异常点。', icon: 'icon-dichan'},
+    {title: '效果评估', desc: '运营人员可自选分析内容，对活动的流量趋势、客户新增、付费转换等内容进行合理的搭配。最终输出符合业务分析需求的自定义报告。', icon: 'icon-dichan'}
+    ],
+    // 案例客户
+    cases: [
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', img: './images/wechat.png'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', img: './images/wechat.png'}
+    ],
+    // 技术架构
+    techArt: {
+    // 标题
+    title: '高性能弹性云数据库服务 支持多个云服务器高并发访问',
+    // 描述
+    desc: '满足业务连续性和可扩展性的高性能云数据库服务',
+    // 架构图
+    img: './images/solution-pline1_3.jpg',
+    // 解决方案说明, 架构图描述
+    solutions: [
+    {title: '', desc: '', icon: ''},
+    {title: '', desc: '', icon: ''},
+    {title: '', desc: '', icon: ''},
+    {title: '', desc: '', icon: ''}
+    ]
+    },
+    // 业务架构
+    businessArt: {
+    // 标题
+    title: '高性能弹性云数据库服务 支持多个云服务器高并发访问',
+    // 描述
+    desc: '满足业务连续性和可扩展性的高性能云数据库服务',
+    // 架构图
+    img: './images/solution-pline1_3.jpg',
+    // 解决方案说明, 架构图描述
+    solutions: [
+    {title: '标签分组', desc: '通过标签高效细分客群，可自定义配置，与营销过程管理无缝集成。', icon: ''},
+    {title: '营销自动化', desc: '支持从营销活动的设计、执行和评估完整闭环，灵活地实现在合适的时间、对合适的人、用合适的方式、沟通合适的内容。', icon: ''},
+    {title: '全环节追踪', desc: '营销过程全程可视，自动生成营销活动结果报告，并提供多维度可视化分析。', icon: ''},
+    {title: '企业自行加工业务数据', desc: '系统中所要用到的标签数据，加工环节由客户或其合作伙伴自行定制完成。', icon: ''}
+    ]
+    }
+    }
+  title #{data.title}
+  include mixin/render-product.jade
