@@ -1,0 +1,67 @@
+extends layout.jade
+block title
+  -
+    var data = {
+    title: '日化行业数字化创新解决方案',
+    desc: '随着互联网向着“移动化、专业化、社交化、场景化”深入发展，服务与体验将成为市场竞争的关键， 通过“服务”而不是“销售”，先服务用户再服务客户。用户购买渠道已逐步实现数字化，技术及数字化创新已成为日化企业数字化转型，业务创新增长的新引擎。',
+    href: '',
+    // 产品优势
+    advantages: [
+    {title: '订阅式系统', desc: '实现了业务能力云化，订阅式的应用系统，减少了系统重复建设的工作，提高IT系统建设效率，降低系统建设成本', icon: 'icon-dichan'},
+    {title: '提升用户体验', desc: '实现单点用户登录，多个业务应用互通', icon: 'icon-dichan'},
+    {title: '全生命周期管理', desc: '实现用户全生命周期管理，从游客到潜客、 零售顾客、 经销商，数据驱动运营，持续运营用户', icon: 'icon-dichan'},
+    {title: '业务提升与创新', desc: '整合第三方生态资源，扩大用户入口，促进业务提升与创新', icon: 'icon-dichan'},
+    ],
+    // 解决方案
+    solution: {
+    img: './images/solution-pline1_3.jpg',
+    details: [
+    {title: '先用户再客户', desc: '随着移动化、专业化、社交化、场景化深入发展，服务与体验将成为市场竞争的关键，先服务后销售，先用户再客户已成事实', icon: 'icon-dichan'},
+    {title: '持续演变的创新模式', desc: 'IT扮演顾问角色，共同推进创新模式中持续演变的需求', icon: 'icon-dichan'},
+    {title: '强调业务价值', desc: '数字平台建设侧重于业务价值和用户体验导向', icon: 'icon-dichan'},
+    {title: '端到端方案', desc: '数字平台规划通过定制方案端到端、颠覆性的创新构思提供竞争优势', icon: 'icon-dichan'},
+    {title: '快速迭代', desc: '数字平台落地通过敏捷开发和快速迭代实现', icon: 'icon-dichan'},
+    ]
+    },
+    // 业务场景
+    // 如果要换行, 在需要换行处加 \n
+    situations: [
+    {
+    name: '数字化营销生态 – 统一会员账号',
+    desc: '实现单点登录，提升用户体验\n品牌官网\n服务公众号\n移动营销应用\n会员服务平台',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi',
+    },
+    {
+    name: '数字化营销生态 – 试用体验',
+    desc: '产品使用体验，推动用户参与的快速迭代，快速创新业务模式\n免费试用装\nLBS门店查询\n试用直播间',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi',
+    },
+    {
+    name: '数字化营销生态 – 智慧门店',
+    desc: '智慧门店体验，实现线上线下互动，增加趣味性和科技感，提升用户的参与度\nAR/VR互动体验\n大屏云购物\n自助购货\n摇一摇参与活动',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi',
+    },
+    {
+    name: '数字化营销生态 – 黏性关怀',
+    desc: '通过活动与内容，体现用户的存在感，激励用户参与，增加用户粘性关怀\n每日签到送积分\n活动&新品推送\n定期用品提醒\n需求调研问卷',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi',
+    },
+    ],
+    // 相关产品推荐
+    relativeProducts: [
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', icon: 'icon-dichan'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', icon: 'icon-dichan'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', icon: 'icon-dichan'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', icon: 'icon-dichan'},
+    ],
+    // 案例客户
+    cases: [
+    {title: '某国际知名日化企业', desc: '实现了业务能力云化，订阅式的应用系统，减少了系统重复建设的工作，提高IT系统建设效率，降低系统建设成本。\n提升用户体验，实现单点用户登录，多个业务应用互通。\n实现用户全生命周期管理，从游客到普通顾客、 优惠顾客、 经销商，数据驱动运营，持续运营用户。\n整合第三方生态资源，扩大用户入口，增加销售。', img: './images/wechat.png'},
+    ],
+    }
+  title #{data.title}
+  include mixin/render-solution.jade
