@@ -12,25 +12,25 @@ block title
     // 如果要换行, 在需要换行处加 \n
     situations: [
     {
-    name: '轻松实现系统集成',
+    name: '系统集成',
     desc: '企业用户根据自己的实际业务，选择合适的模版，创建自己的应用。',
     img: '../images/product-s1-kehuxianshang.jpg',
     icon: 'icon-jiaoyupeixun_fuzhi',
     },
     {
-    name: '建立API生态，开放能力，付费使用',
+    name: 'API生态',
     desc: '以 API 形式提供能力，包含计算，数据，功能等各种能力；开放能力，向开发者、合作伙伴、第三方赚取收入。',
     img: '../images/product-s1-kehuxianshang.jpg',
     icon: 'icon-jiaoyupeixun_fuzhi',
     },
     {
-    name: '外部多端统一访问',
+    name: '多端统一',
     desc: '通过 API 网关，一套后端服务来服务多个终端，统一身份认证、统一流量监控；通过 API 网关，统一多端访问入口，通过协议适配和转换，满足不同终端对协议的需求。',
     img: '../images/product-s1-kehuxianshang.jpg',
     icon: 'icon-jiaoyupeixun_fuzhi',
     },
     {
-    name: 'API报告分析',
+    name: 'API报告',
     desc: '以图表化的形式多维度展示API日志，生成对API分析报告，更快速地定位问题，大大提高日常运营效率。',
     img: '../images/product-s1-kehuxianshang.jpg',
     icon: 'icon-jiaoyupeixun_fuzhi',
@@ -51,7 +51,7 @@ block title
     {title: '灵活的权限控制', desc: '提供严格的认证服务，能够控制每个API的访问权限，对应用进行授权，只有对已经授权通过的应用才能正常访问API。', icon: 'icon-dichan'},
     {title: '可视化数据分析', desc: '能够对API 访问日志快速生成数据分析报告，支持多元素图表—折线图、扇形图、柱状图等展示形式。', icon: 'icon-dichan'},
     {title: '精准的流量控制', desc: '限流功能可配置 API 的流控，您可按业务需要配置每秒支持调用 API 的次数，用以保障您业务的稳定性。', icon: 'icon-dichan'},
-    {title: '丰富的扩展插件', desc: '提供了丰富的插件库供您业务场景选择，如身份验证、数据传输安全、黑白名单、数据变形、日志处理等场景。', icon: 'icon-dichan'},
+    {title: '丰富的插件扩展', desc: '提供了丰富的插件库供您业务场景选择，如身份验证、数据传输安全、黑白名单、数据变形、日志处理等场景。', icon: 'icon-dichan'},
     ],
     // 案例客户
     cases: [
@@ -61,33 +61,30 @@ block title
     // 技术架构
     techArt: {
     // 标题
-    title: '高性能弹性云数据库服务 支持多个云服务器高并发访问',
+    title: '前后端分离',
     // 描述
-    desc: '满足业务连续性和可扩展性的高性能云数据库服务',
+    desc: 'API 网关主要分为前台界面、后端服务和持久层三大部分，采用了前后端分离的技术架构。',
     // 架构图
     img: './images/solution-pline1_3.jpg',
     // 解决方案说明, 架构图描述
     solutions: [
-    {title: '', desc: '', icon: ''},
-    {title: '', desc: '', icon: ''},
-    {title: '', desc: '', icon: ''},
-    {title: '', desc: '', icon: ''},
+    {title: '前端', desc: '前端门户采用MVVM框架，通过Restful API与后端服务进行通信；', icon: ''},
+    {title: '后端', desc: '后端服务基于Nginx+Lua技术实现API网关的各种功能，采用Nodejs+Egg开发resful API，供前端调用；', icon: ''},
+    {title: '持久层', desc: '持久层采用nosql数据库存储热点数据和缓存，使用MySQL，MongoDB存储用户数据。', icon: ''},
     ]
     },
     // 业务架构
     businessArt: {
     // 标题
-    title: '高性能弹性云数据库服务 支持多个云服务器高并发访问',
+    title: 'API托管',
     // 描述
-    desc: '满足业务连续性和可扩展性的高性能云数据库服务',
+    desc: 'API 网关作为所有外部应用的统一访问入口，提供了所有服务的API托管，管理API的整个生命周期',
     // 架构图
     img: './images/solution-pline1_3.jpg',
     // 解决方案说明, 架构图描述
     solutions: [
-    {title: '', desc: '', icon: ''},
-    {title: '', desc: '', icon: ''},
-    {title: '', desc: '', icon: ''},
-    {title: '', desc: '', icon: ''},
+    {title: '基本功能', desc: '基本功能包括API管理、安全认证、负载均衡、流量控制、日志分析等；', icon: ''},
+    {title: '扩展功能', desc: '扩展功能够能主要以插件的形式对API 网关进行扩展，丰富的插件市场满足各种业务场景的需求', icon: ''},
     ]
     },
     }
