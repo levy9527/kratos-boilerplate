@@ -85,8 +85,10 @@ mixin renderProduct (data)
             div.tab-content
               div.wide-figure
                 div.figure-box
-                  p.md-text.dark #{data.techArt.title}
-                  div(style="margin-bottom: 40px") #{data.techArt.desc}
+                  if data.techArt.title
+                    p.md-text.dark #{data.techArt.title}
+                  if data.techArt.desc
+                    div(style="margin-bottom: 40px") #{data.techArt.desc}
                   each item in data.techArt.solutions
                     div.figure
                       i.font_family.figure-img(class=item.icon)
