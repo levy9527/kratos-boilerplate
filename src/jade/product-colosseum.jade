@@ -12,38 +12,26 @@ block title
     // 如果要换行, 在需要换行处加 \n
     situations: [
     {
-    name: '容器化部署',
-    desc: '简化部署流程，缩短部署成本。',
+    name: '一键部署',
+    desc: 'Colosseum运维平台可一键部署微服务应用(支持Docker Hub 等第三方平台的 Docker 镜像)；\n可一键部署 Redis、Mysql、Jenkins、Kafka 等多种常用分布式应用，从而快速搭建企业生产环境，开发流行的微服务应用。',
     img: '../images/product-s1-kehuxianshang.jpg',
     icon: 'icon-jiaoyupeixun_fuzhi',
     },
     {
-    name: '全链路监控',
-    desc: '全面的监控与可视化报告，快速定位问题来源。',
+    name: '灰度发布',
+    desc: 'Colosseum运维平台的灰度发布实现是在接口层面的，可以是单个接口，也可以是整个业务服务（多个接口）。',
     img: '../images/product-s1-kehuxianshang.jpg',
     icon: 'icon-jiaoyupeixun_fuzhi',
     },
+    //{
+    //name: '压力测试',
+    //desc: '一致的发布、回退策略，避免人的误操作。',
+    //img: '../images/product-s1-kehuxianshang.jpg',
+    //icon: 'icon-jiaoyupeixun_fuzhi',
+    //},
     {
-    name: '标准化版本控制',
-    desc: '一致的发布、回退策略，避免人的误操作。',
-    img: '../images/product-s1-kehuxianshang.jpg',
-    icon: 'icon-jiaoyupeixun_fuzhi',
-    },
-    {
-    name: '弹性扩容',
-    desc: '秒级伸缩，保证应用高并发情况下的高可用性。',
-    img: '../images/product-s1-kehuxianshang.jpg',
-    icon: 'icon-jiaoyupeixun_fuzhi',
-    },
-    {
-    name: '性能探测',
-    desc: '精细化性能测试数据，准确探知站点能力。',
-    img: '../images/product-s1-kehuxianshang.jpg',
-    icon: 'icon-jiaoyupeixun_fuzhi',
-    },
-    {
-    name: '快速迭代',
-    desc: '灵活的发布策略，精准选取参与使用的用户，全面准确获取用户使用信息。',
+    name: '监控告警',
+    desc: '通过Colosseum运维平台可为您关注的集群、服务、容器指标创建告警，能够使上述资源的运行状态在到达某一条件时，及时发送告警信息至您的用户或用户组中。这样能使得您及时发现异常状况从而采取相应措施，保持系统的稳定性和可靠性。',
     img: '../images/product-s1-kehuxianshang.jpg',
     icon: 'icon-jiaoyupeixun_fuzhi',
     },
@@ -53,14 +41,16 @@ block title
     {title: '监控告警', desc: '多维度监控：API健康检查、业务指标报警、应用程序异常报警、服务器负载、容器负载。预防与应对：重试、降级、熔断、自我恢复、人工排查。', icon: 'icon-dichan'},
     {title: '灰度发布', desc: '灵活精准选取参与使用的用户，全面准确的获取灰度用户使用情况信息，分析、总结、完善；达到降低发布风险、减少bug带来的影响。', icon: 'icon-dichan'},
     {title: '压力测试', desc: '集脚本管理、场景管理、过程监控、压测报告为一体，压测流量从全国不同的地域发起，具备强大的分布式压测能力。通过模拟海量用户真实的业务操作场景，您可以提前对站点进行业务高压力测试，全方位探测站点的性能瓶颈，确保平稳地应对业务峰值。', icon: 'icon-dichan'},
-    {title: '应用部署', desc: '持续交付，一键部署多种 Docker 容器化应用。如Redis、Mysql、Jenkins、Kafka 等分布式应用。', icon: 'icon-dichan'},
+    {title: '一键部署', desc: '持续交付，一键部署多种 Docker 容器化应用。如Redis、Mysql、Jenkins、Kafka 等分布式应用。', icon: 'icon-dichan'},
     ],
     // 核心功能
     coreFuns: [
-    {title: '监控告警', desc: '多维度监控：API健康检查、业务指标报警、应用程序异常报警、服务器负载、容器负载。预防与应对：重试、降级、熔断、自我恢复、人工排查。', icon: 'icon-dichan'},
-    {title: '灰度发布', desc: '灵活精准选取参与使用的用户，全面准确的获取灰度用户使用情况信息，分析、总结、完善；达到降低发布风险、减少bug带来的影响。', icon: 'icon-dichan'},
-    {title: '压力测试', desc: '集脚本管理、场景管理、过程监控、压测报告为一体，压测流量从全国不同的地域发起，具备强大的分布式压测能力。通过模拟海量用户真实的业务操作场景，您可以提前对站点进行业务高压力测试，全方位探测站点的性能瓶颈，确保平稳地应对业务峰值。', icon: 'icon-dichan'},
-    {title: '应用部署', desc: '持续交付，一键部署多种 Docker 容器化应用。如Redis、Mysql、Jenkins、Kafka 等分布式应用。', icon: 'icon-dichan'},
+    {title: '自动化部署', desc: '自动容器化部署, 简化部署流程，缩短部署成本', icon: 'icon-dichan'},
+    {title: '全链路监控', desc: '全面的监控与可监控视化报告，快速定位问题来源', icon: 'icon-dichan'},
+    {title: '标准化版本控制', desc: '一致的发布、回退策略，避免人的误操作', icon: 'icon-dichan'},
+    {title: '弹性扩容', desc: '秒级伸缩，保证应用高并发情况下的高可用性', icon: 'icon-dichan'},
+    {title: '性能探测', desc: '精细化性能测试数据，准确探知站点能力', icon: 'icon-dichan'},
+    {title: '快速迭代', desc: '快速迭代：灵活的发布策略，精准选取参与使用的用户，全面准确获取用户使用信息。', icon: 'icon-dichan'},
     ],
     // 案例客户
     cases: [
@@ -70,33 +60,30 @@ block title
     // 技术架构
     techArt: {
     // 标题
-    title: '高性能弹性云数据库服务 支持多个云服务器高并发访问',
+    title: '微服务架构',
     // 描述
-    desc: '满足业务连续性和可扩展性的高性能云数据库服务',
+    desc: 'Colosseum运维平台采用微服务架构，Dockerize容器化，可移植性强，可实现跨平台部署。涵盖海量基础中间件',
     // 架构图
     img: './images/solution-pline1_3.jpg',
     // 解决方案说明, 架构图描述
     solutions: [
-    {title: '', desc: '', icon: ''},
-    {title: '', desc: '', icon: ''},
-    {title: '', desc: '', icon: ''},
-    {title: '', desc: '', icon: ''},
+    //{title: '', desc: '', icon: ''},
     ]
     },
     // 业务架构
     businessArt: {
     // 标题
-    title: '高性能弹性云数据库服务 支持多个云服务器高并发访问',
+    //title: '高性能弹性云数据库服务 支持多个云服务器高并发访问',
     // 描述
-    desc: '满足业务连续性和可扩展性的高性能云数据库服务',
+    //desc: '满足业务连续性和可扩展性的高性能云数据库服务',
     // 架构图
     img: './images/solution-pline1_3.jpg',
     // 解决方案说明, 架构图描述
     solutions: [
-    {title: '', desc: '', icon: ''},
-    {title: '', desc: '', icon: ''},
-    {title: '', desc: '', icon: ''},
-    {title: '', desc: '', icon: ''},
+    {title: '服务支撑层', desc: '主要面向企业的IT资源、业务运行状态和性能的监控管理和资产管理；', icon: ''},
+    {title: '服务保障层', desc: '提供智能自动化的能力和平台的数据总线管理；', icon: ''},
+    {title: '服务管理层', desc: '提供服务过程的设计、过程记录、监督与考核等事物的管理能力，同时提供对IT各项服务、能力进行整合的职能；', icon: ''},
+    {title: '门户与代理层', desc: '为用户提供统一的门户界面，提升用户工作效率。', icon: ''},
     ]
     },
     }
