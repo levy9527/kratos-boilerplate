@@ -35,7 +35,7 @@ mixin renderProduct (data)
                     img(src=item.img)
                   div.right-side
                     div.md-text.dark #{item.name}
-                    div.content #{item.desc}
+                    div.pre-wrap #{item.desc}
 
       div#three-sight
         div.container.show-case
@@ -71,14 +71,17 @@ mixin renderProduct (data)
             div.tab-content
               div.wide-figure
                 div.figure-box
-                  p.md-text.dark #{data.businessArt.title}
-                  div(style="margin-bottom: 40px") #{data.businessArt.desc}
-                  each item in data.businessArt.solutions
-                    div.figure
-                      i.font_family.figure-img(class=item.icon)
-                      div.figure-text
-                        div.figure-title #{item.title}
-                        span #{item.desc}
+                  if data.businessArt.title
+                    p.md-text.dark #{data.businessArt.title}
+                  if data.businessArt.desc
+                    div(style="margin-bottom: 40px") #{data.businessArt.desc}
+                  if data.businessArt.solutions
+                    each item in data.businessArt.solutions
+                      div.figure
+                        i.font_family.figure-img(class=item.icon)
+                        div.figure-text
+                          div.figure-title #{item.title}
+                          span #{item.desc}
                 img(src=data.businessArt.img)
 
             input(type="radio" name="artichet")#techArt.hide.artichet-radio
@@ -89,12 +92,13 @@ mixin renderProduct (data)
                     p.md-text.dark #{data.techArt.title}
                   if data.techArt.desc
                     div(style="margin-bottom: 40px") #{data.techArt.desc}
-                  each item in data.techArt.solutions
-                    div.figure
-                      i.font_family.figure-img(class=item.icon)
-                      div.figure-text
-                        div.figure-title #{item.title}
-                        span #{item.desc}
+                  if data.techArt.solutions
+                    each item in data.techArt.solutions
+                      div.figure
+                        i.font_family.figure-img(class=item.icon)
+                        div.figure-text
+                          div.figure-title #{item.title}
+                          span #{item.desc}
                 img(src=data.techArt.img)
 
       div.show-case.white-bg#seven-sight
