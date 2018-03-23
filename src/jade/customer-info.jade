@@ -4,36 +4,90 @@ block title
 block content
   section.customer-info
     div.first-sight.text-center
-      p.f24 欢迎加入云徙云,完善行业信息可为您提供更精准的行业优惠及活动优惠 
+      p.f24 欢迎加入云徙云,完善行业信息可为您提供更精准的行业优惠及活动优惠
       p 我们将尽快与您取得联系，工作时间：周一-周五 9:00-18:00
-    div.container 
+    div.container
       div.content-half
         img(src="./images/index-guide-01@2x.png")
         p 云徙科技基于阿里巴巴互联网最佳实践及技术，自主研发云徙数字化PaaS平台、全渠道销售、营销智能、智能物联等创新数字化解决方案与产品，为国内外的汽车、地产、快消、农业、3C、政企、医药等行业一流企业提供基础设施云化、业务云化、数据智能化等数字化创新服务。
-      div.content-half  
+      div.content-half
         div.form-box
-          form(action="javascript:;")
+          form(action="javascript:;")#form
             fieldset
-              label 企业名称
-              input(placeholder="请输入企业全称")
+              label 姓名
+              input(placeholder="请输入真实姓名" name="name")
             fieldset
-              label 企业名称
-              select
-                option(value="") 请选择行业
+              label 职务
+              input(placeholder="请输入职务" name="position")
             fieldset
-              label 企业规模
-              select
+              label 邮箱
+              input(placeholder="请输邮箱" type="email" name="email")
+            fieldset
+              label 手机号码
+              input(placeholder="请输邮箱" type="tel" name="phone")
+            fieldset
+              label 公司名称
+              input(placeholder="请输公司名字全称" name="enterpriseName")
+            fieldset
+              label 公司规模
+              select(name="scale")
                 option(value="") 请选择人数
+                option(value="<50") <50
+                option(value="50~100") 50~100
+                option(value="100~200") 100~200
+                option(value="200~500") 200~500
+                option(value="500~1000") 500~1000
+                option(value=">1000") >1000
             fieldset
-              label 联系人
-              input(placeholder="请输入真实姓名")
+              label 关注的产品
+              select(name="product")
+                option(value="") 请选择产品
+                option(value="营销智能") 营销智能
+                option(value="全渠道销售") 全渠道销售
+                option(value="企业数字化平台") 企业数字化平台
+                option(value="云管平台") 云管平台
             fieldset
-              label 手机号
-              input(placeholder="请输入联系电话")
-            fieldset
-              label 部门
-              input(placeholder="请输入您所在的部门")
-            fieldset
-              label 职位
-              input(placeholder="请输入您的工作岗位")
-            button(type="primary") 提交
+              label 留言
+              input(placeholder="请输入问题或评论, 可不填" name="comment")
+            button(type="primary" id="submit") 提交
+
+block script
+  script.
+    $('#submit').on('click', function () {
+      var url = 'http://120.78.191.79:7001/official-website/api/v1/profiles'
+      var dataArray = $('#form').serializeArray()
+      var data = {}
+      var $btn = $(this)
+
+      $.each(dataArray, function (index, item) {
+        data[item.name] = item.value
+      })
+
+      $btn.text('提交中...').addClass('wait')
+
+      $.ajax({
+        type: 'POST',
+        url: url,
+        // 坑啊
+        data: JSON.stringify(data),
+        // type of data we are expecting in return:
+        dataType: 'json',
+        timeout: 2000,
+        // 坑啊
+        processData: false,
+        contentType: 'application/json',
+        success: function (data) {
+          console.log(data)
+          $btn.text('提交成功').removeClass('wait').addClass('disabled')
+        },
+        error: function (xhr, type) {
+          alert('出错了, 请重试')
+          $btn.text('提交').removeClass('wait')
+        }
+      })
+
+    })
+
+
+
+
