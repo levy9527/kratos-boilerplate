@@ -1,104 +1,96 @@
 extends layout.jade
 block title
- title 营销智能
-block content
-  section.i-marketing
-    div.first-sight
-      div.container
-        h1.huge-text 营销智能 i-Marketing
-        p.desc 北极星是一个全链路多业态的智能化营销平台；解决企业在全链路数据化营销上单一业态到多业态营销链路断裂，以及数据应用和业务应用分裂等问题；帮助企业将数据在具体的运用场景中统一，主要服务垂直行业中的中小型行业代理商和代运营商。
-        button.link-btn 立即体验
-      div.first-sight-anchor
-        div.container
-          a(href="#two-sight", class="active") 应用场景
-          a(href="#three-sight") 产品优势
-          a(href="#four-sight") 核心功能
-          a(href="#five-sight") 产品架构
-          a(href="#six-sight") 产品推荐
-          a(href="#seven-sight") 案例客户
-    div#two-sight
-      div.container.show-case
-        div.show-case-title 应用场景
-        include components/tab/tab.jade
-      div#three-sight
-        div.container.show-case
-          div.show-case-title 产品优势
-          div.table
-    div#four-sight.product-media
-      div.container.show-case
-        div.show-case-title 核心功能
-        div.media-warp
-          div.media
-            div.media-left
-              div.media-object
-            div.media-body
-              h4.media-heading 广告投放管理
-              div.media-content.
-                全环节的监控与分析
-                可按照投放计划、受众、创意、媒体、分类等多个角度查看展示、点击、转化率、消耗等效果明细及趋势。TB级别的数据秒级延迟。
-          div.media
-            div.media-left
-              div.media-object
-            div.media-body
-              h4.media-heading 门店营销
-              div.media-content.
-                线下流量数据化
-                分析线下客流的趋势、来访频次、停留时间、门店动线、人群特征等信息，将线下流量数据化，直观掌握门店客流情况。
-          div.media
-            div.media-left
-              div.media-object
-                i.font_family.icon-jiaoyupeixun_fuzhi
-            div.media-body
-              h4.media-heading 客户管理
-              div.media-content.
-                全生命周期管理
-                结合行业特征，依据行业场景，以客户全生命周期为维度，去梳理和制定指标。让指标更贴近行业、更贴近行业客户，实现更精准的细分人群、广告投放。
-          div.media
-            div.media-left
-              div.media-object
-            div.media-body
-              h4.media-heading 营销管理
-              div.media-content.
-                快速配置执行
-                通过丰富的营销模版，直接配置营销时间、对象、活动内容、触达方式、分析内容等规则，快速配置执行，无需程序介入二次开发。实现敏捷、灵活、低门槛的自动化营销。
-    div#five-sight
-      div.container.show-case
-        div.show-case-title 产品架构
-    div#six-sight
-      div.container.show-case
-        div.show-case-title 相关产品推荐
-        div.flex
-          div.scale-item
-            i.font_family.icon-dichan
-            div.md-text.dark 广告投放管理 i-SmartAd
-            div.text 实现平台自营，线上商城和线下多门店并重，支持商家、个人店铺入驻；商城、门店、卖家、买家均有独立管理中心，全程可监控。
-            a.link-btn 立即体验
-          div.scale-item
-            i.font_family.icon-dichan
-            div.md-text.dark 客户管理  i-CRM
-            div.text 实现平台自营，线上商城和线下多门店并重，支持商家、个人店铺入驻；商城、门店、卖家、买家均有独立管理中心，全程可监控。
-            a.link-btn 立即体验
-          div.scale-item
-            i.font_family.icon-dichan
-            div.md-text 营销管理  i-DMM
-            div.text 实现平台自营，线上商城和线下多门店并重，支持商家、个人店铺入驻；商城、门店、卖家、买家均有独立管理中心，全程可监控。
-            a.link-btn 立即体验
-          div.scale-item
-            i.font_family.icon-dichan
-            div.md-text.dark 门店运营 i-SmartsStore
-            div.text 实现平台自营，线上商城和线下多门店并重，支持商家、个人店铺入驻；商城、门店、卖家、买家均有独立管理中心，全程可监控。
-            a.link-btn 立即体验
-    div#seven-sight.white-bg
-      div.container.show-case
-        div.show-case-title.dark.mb60 案例客户
-        div.slider.flex.container
-          div.arrow-box
-            i.arrow-left
-          div.slider-content
-            div.slider-figure.flex
-              img.figure-img(src="./images/wechat.png")
-              div.figure-text
-                div.figure-title BBC商城
-                span 91琴趣致力于打造钢琴互联网数字化服务平台，与钢琴用户对接，掌握用户需求，为用户提供物流配送、钢琴调律、钢琴维修、钢琴租赁买卖、产品咨询、钢琴教育、音乐比赛、表演社交、广告、大数据、金融等多种增值服务，打造全球首个“云上钢琴服务”生态系统。
-          div.arrow-box
-            i.arrow-right
+  include var/product-lines.jade
+  -
+    var data = {
+    // 产品名
+    title: productLines.iMarketing.name + ' ' + productLines.iMarketing.en,
+    // 产品定义
+    desc: '北极星是一个全链路多业态的智能化营销平台；解决企业在全链路数据化营销上单一业态到多业态营销链路断裂，以及数据应用和业务应用分裂等问题；帮助企业将数据在具体的运用场景中统一，主要服务垂直行业中的代理商和代运营商。',
+    // 立即体验链接
+    href: '',
+    // 应用场景
+    // 如果要换行, 在需要换行处加 \n
+    situations: [
+    {
+    name: '用户全生命周期管理',
+    desc: '各大产品数据互通，对用户全生命周期进行数据化管理，提供大而全的营销方案。帮助企业更有效的掌握数据、运用数据。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi',
+    },
+    {
+    name: '客户线上分析',
+    desc: '根据不同的企业需求，灵活组合产品形态。针对电商场景，提供用户的营销触达、埋点分析、会员信息管理服务，记录下客户的点滴行为。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi',
+    },
+    {
+    name: '线下门店分析',
+    desc: '根据不同的企业需求，灵活组合产品形态。针对门店场景，提供客流分析、人群分析、潜客管理、营销触达服务，不轻易放过任何来访客户。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi',
+    },
+    {
+    name: '广告投放分析',
+    desc: '根据不同的企业需求，灵活组合产品形态。针对广告投放场景，提供目标人群圈选、精准时间触达、广告投放ROI控制服务，帮助企业更有效的进行广告投放。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi',
+    },
+
+    ],
+    // 产品优势
+    advantages: [
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', icon: 'icon-dichan'},
+    {title: '智能决策模型', desc: '多维客人分群模型支持客户进行分群，并分析客群特征，以及基于客群画像，提供客户运营建议，并为商品企划决策提供参考。', icon: 'icon-dichan'},
+    {title: '标签体系', desc: '基于不同行业长期实践与总结，形成覆盖客人与商品的广泛多维标签体系，支持与CRM客户关系管理深度集成，实现自动化的精准营销。', icon: 'icon-dichan'},
+    {title: '数字化营销', desc: '整合行业资源、帮助企业达成资源的优势互补、合作共赢，从而实现高性价比的营销，精准模式实现全渠道投放，全链路的监控，及投放策略的优化。', icon: 'icon-dichan'},
+    ],
+    // 核心功能
+    coreFuns: [
+    {title: '广告投放管理', desc: '可按照投放计划、受众、创意、媒体、分类等多个角度查看展示、点击、转化率、消耗等效果明细及趋势。TB级别的数据秒级延迟。', icon: 'icon-dichan'},
+    {title: '门店营销', desc: '分析线下客流的趋势、来访频次、停留时间、门店动线、人群特征等信息，将线下流量数据化，直观掌握门店客流情况。', icon: 'icon-dichan'},
+    {title: '客户管理', desc: '结合行业特征，依据行业场景，以客户全生命周期为维度，去梳理和制定指标。让指标更贴近行业、更贴近行业客户，实现更精准的细分人群、广告投放。', icon: 'icon-dichan'},
+    {title: '营销管理', desc: '通过丰富的营销模版，直接配置营销时间、对象、活动内容、触达方式、分析内容等规则，快速配置执行，无需程序介入二次开发。实现敏捷、灵活、低门槛的自动化营销。', icon: 'icon-dichan'},
+    ],
+    //relativeProducts: [
+
+    //],
+    // 案例客户
+    cases: [
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', img: './images/wechat.png'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', img: './images/wechat.png'},
+    ],
+    // 技术架构
+    techArt: {
+    // 标题
+    title: '',
+    // 描述
+    desc: '',
+    // 架构图
+    img: './images/solution-pline1_3.jpg',
+    // 解决方案说明, 架构图描述
+    solutions: [
+    {title: '标准化输出', desc: '提供系统的底层服务API及标准化功能界面，按需进行搭配、整合。满足多元化业务与场景需求。', icon: ''},
+    {title: '数据处理能力', desc: '大数据计算服务能够帮助用户针对TB/PB级数据进行分布式的数据加工，后台强大得计算能力，支持用户做更深度、更复杂的加工。', icon: ''},
+    {title: '数据整合能力', desc: '不管是存量的历史数据，还是不同应用系统的数据，都可以通过数据采集工具统一采集。满足用户整合不同系统数据，统一加工分析的需求。', icon: ''},
+    {title: '账号权限体系归企业所有', desc: '账号权限体系以开源方式输出，可直接使用或自由定制；其中账号数据存储在企业RDS数据库', icon: ''},
+    ]
+    },
+    // 业务架构
+    businessArt: {
+    // 标题
+    title: '',
+    // 描述
+    desc: '',
+    // 架构图
+    img: './images/solution-pline1_3.jpg',
+    // 解决方案说明, 架构图描述
+    solutions: [
+    {title: '完整闭环', desc: '以客户管理平台为基础，整合营销管理，广告投放管理，电商营销、门店营销与第三方服务等6大模块，实现完整闭环。帮助企业全方位管理客户资源、以营销效果为导向，深度挖掘客户价值，持续构建自身的核心竞争优势。', icon: ''},
+    {title: '营销自动化', desc: '从营销活动的设计、执行和评估完整闭环，灵活地实现在合适的时间、对合适的人、用合适的方式、沟通合适的内容， 为客户提供主动差异化的精准营销。', icon: ''},
+    ]
+    },
+    }
+  title #{data.title}
+  include mixin/render-product.jade
+
