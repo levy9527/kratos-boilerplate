@@ -263,8 +263,14 @@ $navbar-height = 60px
 
 
     .product-title
+      display block
       padding 30px 0
       border-bottom 1px solid #2a2a2a
+
+      .md-text
+        color white
+        &:hover
+          color $primary-color
 
     .md-text
       margin-right 12px
@@ -301,8 +307,7 @@ $navbar-height = 60px
       width 240px
       figure
         margin 0 0 20px
-    .md-text
-      margin 30px 0
+
     .product-link
       display block
       margin-bottom 15px
@@ -310,6 +315,11 @@ $navbar-height = 60px
 
       &:hover
         color $primary-color
+
+    .md-text
+      color white
+      margin 30px 0
+
   .copyright-row
     box-shadow 0 -1px 0 0 #333
 

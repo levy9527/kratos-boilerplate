@@ -29,6 +29,7 @@ html
 
   include var/solutions.jade
   include var/products.jade
+  include var/product-lines.jade
 
   mixin renderProductItem (items)
     each item in items
@@ -42,7 +43,6 @@ html
     each item in items
       a.product-link(href=item.href) #{item.title}
 
-
   body
     header.navbar
       div.navbar-section
@@ -54,24 +54,24 @@ html
           a.nav-item-link() 产品
         div.product-menu.flex
           div.product-box
-            div.product-title
-              span.white.md-text 营销智能
-              span.small-text.primary-color i－Marketing
+            a.product-title(href=productLines.iMarketing.href)
+              span.md-text #{productLines.iMarketing.name}
+              span.small-text.primary-color #{productLines.iMarketing.en}
             +renderProductItem(iMarketing)
           div.product-box
-            div.product-title
-              span.white.md-text 全渠道销售
-              span.small-text.primary-color i－Sales
+            a.product-title(href=productLines.iSales.href)
+              span.md-text #{productLines.iSales.name}
+              span.small-text.primary-color #{productLines.iSales.en}
             +renderProductItem(iSales)
           div.product-box
-            div.product-title
-              span.white.md-text 企业数字化平台
-              span.small-text.primary-color i－Digital Platform
+            a.product-title(href=productLines.iDigitalPlatform.href)
+              span.md-text #{productLines.iDigitalPlatform.name}
+              span.small-text.primary-color #{productLines.iDigitalPlatform.en}
             +renderProductItem(iDigitalPlatform)
           div.product-box
-            div.product-title
-              span.white.md-text 云管平台
-              span.small-text.primary-color i－Cloud Platform
+            a.product-title(href=productLines.iCloudPlatform.href)
+              span.md-text #{productLines.iCloudPlatform.name}
+              span.small-text.primary-color #{productLines.iCloudPlatform.en}
             +renderProductItem(iCloudPlatform)
         div.nav-item
           a.nav-item-link() 解决方案
@@ -133,16 +133,16 @@ html
               span 全天候7x24小时服务
         div.product
           div.product-item
-            p.md-text 营销智能
+            a.md-text.product-link(href=productLines.iMarketing.href) #{productLines.iMarketing.name}
             +renderProductLink(iMarketing)
           div.product-item
-            p.md-text 全渠道销售
+            a.md-text.product-link(href=productLines.iSales.href) #{productLines.iSales.name}
             +renderProductLink(iSales)
           div.product-item
-            p.md-text 企业数字化平台
+            a.md-text.product-link(href=productLines.iDigitalPlatform.href) #{productLines.iDigitalPlatform.name}
             +renderProductLink(iDigitalPlatform)
           div.product-item
-            p.md-text 云管平台
+            a.md-text.product-link(href=productLines.iCloudPlatform.href) #{productLines.iCloudPlatform.name}
             +renderProductLink(iCloudPlatform)
           div.product-item
             p.md-text 关注我们
