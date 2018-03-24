@@ -5,6 +5,7 @@ block title
 block content
   include var/solutions.jade
   include var/products.jade
+  include var/product-lines.jade
 
   mixin renderProductItem (items)
     each item in items
@@ -31,17 +32,17 @@ block content
       span 赋能企业数字化创新，阿里云战略生态合作伙伴
       div.container.flex.i-product-container
         div.container-item.i-product(data-tab="tab1").active
-          div.f18 营销智能
-          span.f16 i－Marketing
+          div.f18 #{productLines.iMarketing.name}
+          span.f16 #{productLines.iMarketing.en}
         div.container-item.i-product(data-tab="tab2")
-          div.f18 全渠道销售
-          span.f16 i－Sales
+          div.f18 #{productLines.iSales.name}
+          span.f16 #{productLines.iSales.en}
         div.container-item.i-product(data-tab="tab3")
-          div.f18 企业数字化平台
-          span.f16 i-Digital Platform
+          div.f18 #{productLines.iDigitalPlatform.name}
+          span.f16 #{productLines.iDigitalPlatform.en}
         div.container-item.i-product(data-tab="tab4")
-          div.f18 云管平台
-          span.f16 i－Cloud Platform
+          div.f18 #{productLines.iCloudPlatform.name}
+          span.f16 #{productLines.iCloudPlatform.en}
       div
         div#tab1.tab-content.block
           div.container.figure.product-figure
@@ -49,7 +50,7 @@ block content
             div.figure-text
               div.figure-title 赋能企业数字化创新    阿里云战略生态合作伙伴
               span 进入DT时代，企业通过技术创新和数据驱动业务发展迫在眉睫，“企业数字化平台”构建立体的客户触点体系，赋能企业新技术、企业数字化和全方位体验转型，快速全方位应对业务场景变化，帮助企业实现技术和数据驱动业务，精细化运营，降本增效。
-            a.link-btn 立即试用 >>
+            a.link-btn(href=productLines.iMarketing.href) 立即试用 >>
           div.service.container
             div.service-row.flex
               +renderProductItem(iMarketing)
@@ -59,7 +60,7 @@ block content
             div.figure-text
               div.figure-title 赋能企业数字化创新    阿里云战略生态合作伙伴
               span 进入DT时代，企业通过技术创新和数据驱动业务发展迫在眉睫，“企业数字化平台”构建立体的客户触点体系，赋能企业新技术、企业数字化和全方位体验转型，快速全方位应对业务场景变化，帮助企业实现技术和数据驱动业务，精细化运营，降本增效。
-            a.link-btn 立即试用 >>
+            a.link-btn(href=productLines.iSales.href) 立即试用 >>
           div.service.container
             div.service-row.flex
               +renderProductItem(iSales)
@@ -69,7 +70,7 @@ block content
             div.figure-text
               div.figure-title 赋能企业数字化创新    阿里云战略生态合作伙伴
               span 进入DT时代，企业通过技术创新和数据驱动业务发展迫在眉睫，“企业数字化平台”构建立体的客户触点体系，赋能企业新技术、企业数字化和全方位体验转型，快速全方位应对业务场景变化，帮助企业实现技术和数据驱动业务，精细化运营，降本增效。
-            a.link-btn 立即试用 >>
+            a.link-btn(href=productLines.iDigitalPlatform.href) 立即试用 >>
           div.service.container
             div.service-row.flex
               +renderProductItem(iDigitalPlatform)
@@ -79,7 +80,7 @@ block content
             div.figure-text
               div.figure-title 赋能企业数字化创新    阿里云战略生态合作伙伴
               span 进入DT时代，企业通过技术创新和数据驱动业务发展迫在眉睫，“企业数字化平台”构建立体的客户触点体系，赋能企业新技术、企业数字化和全方位体验转型，快速全方位应对业务场景变化，帮助企业实现技术和数据驱动业务，精细化运营，降本增效。
-            a.link-btn 立即试用 >>
+            a.link-btn(href=productLines.iCloudPlatform.href) 立即试用 >>
           div.service.container
             div.service-row.flex
               +renderProductItem(iCloudPlatform)
