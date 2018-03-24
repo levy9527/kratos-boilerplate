@@ -26,17 +26,18 @@
   ],
   "author": "Felipe Fialho <hi@felipefialho.com> (http://www.felipefialho.com/)",
   "license": "MIT",
-	"standard": {
-		"ignore": [
-				"gulpfile.js",
-				"build/",
-				"dist/",
-				"src/images/",
-				"src/jade/",
-				"src/styl/"
-			]
-	},
+  "standard": {
+    "ignore": [
+      "gulpfile.js",
+      "build/",
+      "dist/",
+      "src/images/",
+      "src/jade/",
+      "src/styl/"
+    ]
+  },
   "dependencies": {
+    "gulp-newer": "^1.4.0",
     "gulp-rev": "^8.1.1",
     "gulp-rev-collector": "^1.2.4",
     "lazysizes": "^4.0.0-rc3",

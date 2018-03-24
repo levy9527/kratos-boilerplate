@@ -1,7 +1,9 @@
 extends layout.jade
 block title
   include var/product-lines.jade
+  include var/get-img-url.jade
   -
+    var pageName = 'i-sales'
     var data = {
     // 产品名
     title: productLines.iSales.name + ' ' + productLines.iSales.en,
@@ -15,25 +17,25 @@ block title
     {
     name: '全链路购物流程',
     desc: '用户淘品可以无缝在不同场景转换，满足不同场景的购物需求\n支持单个渠道、多个渠道的不同组合\n打通不同的支付方式，用户可以在线下销售渠道购买，线上支付，也可以在线上选货，线下完成支付\n不同的商品类型可以定义不同配送方式，交易场景跟取货可以线上线下切换\n支持交易后的多场景触点，物流推送，活动推送，会员奖励',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 2),
     icon: 'icon-icon_64_nor_31',
     },
     {
     name: '一体化配送',
     desc: '根据客户需求，商家资源，合理设置配送方案\n支持门店仓、线上仓多种仓库类型，支持一货多仓\n顾客拍下商品后，自主选择配送方式\n系统分析用户的地理位置，根绝库存和地理位置分配仓库\n仓库收到发货指令，批量打单发货',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 3),
     icon: 'icon-icon_tab_nor_33',
     },
     {
     name: '精准化活动运营',
     desc: '根据用户喜好，不同渠道，不同终端设置活动方式，以及商品，满足一个商品多种玩法\n商家可以自定义用户标签、系统根据用户行为建立用户画像\n组建活动规则以及页面，定义用户对象，实现精准活动\n在不同的渠道，面向不同用户，展现不同的页面和商品\n全面分析活动的渠道效果、商品销量、页面用户反馈',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 4),
     icon: 'icon-icon_tab_nor_14',
     },
     {
     name: '人人分销',
     desc: '支持供货商、分销商、用户/粉丝，的闭环分销建设\n支持定义是否支持商家入驻，社会化分销\n开放申请入口，商家可以自主发起申请\n粉丝可以打造自己的分销页面，通过熟人关系链裂变成口碑营销\n分销商独立管理，供应商统一进行数据监控，资源掌握',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 5),
     icon: 'icon-icon_tab_nor_37',
     },
 
@@ -64,7 +66,7 @@ block title
     // 描述
     desc: '',
     // 架构图
-    img: './images/solution-pline1_3.jpg',
+    img: getImgUrl(pageName, 8),
     // 解决方案说明, 架构图描述
     solutions: [
     {title: '标准化输出', desc: '提供系统的底层服务API及标准化功能界面，按需进行搭配、整合。满足多元化业务与场景需求。', icon: ''},
@@ -80,7 +82,7 @@ block title
     // 描述
     desc: '',
     // 架构图
-    img: './images/solution-pline1_3.jpg',
+    img: getImgUrl(pageName, 7),
     // 解决方案说明, 架构图描述
     solutions: [
     {title: '1）批发、零售、渠道管理深度结合', desc: '', icon: ''},
