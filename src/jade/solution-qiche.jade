@@ -1,6 +1,8 @@
 extends layout.jade
 block title
+  include var/get-img-url.jade
   -
+    var pageName = 'solution-qiche'
     var data = {
     title: '汽车行业数字化创新解决方案',
     desc: '基于互联网微服务架构的营销平台，实现汽车行业营销全域数字化。通过为微服务化的中台架构，大幅度增加企业IT的开发效率，降低企业的营销试错成本。通过营销前端的设计风格，技术架构，用户数据，运营指标的统一，构建起“以用户为核心，以数据为驱动的精细化运营体系”。完成业务云化，数据实时可视化，分析自动化，决策智能化的升级，支撑各用户体验极致优化，达到品牌和客户的深度互动，实现品牌和用户之间的良性黏着。',
@@ -14,7 +16,7 @@ block title
     ],
     // 解决方案
     solution: {
-    img: './images/solution-pline1_3.jpg',
+    img: getImgUrl(pageName, 2),
     details: [
     {title: '1、领先的数字化营销平台:', desc: '基于云技术和中台微服务架构搭建领先的数字化营销平台，支持品牌形象的展示，整车销售，售后服务，客户和品牌之间的互动', icon: 'icon-icon_tab_nor_40'},
     {title: '2、打破信息孤岛：', desc: '打破系统的信息孤岛，减少后续重复建设。统一品牌的视觉效果，设计语言以及用户的体验逻辑', icon: 'icon-icon_tab_nor_23'},
@@ -27,19 +29,19 @@ block title
     {
     name: '整车销售',
     desc: '提供线上全新的电商营销渠道，使营销信息即时触达消费者。\n帮助厂商及经销商扩展线索收集渠道，实现智能化线索清洗下发；\n建立消费者、经销商、官方平台的全新沟通渠道，实现平台引流经销商；\n官方统一运营内容素材库，经销商可随时下载、引用；\n打通线上线下营销渠道，实现客户全生命周期的数据融通。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 3),
     icon: 'icon-icon_tab_nor_07',
     },
     {
     name: '售后服务',
     desc: '客户在售后服务平台上，享受简单、自然以及温暖的售后服务\n售后服务透明、高效、按需、系统地呈现给客户 ；\n给经销商赋能，给经销商带来价值的同时提升其售后服务效率 ；\n智能保养方案推荐，享受闲时优惠，价格透明、自助选择。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 4),
     icon: 'icon-icon_tab_nor_28',
     },
     {
     name: '社交全栈智能SCRM',
     desc: '打通线上线下渠道，实现多渠道的统一客服与智能客服；\n优化客户数据管理工具，建立客户数据分析模型，加强分析结果的应用；\n完成销售线索全生命周期管理，唤醒沉睡客户数据，实现综合数据分析，完成可扩展的中台搭建 ；',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 5),
     icon: 'icon-icon_tab_nor_09',
     },
     ],

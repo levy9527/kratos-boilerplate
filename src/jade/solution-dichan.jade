@@ -1,6 +1,8 @@
 extends layout.jade
 block title
+  include var/get-img-url.jade
   -
+    var pageName = 'solution-dichan'
     var data = {
     title: '地产行业新零售解决方案',
     desc: '数据驱动，以用户为核心的地产行业数字化转型价值体现。构建用户360度视图、立体用户触点、全生命周期管理，实现用户增值，打造地产新营销创新销售模式。',
@@ -14,7 +16,7 @@ block title
     ],
     // 解决方案
     solution: {
-    img: './images/solution-pline1_3.jpg',
+    img: getImgUrl(pageName, 2),
     details: [
     {title: '1、智慧营销解决方案', desc: '从用户的精准拉新，获取用户到到流失干预，提高活跃度一站式服务，提高用户留存率再到流失回流，获取收入，最后通过有效的运营，增强活跃成长，完成二次传播。', icon: 'icon-icon_tab_nor_14'},
     {title: '2、智慧社区解决方案', desc: '基于地产业务中台、数据中台，为智慧社区提供“智慧物联+智慧物业+智慧商业+智慧生活”系列产品服务。', icon: 'icon-icon_tab_nor_18'},
@@ -27,19 +29,19 @@ block title
     {
     name: '智慧营销',
     desc: '针对过往营销存在的费用高、受众不精准、媒体碎片化、信息海量、数据不可追踪，无法形成营销闭环等问题，智慧营销场景专注全网大数据，精准传播，费效比高，用户具有平等话语权，同时实现数据可沉淀，营销可闭环。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 3),
     icon: 'icon-icon_tab_nor_34',
     },
     {
     name: '智能数据  （全局监控、经营分析、数据应用）',
     desc: '基于阿里数据运营理念和数据中台产品建设地产大数据平台，开展地产内部数据治理和第三方数据整合\n地产大数据平台包括智能数据研发套件、数据连接与萃取套件、统一数据服务引擎、统一数据资产及其管理、计算存储平台和安全管控体系\n地产大数据产品包括可视化大屏（DataV）、企业报表（QuickBI）、精准营销（DMP+DSP）等',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 4),
     icon: 'icon-icon_tab_nor_18',
     },
     {
     name: '智慧社区',
     desc: '智慧物联：聚焦智慧家居，提供节能环保（能耗监控）、智能控制（智能安防）、信息互动（家电控制）、产品智能（可视电话）方面的产品服务\n智慧物业：提供物业管理端、业主端和手机办公平台产品\n智慧商业：社区O2O运营，覆盖社区上门服务、日用百货、票务旅游、商超购物、餐饮娱乐等社区商业\n智慧生活：聚合社区金融、社区养老、文化旅游、保险服务、停车管理宽带服务等资源，助力品质生活',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 5),
     icon: 'icon-icon_tab_nor_14',
     },
     ],

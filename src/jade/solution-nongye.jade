@@ -1,6 +1,8 @@
 extends layout.jade
 block title
+  include var/get-img-url.jade
   -
+    var pageName = 'solution-nongye'
     var data = {
     title: '农牧行业数字化创新解决方案',
     desc: '充分利用移动互联网、大数据、云计算、物联网等新一代信息技术与农业的跨界融合，基于互联网平台的现代农业新产品、新模式与新业态，推动农业全产业链改造升级和创新。',
@@ -14,7 +16,7 @@ block title
     ],
     // 解决方案
     solution: {
-    img: './images/solution-pline1_3.jpg',
+    img: getImgUrl(pageName, 2),
     details: [
     {title: '', desc: '1、基于阿里云平台架构，以共享服务体系为核心建设农牧行业+互联网', icon: 'icon-icon_tab_nor_20'},
     {title: '', desc: '2、充分利用互联网、云计算新技术， 将农牧相对粗放经营思路转变为精细化管理模式，实现数字化运营，提高运营效率', icon: 'icon-icon_tab_nor_34'},
@@ -28,19 +30,19 @@ block title
     {
     name: 'B2B采购',
     desc: '重构企业与合作伙伴的供应链采销平台，帮助企业做最佳采购决策和高效协同，构建企业一站式采购入口，提升采购高效协同，对接精选供应商资源，降低企业运营成本。\n专业采购：\n标准、大宗、通用工业品，例如大宗原料类、机械设备类等；\n支持在线寻源、招投标、询议价、采购执行、供应商管理\n订单需要供应商确认；\n采购部门在线选择供应商并下单\n云采超市：\n价值低、标准化程度高、企业可以逐步不设库存的通用物资产品，例如行政类、五金类、劳保类等；\n不议价，订单不需供应商确认，直接线上下单；\n最终用户直接在线选择商品并下单，供应部门定期结算\n',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 3),
     icon: 'icon-icon_tab_nor_32',
     },
     {
     name: '农产品新零售',
     desc: '构建线上线下融合，提升人货场协同效率。\n对消费个体强化用户体验，围绕用户提供更精准化服务；\n对企业增加导流和提升客户体验，通过大数据运营，提升赢利模式；\n对行业促进产业链升级改造，加速行业向智能化、标准化转型；\n打通线上线下各渠道，实现智能化数据管控。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 4),
     icon: 'icon-icon_tab_nor_29',
     },
     {
     name: 'O2O业务全视角，构建清晰的业务链条',
     desc: '',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 5),
     icon: 'icon-icon_tab_nor_03',
     },
     ],
