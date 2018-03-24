@@ -33,11 +33,17 @@ mixin renderProduct (data)
               each item, index in data.situations
                 input(type="radio" name="tabRadio" checked=(index === 0) id="tab" + index)
                 div.component-tab-content
-                  div.left-side
-                    img(src=item.img)
-                  div.right-side
-                    div.md-text.dark #{item.name}
-                    div.pre-wrap #{item.desc}
+                  if item.wideImg
+                    div.top-side
+                      img(src=item.img)
+                    div.pre-wrap.text-center #{item.desc}
+                  else
+                    div.left-side
+                      img(src=item.img)
+                    div.right-side
+                      div.md-text.dark #{item.name}
+                      div.pre-wrap #{item.desc}
+
 
       div#three-sight
         div.container.show-case
