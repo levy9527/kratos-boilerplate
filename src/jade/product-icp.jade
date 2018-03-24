@@ -1,6 +1,11 @@
 extends layout.jade
 block title
+  include var/get-img-url.jade
+  // 四个场景图, 数字分别 2,3,4,5
+  // 业务架构图/技术架构图, 数字分别 7,8
   -
+    // pageName 就是 本文件名
+    var pageName = 'product-icp'
     var data = {
     // 产品名
     title: '云管平台  ICP',
@@ -14,25 +19,25 @@ block title
     {
     name: '多业务系统支持',
     desc: 'i-Cloud Platform可为大型数据数据中心的资源提供统一管理平台，管理多个开源或者异构的云计算技术或产品，支撑较多的业务系统。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 2),
     icon: 'icon-jiaoyupeixun_fuzhi'
     },
     {
     name: '多虚拟化平台支持',
     desc: '大型企业可能存在多种不同的虚拟平台，如Vmware、KVM等，但是各个虚拟化平台都各自提供管理平台，导致资源管理不便， i-Cloud Platform可为多种虚拟化平台提供统一的管理支持。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 3),
     icon: 'icon-jiaoyupeixun_fuzhi'
     },
     {
     name: '多个云支持',
     desc: '企业多个部门实施了多朵私有云，需要统一集成管理， i-Cloud Platform可为企业提供统一的管理平台。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 4),
     icon: 'icon-jiaoyupeixun_fuzhi'
     },
     {
     name: '混合云支持',
     desc: '通常基于Web的业务都可以不属于公有云，而处于安全或合规需要，ERP等核心业务部署于私有云， i-Cloud Platform可为这种融合的混合云提供统一的管理平台。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 5),
     icon: 'icon-jiaoyupeixun_fuzhi'
     }
     ],
@@ -61,7 +66,7 @@ block title
     // 描述
     desc: '',
     // 架构图
-    img: './images/solution-pline1_3.jpg',
+    img: getImgUrl(pageName, 8),
     // 解决方案说明, 架构图描述
     solutions: [
     {title: '', desc: '基础架构主要体现为对于计算、存储、网络资源的虚拟化，通过虚拟化实现对于物理资源的逻辑化并与硬件解耦', icon: ''},
@@ -77,7 +82,7 @@ block title
     // 描述
     desc: '',
     // 架构图
-    img: './images/solution-pline1_3.jpg',
+    img: getImgUrl(pageName, 7),
     // 解决方案说明, 架构图描述
     solutions: [
     {title: '', desc: '统一纳管物理机、虚拟机、公有云、私有云、Docker', icon: ''},
