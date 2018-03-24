@@ -24,7 +24,8 @@ const fs = require('fs');
 const del = require('del');
 const rev = require('gulp-rev')
 const revCollector = require('gulp-rev-collector');
-const runSequence = require('run-sequence')
+const runSequence = require('run-sequence');
+const newer = require('gulp-newer');
 
 const srcApp = {
   js: [
@@ -49,6 +50,7 @@ let files = [];
 
 gulp.task('css', () => {
   return gulp.src(srcApp.css)
+    .pipe(newer(buildApp.css))
     .pipe(plumber())
 //    .pipe(sourcemaps.init())
     .pipe(stylus({
@@ -83,20 +85,21 @@ gulp.task('js', () => {
 
 gulp.task('html', () => {
   return gulp.src(srcApp.html)
+    .pipe(newer(buildApp.html))
     .pipe(plumber())
     .pipe(pug())
     .pipe(gulp.dest(buildApp.html));
 });
 
-
 gulp.task('images', () => {
   return gulp.src(srcApp.img)
+  // .pipe(buildApp.img) // todo dest.on is not a function
     .pipe(plumber())
-    .pipe(imagemin({
-      optimizationLevel: 3,
-      progressive: true,
-      interlaced: true
-    }))
+    // .pipe(imagemin({
+    //   optimizationLevel: 3,
+    //   progressive: true,
+    //   interlaced: true
+    // }))
     .pipe(gulp.dest(buildApp.img));
 });
 
