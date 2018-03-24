@@ -12,6 +12,8 @@ mixin renderProduct (data)
           a(href="#three-sight") 产品优势
           a(href="#four-sight") 核心功能
           a(href="#five-sight") 产品架构
+          if data.relativeProducts
+            a(href="#six-sight") 产品推荐
           a(href="#seven-sight") 案例客户
       div#two-sight.white-bg
         div.container.show-case
@@ -100,6 +102,17 @@ mixin renderProduct (data)
                           div.figure-title #{item.title}
                           span #{item.desc}
                 img(src=data.techArt.img)
+
+      if data.relativeProducts
+        div#six-sight
+          div.container.show-case
+            div.show-case-title.mb60 相关产品推荐
+            div.flex
+              each item in data.relativeProducts
+                div.scale-item
+                  i.font_family(class=item.icon)
+                  div.md-text.dark #{item.title}
+                  div.text #{item.desc}
 
       div.show-case.white-bg#seven-sight
         div.show-case-title.dark.mb60 案例客户

@@ -1,3 +1,99 @@
-//
-   Created by levy on 2018/3/24.
+extends layout.jade
+block title
+  include var/product-lines.jade
+  -
+    var data = {
+    // 产品名
+    title: productLines.iSales.name + ' ' + productLines.iSales.en,
+    // 产品定义
+    desc: '服务治理（SOA governance），指的是企业为了确保事情顺利完成而实施的过程，包括最佳实践、架构原则、治理规程、规律以及其他决定性的因素，通过服务治理，能够更好地管理微服务的使用情况，进行服务调用链路追踪，规范化服务的使用。',
+    // 立即体验链接
+    href: '',
+    // 应用场景
+    // 如果要换行, 在需要换行处加 \n
+    situations: [
+    {
+    name: '异常处理',
+    desc: '服务治理平台根据您设置的报警规则，在监控数据达到报警阈值时发送报警信息，让您及时获取异常通知，查询异常原因。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi',
+    },
+    {
+    name: '服务管理',
+    desc: '服务需要经过定义、验收、审计、上线、变更、优化提升、运行质量监控、下线等流程，通过流程化管理服务，更好地把控服务质量，提升服务性能。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi',
+    },
+    {
+    name: '自动扩容',
+    desc: '对带宽、连接数、磁盘使用率等监控项设置报警规则后，可以让您方便的了解服务现状，在业务量变大后及时收到报警通知进行服务扩容。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi',
+    },
+    {
+    name: '熔断降级',
+    desc: '在一个复杂分布式架构中的宿主应用程序具有多个服务层调用，基础服务的故障可能会导致级联故障，进而造成整个系统不可用的情况，服务调用失败进行熔断降级，从而避免了系统发生服务雪崩效应。',
+    img: '../images/product-s1-kehuxianshang.jpg',
+    icon: 'icon-jiaoyupeixun_fuzhi',
+    },
+    ],
+    // 产品优势
+    advantages: [
+    {title: '可视化服务管理', desc: '服务治理平台提供界面化的服务管理，对服务的上线、下线、审计、变更以及调用情况都提供了可视化的操作。', icon: 'icon-dichan'},
+    {title: '分布式链路跟踪', desc: '系统能够分析分布式系统的每一次系统调用、消息发送和数据库访问，从而精准发现系统的瓶颈和隐患。', icon: 'icon-dichan'},
+    {title: '流程化服务治理', desc: '服务治理平台实现了服务的全生命周期管理，根据企业管理要求制定清晰的管理流程。', icon: 'icon-dichan'},
+    {title: '服务监控和统计', desc: '服务治理平台能够针对应用的服务调用情况，对服务的 QPS、响应时间和出错率进行全方面的监控，同时针对应用的运行状态，对机器的 CPU、内存、负载、网络和磁盘等基础指标进行详细的监控。', icon: 'icon-dichan'},
+    //{title: '容错性高', desc: '多个服务调用，基础服务的故障可能会导致级联故障，进而造成服务雪崩效应。有效的失败熔断和服务降级机制，提供系统稳定性。', icon: 'icon-dichan'},
+    //{title: '安全稳定', desc: '基于ACL访问控制列表的服务鉴权机制，更好地进行服务管理。', icon: 'icon-dichan'},
+    ],
+    // 核心功能
+    coreFuns: [
+    {title: '服务动态注册和发现', desc: '当服务越来越多时，使用人工进行服务配置变得异常困难，动态的注册和发现服务，使服务的位置透明。', icon: 'icon-dichan'},
+    {title: '服务链路跟踪', desc: '系统能够分析分布式系统的每一次系统调用、消息发送和数据库访问，从而精准发现系统的瓶颈和隐患。', icon: 'icon-dichan'},
+    {title: '可视化服务治理', desc: '服务治理实现了服务的全生命周期管理，对服务的上线、下线、审计、变更以及调用情况都提供了可视化的操作。', icon: 'icon-dichan'},
+    {title: '监控统计', desc: '系统能够针对应用的服务调用情况，对服务的 QPS、响应时间和出错率进行全方面的监控，同时针对应用的运行状态，对机器的 CPU、内存、负载、网络和磁盘等基础指标进行详细的监控。', icon: 'icon-dichan'},
+    {title: '统一技术标准', desc: '减少沟通协作成本，技术标准文档化，提高服务开发效率和响应速度。', icon: 'icon-dichan'},
+    {title: '服务权限控制', desc: '基于ACL访问控制列表的服务鉴权机制，服务调用时进行权限控制。', icon: 'icon-dichan'},
+    ],
+    relativeProducts: [
+
+    ],
+    // 案例客户
+    cases: [
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', img: './images/wechat.png'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', img: './images/wechat.png'},
+    ],
+    // 技术架构
+    techArt: {
+    // 标题
+    title: '前后端分离',
+    // 描述
+    desc: '服务治理平台主要分为前台界面、后端服务和持久层三大部分，采用了前后端分离的技术架构',
+    // 架构图
+    img: './images/solution-pline1_3.jpg',
+    // 解决方案说明, 架构图描述
+    solutions: [
+    {title: '前端', desc: '前端门户采用MVVM框架，通过Restful API与后端服务进行通信；', icon: ''},
+    {title: '后端', desc: '后端服务主要采用HSF+EDAS技术作为分布式架构，采用JAVA+Springboot开发resful API，供前台调用', icon: ''},
+    {title: '持久层', desc: '持久层采用nosql数据库存储热点数据和缓存，使用MySQL，MongoDB存储用户数据。', icon: ''},
+    ]
+    },
+    // 业务架构
+    businessArt: {
+    // 标题
+    title: '服务治理平台',
+    // 描述
+    desc: '服务治理平台主要包括消费方门户、提供方门户、运营者门户共三大门户，针对不同的角色提供微服务治理能力。',
+    // 架构图
+    img: './images/solution-pline1_3.jpg',
+    // 解决方案说明, 架构图描述
+    solutions: [
+    {title: '提供方', desc: '提供方可以登录平台，查看自己发布的服务，以及修改服务的路由规则、动态调整配置和权重，对服务进行访问控制以及服务上线申请', icon: ''},
+    {title: '消费方', desc: '消费方可以在平台上，查看自己订阅的服务，在平台上申请自己需要调用的服务，动态修改服务配置', icon: ''},
+    {title: '运营者', desc: '平台运营者可以进行服务审计，质量监控以及审核服务申请，查看服务调用信息和统计报告', icon: ''},
+    ]
+    },
+    }
+  title #{data.title}
+  include mixin/render-product.jade
 
