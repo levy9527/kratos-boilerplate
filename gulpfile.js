@@ -93,13 +93,12 @@ gulp.task('html', () => {
 
 gulp.task('images', () => {
   return gulp.src(srcApp.img)
-  // .pipe(buildApp.img) // todo dest.on is not a function
     .pipe(plumber())
-    // .pipe(imagemin({
-    //   optimizationLevel: 3,
-    //   progressive: true,
-    //   interlaced: true
-    // }))
+    .pipe(imagemin({
+      optimizationLevel: 3,
+      progressive: true,
+      interlaced: true
+    }))
     .pipe(gulp.dest(buildApp.img));
 });
 
