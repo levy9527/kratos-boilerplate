@@ -15,7 +15,7 @@ mixin renderSolution (data)
 
       div.show-case.total-view
         div.show-case-title.mb60 解决方案全景洞察
-        div.flex.container
+        div.flex.container(class=data.solution.wideImg ? 'wide-image-container' :'')
           img(src=data.solution.img).total-view-img
           div.figure-box
             each d in data.solution.details

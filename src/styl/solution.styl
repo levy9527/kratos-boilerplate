@@ -41,6 +41,28 @@
     .figure-text {
       width auto
     }
+
+    .wide-image-container {
+      flex-direction column
+
+      .figure-box {
+        display flex
+        flex-wrap wrap
+        justify-content space-between
+        margin 0
+      }
+
+      .figure {
+        flex none
+        box-sizing border-box
+        width 50%
+        padding 0 0 25px
+
+        &:nth-child(odd) {
+          padding-right 84px
+        }
+      }
+    }
   }
 
    // tab 切换取代js关键样式 start
