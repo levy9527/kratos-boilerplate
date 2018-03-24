@@ -1,6 +1,8 @@
 extends layout.jade
 block title
+  include var/get-img-url.jade
   -
+    var pageName = 'product-stonehenge'
     var data = {
     // 产品名
     title: '开发平台 Stonehenge',
@@ -14,27 +16,29 @@ block title
       {
         name: '技术革新',
         desc: '拥抱前沿技术，开拓新的可能\n遵循标准规范，保持风格一致\n进行单元测试，保证代码质量\n开发自运维，打破开发与运维之间的壁垒，加上自动化工具，新功能可以快速交付，团队可以低成本享受开发成果。',
-        img: '../images/product-s1-kehuxianshang.jpg',
-        icon: 'icon-icon_64_nor_24',
+      img: getImgUrl(pageName, 2),
+      icon: 'icon-icon_64_nor_24'
       },
       {
       name: '快速开始',
       desc: '还在开发相似的接口？\n还在刻画相似的页面？\n开发套件支持通过配置自动生成接口以及页面，免去了重复劳动\n如果现有模板不满足个性化需求，还可以一键导出生成好的文件，稍做修改即可使用',
-      img: '../images/product-s1-kehuxianshang.jpg',
-      icon: 'icon-icon_64_nor_03',
+      img: getImgUrl(pageName, 3),
+      icon: 'icon-icon_64_nor_03'
       },
       {
       name: '开箱即用',
       desc: '提炼中后台应用常见场景\n预先配置好开发环境\n提供一个开箱即用的解决方案\n专注书写业务代码',
-      img: '../images/product-s1-kehuxianshang.jpg',
-      icon: 'icon-icon_tab_nor_13',
+      img: getImgUrl(pageName, 4),
+      wideImg: getImgUrl(pageName, 4),
+      icon: 'icon-icon_tab_nor_13'
       },
       {
       name: '前后端分离',
       desc: '把传统的单体Web应用，拆分成微服务架构，必然要用到前后端分离的协作模式，这是主流的趋势\n两端分离带来灵活性的同时，也为双方沟通协作方式提出了挑战，\n开发平台帮助您减少沟通维护成本，便捷管理接口，前后端并行开发，提高开发效率',
-      img: '../images/product-s1-kehuxianshang.jpg',
-      icon: 'icon-icon_tab_nor_21',
-      },
+      img: getImgUrl(pageName, 5),
+      wideImg: getImgUrl(pageName, 5),
+      icon: 'icon-icon_tab_nor_21'
+      }
     ],
     // 产品优势
     advantages: [
@@ -43,19 +47,19 @@ block title
     //{title: '自动化开发工作流', desc: '减少人力重复劳动，使用工具解放生产力。', icon: 'icon-dichan'},
     {title: '快速产出', desc: '敏捷开发，应对需求快速变化；DevOps，提升开发与运营的协作效率。', icon: 'icon-icon_64_nor_03'},
     {title: '解决方案集成', desc: '开箱即用的解决方案，专注书写业务代码。', icon: 'icon-icon_64_nor_07'},
-    {title: '最佳实践', desc: '良好的工程实践，助你持续产出高质量代码。', icon: 'icon-icon_64_nor_33'},
+    {title: '最佳实践', desc: '良好的工程实践，助你持续产出高质量代码。', icon: 'icon-icon_64_nor_33'}
     ],
     // 核心功能
     coreFuns: [
     {title: '接口管理', desc: '使用接口管理服务，在线生成API文档，根据文档生成在线Mock服务。\n前后端分离方式，让前后端人员并行开发，提高整体开发效率。', icon: 'icon-icon_72_12'},
     {title: '最新技术栈', desc: '使用React/Vue，ES6/ES7，Sass/Less/Stylus/PostCSS, Webpack4 等前沿技术。\n摆脱落后的开发方式，获得更友好的开发体验，提高开发效率。', icon: 'icon-icon_72_42'},
     {title: '开发工作流自动化', desc: '使用开发套件，建构本地链，结合脚本或可视化界面，让开发过程中重复的劳动自动化。\n把重复劳动交给工具,解放人的生产力，提高创造力。', icon: 'icon-icon_72_19'},
-    {title: '最佳实践', desc: '开发理念以及项目规范，以友好的文档形式展示，配合工具对代码进行质量管理。\n良好的工程实践，成熟的解决方案，助你持续产出高质量代码。', icon: 'icon-icon_72_32'},
+    {title: '最佳实践', desc: '开发理念以及项目规范，以友好的文档形式展示，配合工具对代码进行质量管理。\n良好的工程实践，成熟的解决方案，助你持续产出高质量代码。', icon: 'icon-icon_72_32'}
     ],
     // 案例客户
     cases: [
     {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', img: './images/wechat.png'},
-    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', img: './images/wechat.png'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', img: './images/wechat.png'}
     ],
     // 技术架构
     techArt: {
@@ -70,7 +74,7 @@ block title
     {title: '开发套件', desc: '开发套件可开箱即用，提高开发效率', icon: ''},
     {title: '接口服务', desc: '接口服务减少沟通协作成本，是前后端并行开发的关键利器', icon: ''},
     {title: '工具集', desc: '工具集可减少重复劳动，解放生产力', icon: ''},
-    {title: '技术沉淀', desc: '技术沉淀避免重复造轮子，同时保证了代码风格一致，提高交付稳定性', icon: ''},
+    {title: '技术沉淀', desc: '技术沉淀避免重复造轮子，同时保证了代码风格一致，提高交付稳定性', icon: ''}
     ]
     },
     // 业务架构
@@ -80,7 +84,7 @@ block title
     //// 描述
     desc: '',
     //// 架构图
-    img: './images/solution-pline1_3.jpg',
+    img: getImgUrl(pageName, 7)
     //// 解决方案说明, 架构图描述
     //solutions: [
     //{title: '', desc: '', icon: ''},
@@ -88,7 +92,7 @@ block title
     //{title: '', desc: '', icon: ''},
     //{title: '', desc: '', icon: ''},
     //]
-    },
+    }
     }
   title #{data.title}
   include mixin/render-product.jade
