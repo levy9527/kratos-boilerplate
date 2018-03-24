@@ -1,6 +1,8 @@
 extends layout.jade
 block title
+  include var/get-img-url.jade
   -
+    var pageName = 'product-tourbillon'
     var data = {
     // 产品名
     title: '运营平台 Tourbillon',
@@ -14,33 +16,36 @@ block title
     {
     name: '应用创建',
     desc: '创建应用时，首先录入基础数据，包括应用名称，公司信息。\n应用类型包含PC，APP，微信，小程序，可根据实际情况选择。\n目前支持B2B，B2C，O2O三种模式。平台会根据发展，添加更多的经营模式。\n同意《云徙apass系统合作服务协议》,完成应用创建，等待审核结果。管理员会在3个工作日内完成审核。',
-    img: '../images/product-s1-kehuxianshang.jpg',
-    icon: 'icon-icon_tab_nor_25',
+    img: getImgUrl(pageName, 2),
+    wideImg: getImgUrl(pageName, 2),
+    icon: 'icon-icon_tab_nor_25'
     },
     {
     name: '应用审核',
     desc: '在审核通过之前，用户可以修改自己的应用信息。\n管理员根据企业用户提交的应用信息，对其进行审核，决定是否允许此应用使用开放能力API。\n审核通过后,授予此应用能够使用开放能力API。',
-    img: '../images/product-s1-kehuxianshang.jpg',
-    icon: 'icon-icon_64_nor_16',
+    img: getImgUrl(pageName, 3),
+    wideImg: getImgUrl(pageName, 3),
+    icon: 'icon-icon_64_nor_16'
     },
     {
     name: '应用上线',
     desc: '应用经过开发之后，上线上架。此时，应用真实需要调用开放能力API。\n应用将审核通过后，颁发的授权信息，配置在程序里面。启动时，带配置信息向平台获取token。平台授与一个实效性的token。\n合法的token，可以访问开放API接口。',
-    img: '../images/product-s1-kehuxianshang.jpg',
-    icon: 'icon-icon_tab_nor_03',
+    img: getImgUrl(pageName, 4),
+    wideImg: getImgUrl(pageName, 4),
+    icon: 'icon-icon_tab_nor_03'
     },
     {
     name: '数据分析',
     desc: '通过查看应用维度的API调用数据。系统管理员可以看到哪些应用比较活跃。这些应用可能具有较好的业务模式。看到行业的发展趋势。\n时间较长的API调用，表示性能问题。及时反馈，让中台开发者提高产品性能。\n统计调用出错信息，迅速反馈给中心开发同学，提高服务可用性和用户体验。\n通过应用类型统计，可以看出整个应用的发展趋势。统计不同类型的应用从创建到上线的时间，评估开发成本。',
-    img: '../images/product-s1-kehuxianshang.jpg',
-    icon: 'icon-icon_64_nor_37',
-    },
+    img: getImgUrl(pageName, 5),
+    icon: 'icon-icon_64_nor_37'
+    }
     ],
     // 产品优势
     advantages: [
     {title: '便捷的应用创建', desc: 'step-by-step式的应用创建引导页，方便企业用户根据自己的实际业务模式，创建应用。', icon: 'icon-icon_64_nor_14'},
     {title: '完善的开发支持', desc: '完善的开发者文档。多语言支持的开发SDK，开发者引入SDK即能使用中心赋能。', icon: 'icon-icon_64_nor_33'},
-    {title: '测试环境自由切换', desc: '企业应用测试阶段，可以通过SDK配置切换测试环境，完成测试后，再使用正式环境。', icon: 'icon-icon_64_nor_02'},
+    {title: '测试环境自由切换', desc: '企业应用测试阶段，可以通过SDK配置切换测试环境，完成测试后，再使用正式环境。', icon: 'icon-icon_64_nor_02'}
     // {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', icon: 'icon-dichan'},
     ],
     // 核心功能
@@ -48,12 +53,12 @@ block title
     {title: '应用接入规范', desc: '引导式的应用接入。企业用户在web页面上填写应用基础数据，提交即完成应用申请。', icon: 'icon-icon_72_02'},
     {title: '中台中心管理', desc: '管理员可以在web页面，添加中心到中台网关。也可以将中心下线。内部通过调用中台网关API完成。', icon: 'icon-icon_72_19'},
     {title: '线上运营', desc: '查看企业运营数据，如调用次数、错误信息，不同渠道的的调用对比等。这些数据可以通过分析，为企业提供业务决策。', icon: 'icon-icon_72_36'},
-    {title: '开发者文档', desc: '提供清晰易用的在线开发者文档、接入SDK，并提供测试环境，最大限度的简化企业应用的开发，联调。', icon: 'icon-icon_72_32'},
+    {title: '开发者文档', desc: '提供清晰易用的在线开发者文档、接入SDK，并提供测试环境，最大限度的简化企业应用的开发，联调。', icon: 'icon-icon_72_32'}
     ],
     // 案例客户
     cases: [
     {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', img: './images/wechat.png'},
-    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', img: './images/wechat.png'},
+    {title: '大数据洞察', desc: '智能化数据分析引擎，快速形成以企业自有数据与第三方大数据为基础的智能化业务洞察，定位业务问题,大数据引擎实现线上与线下数据的多维度整合分析。', img: './images/wechat.png'}
     ],
     // 技术架构
     techArt: {
@@ -62,13 +67,13 @@ block title
     // 描述
     //desc: '满足业务连续性和可扩展性的高性能云数据库服务',
     // 架构图
-    img: './images/solution-pline1_3.jpg',
+    img: getImgUrl(pageName, 8),
     // 解决方案说明, 架构图描述
     solutions: [
     {title: '创建应用', desc: '在特比龙的web端上创建应用，特比龙会记录这些创建的应用，并授权获得中台能力。', icon: ''},
     {title: '审核应用', desc: '审核该应用后，修改数据库中存储的应用相关元数据。', icon: ''},
     {title: '配置元数据', desc: '将这些元数据配置到应用中。并参考开放API文档，编写使用中台API接口相关的代码。', icon: ''},
-    {title: '获取token', desc: '应用特比龙平台接口获取token时，平台生成token，并设定有效期。并调用通过网关管理服务，将token写入中台网关的配置。当应用带token访问中台网关时，中台网关检测此token有效，允许应用调用开放API。当有效期到达后，会再次通过网关管理服务，清理中台网关与此token相关的配置。保证token的时效性。', icon: ''},
+    {title: '获取token', desc: '应用特比龙平台接口获取token时，平台生成token，并设定有效期。并调用通过网关管理服务，将token写入中台网关的配置。当应用带token访问中台网关时，中台网关检测此token有效，允许应用调用开放API。当有效期到达后，会再次通过网关管理服务，清理中台网关与此token相关的配置。保证token的时效性。', icon: ''}
     ]
     },
     // 业务架构
@@ -78,15 +83,15 @@ block title
     // 描述
     //desc: '满足业务连续性和可扩展性的高性能云数据库服务',
     // 架构图
-    img: './images/solution-pline1_3.jpg',
+    img: getImgUrl(pageName, 7),
     // 解决方案说明, 架构图描述
     solutions: [
     {title: '企业用户', desc: '企业用户可以在特比龙上创建应用，管理自己创建的应用', icon: ''},
     {title: '管理员', desc: '管理员能审核企业用户创建的应用。通过审核后，应用就具有了相应的元数据。还可便捷的上线、下线中台中心接', icon: ''},
     {title: '应用开发者', desc: '应用开发者将这些元数据配置到应用中。并参考开放API文档，编写抵用中台API接口相关的代码。', icon: ''},
-    {title: '应用发布', desc: '应用发布后，通过特比龙平台接口获取token，携带token访问中台网关。中台网关检测此token有效，允许应用调用开放API。', icon: ''},
+    {title: '应用发布', desc: '应用发布后，通过特比龙平台接口获取token，携带token访问中台网关。中台网关检测此token有效，允许应用调用开放API。', icon: ''}
     ]
-    },
+    }
     }
   title #{data.title}
   include mixin/render-product.jade
