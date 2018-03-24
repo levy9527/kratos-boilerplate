@@ -1,6 +1,8 @@
 extends layout.jade
 block title
+  include var/get-img-url.jade
   -
+    var pageName = 'product-dstore'
     var data = {
     // 产品名
     title: '数字门店 Dstore',
@@ -14,25 +16,25 @@ block title
     {
     name: 'O2O购物',
     desc: '浏览商品:\n·消费者在家直接通过店铺微商城浏览商品\n消费者到门店直接选购商品\n购买商品:\n·消费者到门店体验商品，在微商城下单\n·消费者直接在门店下单\n派送商品:\n·消费者可选择在门店直接提货\n·消费者选择送货到家\n订单完成:\n消费者确认收货，订单完成',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 2),
     icon: 'icon-icon_tab_nor_29'
     },
     {
     name: '预售商品个性化推荐',
     desc: '设置预售活动信息:\n在店铺微商城选择要上架的预售商品，并设置预售活动标题、内容、时间、范围等\n选择推广群体:\n通过对商品属性分析和用户画像，为预售商品选择合适的推广群体和渠道\n开始推广预售商品:\n根据已选群体和渠道进行预售商品的推广',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 3),
     icon: 'icon-icon_tab_nor_14'
     },
     {
     name: '门店数字陈列 ',
     desc: '商品陈列分析:\n分析商品销售数据和陈列位置，并形成分析结论\n调整陈列方式:\n供应商将商品发布至推广页面，设定好佣金比例，以供推广商选择\n跟踪陈列数据:\n对新的陈列方式进行数据跟踪，得出结论，验证陈列是否合理\n优化陈列方式:\n当新的陈列方式无法提升商品销量或邻近商品销售，则应当再次优化商品陈列方式',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 4),
     icon: 'icon-icon_tab_nor_31'
     },
     {
     name: '业务员数字巡店',
     desc: '新增巡店计划:\n业务员可以通过PC、手机、平板创建巡店计划，并自动生成巡店地图\n执行巡店计划:\n业务员根据巡店地图的最短路径进行巡店，并直接通过手机或平板上传巡店数据至后台\n分析巡店数据:\n后台自动分析巡店数据，生成分析报告\n反馈巡店结果:\n将结果反馈至业务员和门店，帮助业务员提升许多年效率，帮助门店提升相应商品销量',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 5),
     icon: 'icon-icon_tab_nor_03'
     }
     ],
@@ -62,7 +64,7 @@ block title
     // 描述
     desc: '',
     // 架构图
-    img: './images/solution-pline1_3.jpg',
+    img: getImgUrl(pageName, 8),
     // 解决方案说明, 架构图描述
     solutions: [
     {title: '', desc: '', icon: ''},
@@ -78,7 +80,7 @@ block title
     // 描述
     desc: '',
     // 架构图
-    img: './images/solution-pline1_3.jpg',
+    img: getImgUrl(pageName, 7),
     // 解决方案说明, 架构图描述
     solutions: [
     {title: '标签分组', desc: '通过标签高效细分客群，可自定义配置，与营销过程管理无缝集成。', icon: ''},

@@ -1,6 +1,8 @@
 extends layout.jade
 block title
+  include var/get-img-url.jade
   -
+    var pageName = 'product-dmall'
     var data = {
     // 产品名
     title: '数字商城 DMall',
@@ -14,25 +16,25 @@ block title
     {
     name: '汇聚海量货架',
     desc: '商家准入机制:\n支持定义商家入驻的标准，如商品标准，资质要求、经营范围\n发起申请:\n开放申请入口，商家可以自主发起申请\n区分角色权限:\n商家可自定义商品上架的流程，以及操作角色，实现全流程自动流转操作\n扩充sku:\n平台展示所有入驻商家商品，铺开销售。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 2),
     icon: 'icon-icon_tab_nor_31'
     },
     {
     name: '多维活动并行',
     desc: '多维度并行:\n支持平台活动开放商家申请入口，支持商家自行发起活动\n灵活模板:\n商家可以选择标准活动模板，也可以通过活动模板组件，实现活动页面+活动规则的组合\n自主投放:\n一键获取活动链接，根据商家需求投放到不同的推广渠道\n数据化活动效果:\n每个活动可以跟踪用户参与情况，页面点击情况，为活动调整提供支撑',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 3),
     icon: 'icon-icon_tab_nor_14'
     },
     {
     name: '统一发货调度',
     desc: '多维度拆合:\n系统会自动识别商品来源，并对应仓库进行订单拆分，将子订单自动分发到所在仓库或相应的供应商代发货栏目下\n自动择优:\n根据用户的配送地址、仓库的距离，自动选择成本最低的物流，并回填物流单号\n批量处理:\n自动匹配订单与物流发货面单，实现批量打印\n自动化处理:\n根据订单的商家结算规则，分销规则，自动计算结算清单，一键提现发起结算',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 4),
     icon: 'icon-icon_tab_nor_33'
     },
     {
     name: '全局售后',
     desc: '多重账号角色:\n平台创建商家售后账号，账号可以定义不同的角色权限：退换货处理，退换货审批，投诉处理\n配置配套服务:\n商家可以配置售后知识库，在线接待小组，退换货的规则\n自动流转:\n根据商家的角色以及所设定的售后规则，分派售后处理人员\n跟踪与优化:\n提供售后分析报表，以及异常预警，为商家的服务提升提供依据',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 5),
     icon: 'icon-icon_tab_nor_28'
     }
     ],
@@ -62,7 +64,7 @@ block title
     // 描述
     desc: '',
     // 架构图
-    img: './images/solution-pline1_3.jpg',
+    img: getImgUrl(pageName, 8),
     // 解决方案说明, 架构图描述
     solutions: [
     {title: '', desc: '', icon: ''},
@@ -78,7 +80,7 @@ block title
       // 描述
       desc: '',
       // 架构图
-      img: './images/solution-pline1_3.jpg',
+      img: getImgUrl(pageName, 7),
       // 解决方案说明, 架构图描述
       solutions: [
       {title: '标签分组', desc: '通过标签高效细分客群，可自定义配置，与营销过程管理无缝集成。', icon: ''},

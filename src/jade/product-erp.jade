@@ -1,6 +1,8 @@
 extends layout.jade
 block title
+  include var/get-img-url.jade
   -
+    var pageName = 'product-erp'
     var data = {
     // 产品名
     title: '电商ERP平台 D-ERP',
@@ -14,25 +16,25 @@ block title
     {
     name: '交易管理',
     desc: '多渠道同步:\n自营不同渠道、第三方代销渠道，产生交易，实时推送\n多维度拆合:\n系统会自动识别商品来源，并对应仓库进行订单拆分，将子订单自动分发到所在仓库或相应的供应商代发货栏目下\n自动择优:\n根据用户的配送地址、仓库的距离，自动选择成本最低的物流，并回填物流单号\n批量处理:\n自动匹配订单与物流发货面单，实现批量打印',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 2),
     icon: 'icon-icon_tab_nor_36'
     },
     {
     name: '进销存管理',
     desc: '满足多种采购计划:\n根据常规采购计划、采购建议，发起采购\n多个渠道同步:\n交易产生时自动同步所有渠道订单\n智能分仓:\n根据所分配的发货仓库传递拣货指引\n库存扣减与提醒:\n扣减对应商品库存，同步库存提醒预警数据',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 3),
     icon: 'icon-icon_tab_nor_32'
     },
     {
     name: '商品管理',
     desc: '自定义创建:\n根据商家的经营范围，选择标准分类或者创建新分类\n自定义添加:\n根据不同分类添加属性以及属性值\n实时更新:\n选择或者补充属性具体内容\n统一管理:\nx不同平台获取商品档案进行应用',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 4),
     icon: 'icon-icon_tab_nor_31'
     },
     {
     name: '财务管理',
     desc: '智能审核:\n根据企业业务需求，定义不同金额、不同供应商的审批节点和角色\n多渠道同步:\n不同渠道产生的交易，财务可以直观查看\n多维度分析:\n从商品成本、库存成本、维度进行销量分析\n数据自动化:\n根据不同供应商以及定义的结算规则，自动生成对账清单，一键操作结算',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 5),
     icon: 'icon-icon_tab_nor_37'
     }
     ],
@@ -80,7 +82,7 @@ block title
     // 描述
     desc: '',
     // 架构图
-    img: './images/solution-pline1_3.jpg',
+    img: getImgUrl(pageName, 7),
     // 解决方案说明, 架构图描述
     solutions: [
     {title: '标签分组', desc: '通过标签高效细分客群，可自定义配置，与营销过程管理无缝集成。', icon: ''},

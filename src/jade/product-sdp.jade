@@ -1,6 +1,8 @@
 extends layout.jade
 block title
+  include var/get-img-url.jade
   -
+    var pageName = 'product-sdp'
     var data = {
     // 产品名
     title: '社会化分销平台 SDP',
@@ -14,25 +16,25 @@ block title
     {
     name: '人人电商',
     desc: '成为推广商:\n用户需登录特定的页面，申请推广账号，后台审核通过后，即有资格推广商品获利\n选择产品并推广:\n供应商将商品发布至推广页面，设定好佣金比例，以供推广商选择\n分享推广产品:\n用户选择推广商品后，可分享至社交媒体\n获取推广佣金:\n如果朋友购买了推广商品，则在一定的周期后，推广商可从供应商获取佣金',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 2),
     icon: 'icon-icon_tab_nor_37'
     },
     {
     name: '专属微店',
     desc: '注册微店:\n企业和个人都可以注册微店账号，但拥有不同的微店权限\n审核微店:\n后台人工或机器审核资料是否合法合规\n登录微店:\n注册成功后即可登录上传商品或进行其他操作',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 3),
     icon: 'icon-icon_tab_nor_07'
     },
     {
     name: '消费积分',
     desc: '注册会员:\n用户需先注册会员才可参与积分活动\n获取积分:\n后台设置积分规则，根据会员消费金额获取一定积分\n积分兑换:\n当积分达到某个商品/服务的兑换条件后，即可进行兑换\n积分扣减:\n兑换成功后，后台自动扣减相应积分',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 4),
     icon: 'icon-icon_tab_nor_10'
     },
     {
     name: '商品代发',
     desc: '用户下单:\n用户在代理商（无自己的商品库存）渠道进行下单\n确认订单:\n代理商确认商品订单，系统至流转至供应商仓库处理\n仓库发货:\n供应商确认订单后进行商品代发，并实时反馈物流信息至代理商平台\n确认收货:\n用户确认收货，一定周期后，代理商从供应商结算佣金',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 5),
     icon: 'icon-icon_tab_nor_31'
     }
     ],
@@ -78,7 +80,7 @@ block title
     // 描述
     desc: '',
     // 架构图
-    img: './images/solution-pline1_3.jpg',
+    img: getImgUrl(pageName, 7),
     // 解决方案说明, 架构图描述
     solutions: [
     {title: '标签分组', desc: '通过标签高效细分客群，可自定义配置，与营销过程管理无缝集成。', icon: ''},

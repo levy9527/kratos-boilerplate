@@ -1,6 +1,8 @@
 extends layout.jade
 block title
+  include var/get-img-url.jade
   -
+    var pageName = 'product-crm'
     var data = {
     // 产品名
     title: '客户管理 CRM',
@@ -14,25 +16,28 @@ block title
     {
     name: '客户管理 CRM',
     desc: '通过对客户生命周期进行拆解，对处于不同生命周期的客户提供不同营销工具，对各生命周期的客户进行精准预测，业务人员只需根据系统生成的名单即可进行营销，更高效、精准。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 2),
     icon: 'icon-icon_tab_nor_09'
     },
     {
     name: '会员维系',
     desc: '业务人员根据客户特性进行筛选分组后，可通过配置营销规则为群组客户进行触达，且自动化执行，执行期间群组不断更新符合条件的客户，实现营销自动化。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 3),
+    wideImg: getImgUrl(pageName, 3),
     icon: 'icon-icon_tab_nor_10'
     },
     {
     name: '忠诚度管理',
     desc: '客户信息记录后自动采集更新客户行为，根据不同的客户行为进行忠诚度分组，并为业务人员提供客户跟进管理与流失预警服务。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 4),
+    wideImg: getImgUrl(pageName, 4),
     icon: 'icon-icon_tab_nor_11'
     },
     {
     name: '流失客户预警',
     desc: '由业务人员设置流失条件，客户信息记录后自动采集更新客户行为，将符合条件的客户进行分组，为业务人员进行流失预警，通知业务人员尽快挽留。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 5),
+    wideImg: getImgUrl(pageName, 5),
     icon: 'icon-icon_tab_nor_12'
     }
     ],
@@ -78,7 +83,7 @@ block title
     // 描述
     desc: '',
     // 架构图
-    img: './images/solution-pline1_3.jpg',
+    img: getImgUrl(pageName, 7),
     // 解决方案说明, 架构图描述
     solutions: [
     {title: '统一管理', desc: '实现统一的客户视图、统一的交易与行为跟踪、全程的客户生命周期管理', icon: 'icon-icon_64_nor_01'},

@@ -1,6 +1,8 @@
 extends layout.jade
 block title
+  include var/get-img-url.jade
   -
+    var pageName = 'product-smartad'
     var data = {
     // 产品名
     title: '广告投放管理 SmartAd',
@@ -14,25 +16,29 @@ block title
     {
     name: '数据采集',
     desc: '通过对广告链接和落地页封装监控方案，采集广告浏览信息，获取实时监控数据，为业务人员提供全流程监控分析。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 2),
+    wideImg: getImgUrl(pageName, 2),
     icon: 'icon-icon_tab_nor_16'
     },
     {
     name: '实时监控',
     desc: '对广告投放全流程所有节点进行实时监控，根据各节点特性选择关键指标，只获取有用信息，屏蔽无关信息干扰。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 3),
+    wideImg: getImgUrl(pageName, 3),
     icon: 'icon-icon_tab_nor_18'
     },
     {
     name: '投放策略优化',
     desc: '根据监控信息反馈辅助业务人员动态调整企业投放策略，精准定位劣质渠道，智能调整投放计划关闭劣质通道，持续对广告投放进行优化。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 4),
+    wideImg: getImgUrl(pageName, 4),
     icon: 'icon-icon_tab_nor_08'
     },
     {
     name: '人群放大',
     desc: '可根据种子客户的分析特征进行画像匹配，抽取其中共有属性进行关键特征总结，基于其特征进行放大匹配相似人群，并通过营销规则进行客户触达。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 5),
+    wideImg: getImgUrl(pageName, 4),
     icon: 'icon-icon_tab_nor_09'
     }
     ],
@@ -78,7 +84,7 @@ block title
     // 描述
     desc: '',
     // 架构图
-    img: './images/solution-pline1_3.jpg',
+    img: getImgUrl(pageName, 7),
     // 解决方案说明, 架构图描述
     solutions: [
     {title: '完整数据采集方案', desc: '提供完整、成熟的数据采集方案，帮助企业有效采集数据', icon: 'icon-icon_64_nor_21'},

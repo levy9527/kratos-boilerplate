@@ -1,6 +1,8 @@
 extends layout.jade
 block title
+  include var/get-img-url.jade
   -
+    var pageName = 'product-smartda'
     var data = {
     // 产品名
     title: '营销数据分析 SmartDA',
@@ -14,25 +16,29 @@ block title
     {
     name: '数据处理ETL',
     desc: '抽取、处理源数据，清洗转换到数据存储管理，形成遵循企业数据模型的标准化数据。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 2),
+    wideImg: getImgUrl(pageName, 2),
     icon: 'icon-icon_tab_nor_19'
     },
     {
     name: '元数据管理',
     desc: '业务元数据\n面向业务人员，从业务术语、业务描述、业务指标和业务规则等几个方面对数据进行描述。\n管理元数据\n面向数据管理人员，从运维管理的角度描述数据处理、数据质量和数据安全的状态信息。\n技术元数据\n面向技术人员，从数据结构和数据处理细节方面对数据进行技术化描述。\n',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 3),
+    wideImg: getImgUrl(pageName, 3),
     icon: 'icon-icon_tab_nor_18'
     },
     {
     name: '数据质量管理',
     desc: '数据质量要求确认，根据业务要求制定和明确数据质量要求，同时也需要符合数据标准的要求。\n数据质量考评，对数据质量的量化评价。\n制定数据质量问题解决方案，根据数据质量考评和日常工作中发现的数据质量问题，实施相应的措施，提升数据质量。',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 4),
+    wideImg: getImgUrl(pageName, 4),
     icon: 'icon-icon_tab_nor_36'
     },
     {
     name: '数据调度管理',
     desc: '调度管理负责管理所有作业的触发执行以及作业之间的依赖关系，包括调度模块及监控模块：\n调度模块：将系统内的所有数据处理都作为“作业”来统一处理，覆盖了从业务系统接口扫描、装载、数据统计分析、信息展现与发送、明细数据导出、反哺业务系统等操作。\n监控模块：负责及时反馈调度系统的运行状态。\n',
-    img: '../images/product-s1-kehuxianshang.jpg',
+    img: getImgUrl(pageName, 5),
+    wideImg: getImgUrl(pageName, 5),
     icon: 'icon-icon_tab_nor_13'
     }
     ],
@@ -78,7 +84,7 @@ block title
     // 描述
     desc: '',
     // 架构图
-    img: './images/solution-pline1_3.jpg',
+    img: getImgUrl(pageName, 7),
     // 解决方案说明, 架构图描述
     solutions: [
     {title: '标签分组', desc: '通过标签高效细分客群，可自定义配置，与营销过程管理无缝集成。', icon: ''},
