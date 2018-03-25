@@ -1,7 +1,7 @@
 mixin renderProduct (data)
   block content
     section.product
-      div.first-sight
+      div.first-sight(style="background: url(" + data.firstSightBg + ") #000 center;")
         div.container
           h1.huge-text #{data.title}
           p.desc #{data.desc}
