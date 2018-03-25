@@ -96,6 +96,13 @@
 
   .core-business {
     background url(../images/index-banner.jpg) no-repeat center
+
+    .wide-image-container { // tab-content 设置为定高，大图上下布局会溢出，现在设置让大图50%显示。后面在改
+      img {
+        width 50%
+      }
+    }
+
     .business-item {
       box-sizing border-box
       display flex
