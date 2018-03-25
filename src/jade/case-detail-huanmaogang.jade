@@ -1,0 +1,24 @@
+extends layout.jade
+block title
+  title 客户案例-富力环贸港
+block content
+  include mixin/render-case-detail.jade
+  -
+    var data = {
+    logo: './images/case-detail-huanmaogang.jpg',
+    customerName: '富力环贸港',
+    // 简介
+    abstract: '广州富力地产股份有限公司（以下简称“富力”）（香港联合交易所上市编号：2777）成立于1994年，注册资金8.06亿人民币，集房地产设计、开发、工程监理、销售、物业管理、房地产中介等业务为一体，拥有国家建设部颁发的一级开发资质、甲级设计资质、甲级工程监理资质、一级物业管理资质及一级房地产中介资质,是中国综合实力最强的房地产企业之一。',
+    // 背景故事
+    background: '富力环贸港60万m2 ”互联网+“时尚展贸综合体项目，主要针对广东及华南时尚行业产业带（包括服装服饰、皮具箱包、鞋帽配饰、精品材料，面向全国时尚买手客户（包括品牌集合店、百货商场自营品牌、微商、网红等），提供基于”互联网+”产业服务，通过“产业服务”与“电商服务“双引擎，帮助采购商构建”新零售“背景下的”时尚优品智采平台“，助力富力环贸港实现从买手匹配到S2B。',
+    // 实现价值
+    value: '打通会员体系：设计师会员、ODM厂商会员、材料供应商会员、渠道商会员、买手会员；\n连通商品：服装服饰、鞋帽配饰、皮具箱包、精选材料；\n打通产品-流通供应链，从产品快设计、材料供应、快生产，产品，到商品，最后到市场快销售，全链路流通。',
+    // 解决方案
+    solution: '',
+    products: [
+    {img: './images/i-sale.png', name: 'iSale', href: ''},
+    {img: './images/i-platform.png', name: 'iDigitalPlatform', href: ''},
+    {img: './images/i-cloud.png', name: 'iCloudPlatform', href: ''},
+    ]
+    }
+  +renderCaseDetail(data)
