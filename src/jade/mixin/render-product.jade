@@ -119,6 +119,8 @@ mixin renderProduct (data)
                   i.font_family(class=item.icon)
                   div.md-text.dark #{item.title}
                   div.text #{item.desc}
+                  if item.href
+                    a.link-btn(href=item.href) 立即体验
 
       div.show-case.white-bg#seven-sight
         div.show-case-title.dark.mb60 案例客户
