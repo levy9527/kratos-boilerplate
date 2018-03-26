@@ -72,8 +72,9 @@ mixin renderProduct (data)
         div.container.show-case.artichet
           div.show-case-title.mb60 产品架构
           div.text-center
-            label.tab-controller.link-btn(for="businessArt").active 业务架构
-            label.tab-controller.link-btn(for="techArt") 技术架构
+            if !data.techArt.isHide
+              label.tab-controller.link-btn(for="businessArt").active 业务架构
+              label.tab-controller.link-btn(for="techArt") 技术架构
           div.tab-content-container
             input(type="radio" name="artichet" checked="checked")#businessArt.hide.artichet-radio
             div.tab-content
@@ -92,22 +93,23 @@ mixin renderProduct (data)
                           span #{item.desc}
                 img(src=data.businessArt.img)
 
-            input(type="radio" name="artichet")#techArt.hide.artichet-radio
-            div.tab-content
-              div.wide-figure
-                div.figure-box
-                  if data.techArt.title
-                    p.md-text.dark #{data.techArt.title}
-                  if data.techArt.desc
-                    div(style="margin-bottom: 40px") #{data.techArt.desc}
-                  if data.techArt.solutions
-                    each item in data.techArt.solutions
-                      div.figure
-                        i.font_family.figure-img(class=item.icon)
-                        div.figure-text
-                          div.figure-title #{item.title}
-                          span #{item.desc}
-                img(src=data.techArt.img)
+            if !data.techArt.isHide
+              input(type="radio" name="artichet")#techArt.hide.artichet-radio
+              div.tab-content
+                div.wide-figure
+                  div.figure-box
+                    if data.techArt.title
+                      p.md-text.dark #{data.techArt.title}
+                    if data.techArt.desc
+                      div(style="margin-bottom: 40px") #{data.techArt.desc}
+                    if data.techArt.solutions
+                      each item in data.techArt.solutions
+                        div.figure
+                          i.font_family.figure-img(class=item.icon)
+                          div.figure-text
+                            div.figure-title #{item.title}
+                            span #{item.desc}
+                  img(src=data.techArt.img)
 
       if data.relativeProducts
         div#six-sight
