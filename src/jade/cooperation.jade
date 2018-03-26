@@ -2,8 +2,9 @@ extends layout.jade
 block title
   title 合作与生态
 block content
+  include var/get-img-url.jade
   section.cooperation
-    div.first-sight
+    div.first-sight(style="background: url(" + getImgUrl('cooperation', 1) + ") no-repeat center; ")
       div.container
         h1.huge-text 云徙云生态合作伙伴计划
         p.desc 携手生态合作伙伴，基于云徙云帮助客户构建成功业务实践和解决方案，共同成长，共赢万亿市场
@@ -62,7 +63,7 @@ block content
           a.link-btn.primary(href="customer-info.html") 加入合作伙伴
     div.show-case.white-bg
       div.container
-        img(src="http://www.dtyunxi.com/web3pic/hz-plain.jpg")
+        img(src=imgPrefix + 'hz-plain.jpg')
         div.plain
           div.show-case-title SaaS合作计划
           p 通过提供技术、营销和业务的支持，帮助SAAS合作伙伴基于云徙云构建成功的商业实践和服务能力。以软件即服务 (SaaS) 的方式进行软件授权及交付应
