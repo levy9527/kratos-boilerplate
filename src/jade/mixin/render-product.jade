@@ -8,14 +8,24 @@ mixin renderProduct (data)
           a.link-btn(href=data.href) 立即体验
       div.first-sight-anchor
         div.container
-          a(href="#two-sight") 应用场景
-          a(href="#three-sight") 产品优势
+          a(href="#two-sight") 产品优势
+          a(href="#three-sight") 应用场景
           a(href="#four-sight") 核心功能
           a(href="#five-sight") 产品架构
           if data.relativeProducts
             a(href="#six-sight") 产品推荐
           a(href="#seven-sight") 案例客户
       div#two-sight.white-bg
+        div.container.show-case
+          div.show-case-title.mb60 产品优势
+          div.flex
+            each item in data.advantages
+              div.scale-item
+                i.font_family(class=item.icon)
+                div.md-text.dark #{item.title}
+                div.text #{item.desc}
+
+      div#three-sight
         div.container.show-case
           div.show-case-title 应用场景
           div.component-tabs-wrap
@@ -43,17 +53,6 @@ mixin renderProduct (data)
                     div.right-side
                       div.md-text.dark #{item.name}
                       div.pre-wrap #{item.desc}
-
-
-      div#three-sight
-        div.container.show-case
-          div.show-case-title.mb60 产品优势
-          div.flex
-            each item in data.advantages
-              div.scale-item
-                i.font_family(class=item.icon)
-                div.md-text.dark #{item.title}
-                div.text #{item.desc}
 
       div#four-sight.product-media
         div.container.show-case
