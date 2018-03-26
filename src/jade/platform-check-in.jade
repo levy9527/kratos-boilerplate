@@ -2,8 +2,9 @@ extends layout.jade
 block title
   title 平台接入
 block content
+  include var/get-img-url.jade
   div.platform-check-in
-    div.first-sight
+    div.first-sight(style="background: url(" + getImgUrl('platform-check-in', 1) + ") no-repeat center; ")
       div.container
         h1.huge-text 开放共赢，携手共建企业数字化
         div.msg 赋能企业转型，携手企业发展，引领企业创新，共享数字化未来
