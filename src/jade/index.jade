@@ -128,16 +128,16 @@ block content
                 i.font_family(class=item.icon)
                 p.f24 #{item.title}
               div.item-detail
-                p.f24 #{item.title}
-                p #{item.desc}
-                p.md-text 相关产品
+                p.f24.item-detail-title #{item.title}
+                p.item-detail-desc #{item.desc}
+                p.md-text.item-detail-relative 相关产品
                 if item.relativeProducts
                   div.relative-product
                     each d in item.relativeProducts
                       div
                         div.circle
                           i.font_family(class=d.icon)
-                        p #{d.desc}
+                        p.item-detail-rel-desc #{d.desc}
                   a.link-btn(href=item.href) 查看详情
                 else
                   div 敬请期待
