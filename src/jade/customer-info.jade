@@ -80,6 +80,7 @@ block script
         success: function (data) {
           console.log(data)
           $btn.text('提交成功').removeClass('wait').addClass('disabled')
+          window.location = 'submit-success.html'
         },
         error: function (xhr, type) {
           alert('出错了, 请重试')
