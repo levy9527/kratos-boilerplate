@@ -2,14 +2,15 @@ extends layout.jade
 block title
   title 客户信息
 block content
+  include var/get-img-url.jade
   section.customer-info
     div.first-sight.text-center
-      p.f24 欢迎加入云徙云,完善行业信息可为您提供更精准的行业优惠及活动优惠
-      p 我们将尽快与您取得联系，工作时间：周一-周五 9:00-18:00
+      p.f24 欢迎加入云徙,完善行业信息可为您提供更精准的行业优惠及活动优惠
+      p 我们将尽快与您取得联系
     div.container
-      div.content-half
-        img(src="./images/index-guide-01@2x.png")
-        p 云徙科技基于阿里巴巴互联网最佳实践及技术，自主研发云徙数字化PaaS平台、全渠道销售、营销智能、智能物联等创新数字化解决方案与产品，为国内外的汽车、地产、快消、农业、3C、政企、医药等行业一流企业提供基础设施云化、业务云化、数据智能化等数字化创新服务。
+      div.content-half.pc
+        img(src=getImgUrl('login', 1) style="margin-bottom: 20px")
+        p 云徙基于阿里巴巴互联网最佳实践及技术，自主研发企业数字化平台、全渠道销售、营销智能、智能物联等创新数字化解决方案与产品，为国内外的汽车、地产、快消、农业、3C、政企、医药等行业一流企业提供基础设施云化、业务云化、数据智能化等数字化创新服务。
       div.content-half
         div.form-box
           form(action="javascript:;")#form

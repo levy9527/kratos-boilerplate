@@ -851,10 +851,22 @@ $navbar-height = 60px
 
 // customer-info
 .customer-info
+
+  @media screen and (max-width 992px) {
+    .form-box {
+      padding 0
+    }
+
+    #form {
+      padding 0 20px
+    }
+  }
+
   .container
     margin 60px auto 100px
     display flex
     justify-content space-between
+    align-items center
 
   .first-sight
     padding 60px 0
