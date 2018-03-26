@@ -11,7 +11,8 @@ block content
   mixin renderProductItem (items)
     each item in items
       a.service-item.flex(href=item.href)
-        div
+        div.service-item-main
+          i.font_family(class=item.icon)
           div.item-flex
             span.title #{item.title}
             if item.label
