@@ -31,12 +31,12 @@ block content
         div: a.link-btn.linear-primary-bg-to-right 立即体验
 
     div.slider.flex
-      div.arrow-box.arrow-left-box
+      div.arrow-box.arrow-left-box.pc
         i.arrow-left
       div.slider-container
         each item in [1, 2, 3]
           img.slider-img(src=getImgUrl(pageName, item))
-      div.arrow-box.arrow-right-box
+      div.arrow-box.arrow-right-box.pc
         i.arrow-right
 
     include snippet/we-do.jade

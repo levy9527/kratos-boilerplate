@@ -31,6 +31,12 @@ $btn-height = 34px
   display block
 }
 
+@media screen and (max-width 992px) {
+  .pc {
+    display none !important
+  }
+}
+
 .container,
 label,
 fieldset,
@@ -171,7 +177,7 @@ $navbar-height = 60px
 .navbar
   display flex
   align-items center
-  justify-content space-between
+  //justify-content space-between
   height $navbar-height
   line-height $navbar-height
   padding 0 20px
