@@ -169,8 +169,11 @@ block script
       $('#' + $this.data('tab')).addClass('block').siblings().removeClass('block')
     })
   include ./snippet/slider.jade
-  //script.
-    requestAnimationFrame
+  script.
+
+    setInterval(function () {
+      slider.next()
+    }, 3000)
 
 
 
