@@ -19,6 +19,16 @@ block content
           span.desc-text #{item.desc}
         i.arrow-right
 
+  mixin renderProductItemInMoblie (items)
+    div.gray-bg
+      each item in items
+        div.figure
+          i.font_family(class=item.icon)
+          div.figure-text
+            div.figure-title #{item.title}
+            span #{item.desc}
+
+
   -
     var pageName = 'index'
 
@@ -163,6 +173,14 @@ block content
       div.show-case-title 云徙产品
       span 四大产品线为企业转型互联网提供引擎
       div.show-case-content
+        div.product-line.f16.primary-color #{productLines.iMarketing.name}
+        +renderProductItemInMoblie(iMarketing)
+        div.product-line.f16.primary-color #{productLines.iSales.name}
+        +renderProductItemInMoblie(iSales)
+        div.product-line.f16.primary-color #{productLines.iDigitalPlatform.name}
+        +renderProductItemInMoblie(iDigitalPlatform)
+        div.product-line.f16.primary-color #{productLines.iCloudPlatform.name}
+        +renderProductItemInMoblie(iCloudPlatform)
 
     div.show-case.text-center(style="padding-bottom: 0").solution.mobile
       div.show-case-title.white 热门解决方案
