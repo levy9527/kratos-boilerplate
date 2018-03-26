@@ -793,24 +793,38 @@ $show-case-padding = 80px
   }
 
   [name=tabRadio]:checked + .component-tab-content {
-    display block
+    //display block
+    display flex
   }
 
   .component-tab-content {
-    display none
+    display: none
     padding-top 40px
 
     .md-text {
       margin-bottom 20px
     }
 
-    .left-side,
     .right-side {
-      display table-cell
-      vertical-align middle
+      display flex
+      flex-direction column
+      justify-content center
+      width 50%
+    }
+    .left-side {
+      position relative
+      width 50%
+      max-height 480px
+      overflow hidden
+
+      img {
+        //position absolute
+        //height 100%
+        //width 100%
+      }
     }
     .right-side {
-      padding 60px
+      padding 0 60px
     }
   }
   .font_family {
