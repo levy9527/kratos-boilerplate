@@ -30,6 +30,7 @@ html
   include var/solutions.jade
   include var/products.jade
   include var/product-lines.jade
+  include var/get-img-url.jade
 
   mixin renderProductItem (items)
     each item in items
@@ -46,7 +47,7 @@ html
   body
     header.navbar
       a.logo(href="index.html")
-        img(src="http://www.dtyunxi.com/web3pic/logo.png").logo-img
+        img(src=imgPrefix + "logo.png").logo-img
       div.navbar-section.pc
         div.nav-item
           a.nav-item-link(href="index.html") 首页
