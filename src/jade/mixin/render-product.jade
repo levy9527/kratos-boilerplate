@@ -72,7 +72,7 @@ mixin renderProduct (data)
         div.container.show-case.artichet
           div.show-case-title.mb60 产品架构
           div.text-center
-            if !data.techArt.isHide
+            if !data.techArt.isHide && !data.businessArt.isHide
               label.tab-controller.link-btn(for="businessArt").active 业务架构
               label.tab-controller.link-btn(for="techArt") 技术架构
           div.tab-content-container
