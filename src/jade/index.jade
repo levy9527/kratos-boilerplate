@@ -6,6 +6,7 @@ block content
   include var/solutions.jade
   include var/products.jade
   include var/product-lines.jade
+  include var/get-img-url.jade
 
   mixin renderProductItem (items)
     each item in items
@@ -18,13 +19,26 @@ block content
           span.desc-text #{item.desc}
         i.arrow-right
 
+  -
+    var pageName = 'index'
+
   div.index
-    div.first-sight
+    //div.first-sight
       div.container
         h1.huge-text 企业数字化平台，专业级的数字化平台
         div.msg.f24 新品钜惠专享，领券立减
           span.red 1888元
         div: a.link-btn.linear-primary-bg-to-right 立即体验
+
+    div.slider.flex
+      div.arrow-box.arrow-left-box
+        i.arrow-left
+      div.slider-container
+        each item in [1, 2, 3]
+          img.slider-img(src=getImgUrl(pageName, item))
+      div.arrow-box.arrow-right-box
+        i.arrow-right
+
     include snippet/we-do.jade
     div.divider
     div.show-case.text-center.service-provider
@@ -150,6 +164,7 @@ block script
 
       $('#' + $this.data('tab')).addClass('block').siblings().removeClass('block')
     })
+  include ./snippet/slider.jade
 
 
 
