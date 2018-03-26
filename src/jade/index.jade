@@ -46,7 +46,8 @@ block content
         i.arrow-left
       div.slider-container
         each item in [1, 2, 3]
-          img.slider-img(src=getImgUrl(pageName, item))
+          a(href="customer-info.html")
+            img.slider-img(src=getImgUrl(pageName, item))
       div.arrow-box.arrow-right-box.pc
         i.arrow-right
 
