@@ -15,8 +15,9 @@ mixin renderSolution (data)
 
       div.show-case.total-view
         div.show-case-title.mb60 解决方案全景洞察
-        div.flex.container
-          img(src=data.solution.img).total-view-img
+        div.container
+          div.total-view-img-box
+            img(src=data.solution.img).total-view-img
           div.figure-box
             each d in data.solution.details
               div.figure
@@ -37,7 +38,8 @@ mixin renderSolution (data)
         each d,index in data.situations
           input(type="radio" value="1" name="tabContentRadio" checked=(index === 0) id="tab" + index)
           div.container.tab-content.white-bg
-            img(src=d.img)
+            div.img-obj
+              img(src=d.img)
             div.text
               p.md-text.dark #{d.name}
               p #{d.desc}

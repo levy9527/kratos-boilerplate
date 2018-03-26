@@ -24,8 +24,19 @@
   .total-view {
     background-color white
 
+    .container {
+      display flex
+    }
+
+    .total-view-img-box {
+      max-height 480px
+      width 50%
+      overflow hidden
+    }
+
     .total-view-img {
-      min-width 600px
+      width 100%
+      //width 50%
       //height 320px
     }
 
@@ -104,6 +115,15 @@
     .tab-content {
       height 640px
       align-items center
+
+      .img-obj {
+        width 50%
+        max-height 640px
+        overflow hidden
+      }
+      img {
+        width 100%
+      }
     }
     .text {
       margin-left 60px
