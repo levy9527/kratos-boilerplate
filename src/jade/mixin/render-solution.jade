@@ -1,10 +1,10 @@
 mixin renderSolution (data)
   block content
     section.solution
-      div.first-sight(style="background: url(" + data.firstSightBg + ") #000 center;")
+      div.first-sight(style="background: url(" + data.firstSightBg + ") #000 center; no-repeat; background-size: cover;")
         div.container
           h1.huge-text #{data.title}
-          p.desc
+          p.desc #{data.desc}
           a.link-btn(href=data.href) 立即咨询
       div.container.ad.flex
         each item in data.advantages
