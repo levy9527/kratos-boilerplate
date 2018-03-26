@@ -31,8 +31,14 @@ $btn-height = 34px
   display block
 }
 
-@media screen and (max-width 992px) {
+@media screen and (max-width 991px) {
   .pc {
+    display none !important
+  }
+}
+
+@media screen and (min-width 992px) {
+  .mobile {
     display none !important
   }
 }
@@ -660,15 +666,18 @@ $navbar-height = 60px
   }
 }
 // 客户案例
+
+$show-case-padding = 80px
 .show-case
-  padding 80px 0
+  padding $show-case-padding 0
   .show-case-title
     margin-bottom 20px
     text-align center
     font-size 28px
     color $dark
   .show-case-content
-    margin-top 90px
+    margin-top $show-case-padding
+
 // a 元素 使用 link-btn 样式
 .link-btn
   display inline-block

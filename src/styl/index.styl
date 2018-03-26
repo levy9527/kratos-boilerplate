@@ -174,10 +174,74 @@
   .solution {
     background-image url(../images/index-solution-banner.png)
     color white
+
+    &.pc {
+      .industry-item {
+        flex 1
+        box-sizing border-box
+        height 532px
+
+        .item-name {
+          display flex
+          flex-direction column
+          justify-content center
+          height 100%
+        }
+
+        .item-detail {
+          display none
+          padding 70px 30px 24px
+          text-align left
+        }
+
+        &:hover {
+          flex-basis 28.5%
+          max-width 28.5%
+          background $dark
+
+          .item-name {
+            display none
+          }
+
+          .item-detail {
+            display block
+          }
+        }
+      }
+    }
+
+    &.mobile {
+
+      &.show-case {
+        //padding 40px 0 0
+      }
+
+      .show-case-title {
+        //margin-bottom 40px
+      }
+
+      .industry-item {
+        flex-basis 50%
+        height 148px
+      }
+
+      .item-name {
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        height 100%
+      }
+
+      .f24 {
+        margin-bottom 0
+      }
+    }
   }
 
   .industry {
     display flex
+    flex-wrap wrap
 
     .font_family {
       font-size 38px
@@ -201,38 +265,6 @@
 
   }
 
-  .industry-item {
-    flex 1
-    box-sizing border-box
-    height 532px
-
-    .item-name {
-      display flex
-      flex-direction column
-      justify-content center
-      height 100%
-    }
-
-    .item-detail {
-      display none
-      padding 70px 30px 24px
-      text-align left
-    }
-
-    &:hover {
-      flex-basis 28.5%
-      max-width 28.5%
-      background $dark
-
-      .item-name {
-        display none
-      }
-
-      .item-detail {
-        display block
-      }
-    }
-  }
 
   .relative-product {
     display flex
