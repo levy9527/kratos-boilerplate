@@ -155,6 +155,18 @@
         align-items center
       }
 
+      .service-item-main {
+        position relative
+        padding-left 40px
+
+        .font_family {
+          position absolute
+          left 0
+          font-size 32px
+          top 10px
+        }
+      }
+
       .arrow-right {
         opacity 0
       }
@@ -212,7 +224,7 @@
           font-size 12px
         }
 
-        &:hover {
+        &.hover { // 默认展开，用js控制
           flex-basis 28.5%
           max-width 28.5%
           background $dark !important
@@ -380,7 +392,7 @@
 
   .mobile {
     .figure {
-      padding 15px 0 15px 20px
+      padding 15px 0
       border-bottom 1px solid $border-color
     }
 

@@ -123,8 +123,8 @@ block content
       div 覆盖300+业务场景全栈解决方案
       div.show-case-content
         div.industry
-          each item in solutions
-            div.industry-item(style="background: url(" + item.bgImg + ") #000 center no-repeat; background-size: cover;")
+          each item,index in solutions
+            div.industry-item(style="background: url(" + item.bgImg + ") #000 center no-repeat; background-size: cover;", class=index === 0 ? 'hover' : '')
               div.item-name
                 i.font_family(class=item.icon)
                 p.f24 #{item.title}
@@ -212,6 +212,10 @@ block script
       slider.next()
     }, 4000)
 
+  script.
+    $('.industry-item').on('mouseenter', function (e) {
+      $(this).addClass('hover').siblings().removeClass('hover')
+    })
 
 
 
