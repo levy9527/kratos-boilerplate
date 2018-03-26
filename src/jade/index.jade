@@ -40,8 +40,10 @@ block content
         i.arrow-right
 
     include snippet/we-do.jade
-    div.divider
-    div.show-case.text-center.service-provider
+
+    div.divider.pc
+
+    div.show-case.text-center.service-provider.pc
       div.show-case-title.dark 智能时代领先的数字化服务商
       span 赋能企业数字化创新，阿里云战略生态合作伙伴
       div.container.flex.i-product-container
@@ -102,6 +104,7 @@ block content
           div.service.container
             div.service-row.flex
               +renderProductItem(iCloudPlatform)
+
     div.show-case.text-center(style="padding-bottom: 0").solution.pc
       div.show-case-title.white 行业解决方案
       span 数字智能时代，企业转型、消费升级，专注6大行业企业转型解决方案
@@ -127,18 +130,6 @@ block content
                   a.link-btn(href=item.href) 查看详情
                 else
                   div 敬请期待
-
-    div.show-case.text-center(style="padding-bottom: 0").solution.mobile
-      div.show-case-title.white 热门解决方案
-      //span 数字智能时代，企业转型、消费升级，专注6大行业企业转型解决方案
-      div.show-case-content
-        div.industry
-          each item in solutions
-            div.industry-item(style="background: url(" + item.bgImg + ") #000 center no-repeat; background-size: cover;")
-              div.item-name
-                i.font_family(class=item.icon)
-                p.f24 #{item.title}
-
 
     div.container.show-case.text-center.pc
       div.show-case-title.dark 客户案例
@@ -167,6 +158,24 @@ block content
                 img(src=item.img).item-img
                 div.item-text #{item.desc}
                 a(href=item.href).link-btn 了解更多
+
+    div.show-case.text-center(style="padding-bottom: 0").mobile
+      div.show-case-title 云徙产品
+      span 四大产品线为企业转型互联网提供引擎
+      div.show-case-content
+
+    div.show-case.text-center(style="padding-bottom: 0").solution.mobile
+      div.show-case-title.white 热门解决方案
+      //span 数字智能时代，企业转型、消费升级，专注6大行业企业转型解决方案
+      div.show-case-content
+        div.industry
+          each item in solutions
+            div.industry-item(style="background: url(" + item.bgImg + ") #000 center no-repeat; background-size: cover;")
+              div.item-name
+                i.font_family(class=item.icon)
+                p.f24 #{item.title}
+
+
 block script
   script.
     $('.i-product').on('click', function (e) {
