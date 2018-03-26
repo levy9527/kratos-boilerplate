@@ -162,12 +162,15 @@ block content
             {img: './images/case-detail-yangxiang.jpg', desc: '扬翔集团是一家以饲料业、养猪业、肉食品加工业为主导，兼营育种的现代大型农牧企业。公司致力于为公众提供健康、安全、美味的食品；致力于在母仔猪领域为中小养殖户提供专业、稳定、高效的整体解决方案', href: 'case-detail-yangxiang.html'},
             {img: './images/case-detail-yiqi.jpg', desc: '一汽是国内最大的汽车企业集团之一。2013年营业额达4500亿，曾经连续8年蝉联世界500强榜单。'},
             {img: './images/case-detail-zhengda.jpg', desc: '正大天晴是国内肝病药领域的龙头企业，为国家重点高新技术企业、国家火炬计划连云港新医药产业基地重点骨干企业也是国内仿制药的领先企业', href:'case-detail-zhengda.html'},
-            {img: './images/case-detail-huanmaogang.jpg', desc: '富力环贸港,是富力地产集团旗下的大型时尚综合商贸体,提供专业批发市场店铺租赁服务,以及各类时尚产业配套与服装B2B电商平台服务', href: 'case-detail-huanmaogang.html'},
+            {img: '', alt: '富力环贸港', desc: '富力环贸港,是富力地产集团旗下的大型时尚综合商贸体,提供专业批发市场店铺租赁服务,以及各类时尚产业配套与服装B2B电商平台服务', href: 'case-detail-huanmaogang.html'},
             ]
           each item in cases
             div.placeholder-box
               div.mark-item.text-center
-                img(src=item.img).item-img
+                if item.img
+                  img(src=item.img alt=item.alt).item-img
+                else
+                  div #{item.alt}
                 div.item-text #{item.desc}
                 a(href=item.href).link-btn 了解更多
 
