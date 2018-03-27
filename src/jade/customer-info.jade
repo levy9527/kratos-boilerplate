@@ -18,22 +18,22 @@ block content
             form(action="javascript:;")#form
               fieldset
                 label 姓名
-                input(placeholder="请输入真实姓名" name="name")
+                input(placeholder="请输入真实姓名" name="name" required)
               fieldset
                 label 职务
-                input(placeholder="请输入职务" name="position")
+                input(placeholder="请输入职务" name="position" required)
               fieldset
                 label 邮箱
-                input(placeholder="请输入邮箱" type="email" name="email")
+                input(placeholder="请输入邮箱" type="email" name="email" required)
               fieldset
                 label 手机号码
-                input(placeholder="请输入手机号码" type="tel" name="phone")
+                input(placeholder="请输入手机号码" type="tel" name="phone" required pattern="^13[0-9]{9}$|14[0-9]{9}|15[0-9]{9}$|18[0-9]{9}$")
               fieldset
                 label 公司名称
-                input(placeholder="请输入公司名字全称" name="enterpriseName")
+                input(placeholder="请输入公司名字全称" name="enterpriseName" required)
               fieldset
                 label 公司规模
-                select(name="scale")
+                select(name="scale" required)
                   option(value="") 请选择人数
                   option(value="<50") <50
                   option(value="50~100") 50~100
@@ -43,7 +43,7 @@ block content
                   option(value=">1000") >1000
               fieldset
                 label 关注的产品
-                select(name="product")
+                select(name="product" required)
                   option(value="") 请选择产品
                   option(value="营销智能") 营销智能
                   option(value="全渠道销售") 全渠道销售
@@ -51,14 +51,18 @@ block content
                   option(value="云管平台") 云管平台
               fieldset
                 label 留言
-                input(placeholder="请输入问题或评论, 可不填" name="comment")
+                input(placeholder="请输入问题或评论, 可不填" name="comment" maxlength=200)
               button(type="primary" id="submit") 提交
 
 block script
   script.
     $('#submit').on('click', function () {
+      var $form = $('#form')
+      // 表单校验
+      if (!$form[0].checkValidity()) return
+
       var url = 'http://120.78.191.79:7001/official-website/api/v1/profiles'
-      var dataArray = $('#form').serializeArray()
+      var dataArray = $form.serializeArray()
       var data = {}
       var $btn = $(this)
 
