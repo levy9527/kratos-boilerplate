@@ -125,6 +125,7 @@ block content
         div.industry
           each item,index in solutions
             div.industry-item(style="background: url(" + item.bgImg + ") #000 center no-repeat; background-size: cover;", class=index === 0 ? 'hover' : '')
+              div.industry-item-mark
               div.item-name
                 i.font_family(class=item.icon)
                 p.f24 #{item.title}

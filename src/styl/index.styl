@@ -190,6 +190,7 @@
 
     &.pc {
       .industry-item {
+        position relative
         flex 1
         box-sizing border-box
         height 532px
@@ -228,14 +229,25 @@
         &.hover { // 默认展开，用js控制
           flex-basis 28.5%
           max-width 28.5%
-          background $dark !important
+          //background $dark !important
 
+          .industry-item-mark {
+            background-color rgba(34, 34, 34, 0.7)
+            position absolute
+            top 0
+            left 0
+            height 100%
+            width 100%
+            z-index 1
+          }
           .item-name {
             display none
           }
 
           .item-detail {
             display block
+            position absolute
+            z-index 2
           }
         }
       }
