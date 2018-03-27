@@ -8,7 +8,7 @@ block content
   - var products = iMarketing.concat(iSales, iDigitalPlatform, iCloudPlatform)
   section.customer-info
     div.first-sight.text-center(style="background: url(" + getImgUrl(pageName, 1) + ") no-repeat; background-size: cover; ")
-      p.f24 欢迎加入云徙,完善行业信息可为您提供更精准的行业优惠及活动优惠
+      p#banner-tips.f24 欢迎加入云徙,完善行业信息可为您提供更精准的行业优惠及活动优惠
       p 我们将尽快与您取得联系
     div.second-sight(style="background-image: url(" + getImgUrl(pageName, 2) + ")")
       div.container
@@ -100,6 +100,35 @@ block script
 
     })
 
+  script.
+    $(function () {
+      function getQuery(key) {
+        var search = location.search.substring(1),
+            mapKey = {},
+            paramsArr = search.split('&'),
+            pair = []
+
+        for (var i =0, len = paramsArr.length; i < len; ++i) {
+          pair = paramsArr[i].split('=')
+
+          if (pair.length) {
+            mapKey[pair[0]] = pair[1]
+          }
+        }
+
+        return mapKey[key]
+      }
+
+      var mapBannerTipByType = {
+        tryItFree: '欢迎体验云徙产品, 请填写相关信息，赢最长6个月免费试用机会',
+        platformCheckIn: '欢迎接入云徙，我们将为您提供一对一专家服务，助您开展便捷开发实践',
+        cooperationInEco: '欢迎加入云徙,期盼与您携手企业数字化实践，共赢万亿市场',
+        businessAdvice: '请您准确填写相关信息，以便我们为您匹配一对一专家服务或为您提供更精准的行业优惠及活动优惠',
+        contactUs: '欢迎加入云徙,完善行业信息可为您提供更精准的行业优惠及活动优惠。'
+      }
+      var queryType = getQuery('type') || 'contactUs'
+      $('#banner-tips').text(mapBannerTipByType[queryType])
+    })
 
 
 

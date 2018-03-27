@@ -32,7 +32,11 @@ block content
 
   -
     var pageName = 'index'
-
+    var mapType = {
+      1: 'businessAdvice',
+      2: 'tryItFree',
+      3: 'cooperationInEco'
+    }
   div.index
     //div.first-sight
       div.container
@@ -46,7 +50,7 @@ block content
         i.arrow-left
       div.slider-container
         each item in [1, 2, 3]
-          a(href="customer-info.html")
+          a(href="customer-info.html?type="+ mapType[item])
             img.slider-img(src=getImgUrl(pageName, item))
       div.arrow-box.arrow-right-box.pc
         i.arrow-right
