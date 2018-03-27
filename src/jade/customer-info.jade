@@ -3,7 +3,9 @@ block title
   title 客户信息
 block content
   include var/get-img-url.jade
+  include var/products.jade
   - var pageName = 'customer-info'
+  - var products = iMarketing.concat(iSales, iDigitalPlatform, iCloudPlatform)
   section.customer-info
     div.first-sight.text-center(style="background: url(" + getImgUrl(pageName, 1) + ") no-repeat center; ")
       p.f24 欢迎加入云徙,完善行业信息可为您提供更精准的行业优惠及活动优惠
@@ -45,10 +47,12 @@ block content
                 label 关注的产品
                 select(name="product" required)
                   option(value="") 请选择产品
-                  option(value="营销智能") 营销智能
-                  option(value="全渠道销售") 全渠道销售
-                  option(value="企业数字化平台") 企业数字化平台
-                  option(value="云管平台") 云管平台
+                  each p in products
+                    option(value=p.title) #{p.title}
+                  //option(value="营销智能") 营销智能
+                  //option(value="全渠道销售") 全渠道销售
+                  //option(value="企业数字化平台") 企业数字化平台
+                  //option(value="云管平台") 云管平台
               fieldset
                 label 留言
                 input(placeholder="请输入问题或评论, 可不填" name="comment" maxlength=200)
