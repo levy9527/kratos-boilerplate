@@ -615,10 +615,6 @@ $navbar-height = 60px
   .form-title
     font-weight bolder
 
-  .comment-label
-    position relative
-    top -25px
-
   form
     margin 24px 0
 
@@ -635,19 +631,19 @@ $navbar-height = 60px
 
     // TODO another child flex ?
     select,
-    input
+    input,
+    textarea
       padding-left 10px
       width calc(100% - 88px)
       border 0
+      outline 0
     select
       text-indent 5px
       background-color white
     textarea
       resize none
-      padding-left 10px
       width calc(100% - 100px)
-      border 0
-      outline 0
+      vertical-align middle
 
 // cooperation/product/solution 有用
 .first-sight
