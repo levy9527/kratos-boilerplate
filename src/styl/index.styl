@@ -99,8 +99,35 @@
   }
 
   .product-figure {
+    position relative
     padding 50px 0
     border-bottom 1px solid $border-color
+
+    &:before, &:after {
+      content ''
+      display block
+      position absolute
+      width 20px
+      height 20px
+      background $page-bg-color
+      border 1px solid transparent
+    }
+
+    &:before {
+      bottom 0
+      left 50%
+      border-top-color $border-color
+      transform rotate(46deg) translateX(22px)
+      transform-origin top
+    }
+
+    &:after{
+      bottom 0
+      left 50%
+      border-right-color $border-color
+      transform-origin top
+      transform rotate(46deg) translateX(-1px)
+    }
 
     .figure-img {
       width 105px
