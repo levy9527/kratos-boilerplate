@@ -1,4 +1,10 @@
 mixin renderCaseDetail (data)
+  -
+    var products = [
+      {img: './images/i-sale.png', name: 'i-Sales', href: 'i-sales.html'},
+    {img: './images/i-platform.png', name: 'i-Digital Platform', href: 'i-digital-platform.html'},
+    {img: './images/i-cloud.png', name: 'i-Cloud Platform', href: 'i-cloud-platform.html'},
+    ]
   div.case-detail
     div.first-sight
       div.container
@@ -29,7 +35,7 @@ mixin renderCaseDetail (data)
       div.container
         div.sub-title 使用产品
         div.product-box
-          each item in data.products
+          each item in products
             div.card-with-link
               img(src=item.img)
               div.card-name #{item.name}
