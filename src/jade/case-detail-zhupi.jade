@@ -3,9 +3,11 @@ block title
   title 客户案例-珠江啤酒
 block content
   include mixin/render-case-detail.jade
+  include var/get-img-url.jade
   -
     var data = {
     logo: './images/case-detail-zhupi.jpg',
+    banner: getImgUrl('case-detail', 1),
     customerName: '珠江啤酒',
     // 简介
     abstract: '广州珠江啤酒集团有限公司是一家以啤酒业为主体、以啤酒配套和相关产业为辅助的大型国有企业，1985年建成投产，啤酒产能从最初5万吨发展到目前的230万吨，是我国酿酒行业十强企业、国家环境友好企业和广东省高新技术企业。珠江啤酒是绿色食品。',

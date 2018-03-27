@@ -3,9 +3,11 @@ block title
   title 客户案例-茅台云商
 block content
   include mixin/render-case-detail.jade
+  include var/get-img-url.jade
   -
     var data = {
       logo: './images/case-detail-maotai-logo.png',
+      banner: getImgUrl('case-detail', 1),
       customerName: '茅台云商',
       // 简介
       abstract: '茅台酒是我国的国酒，因其独一无二的酿造工艺和深厚的历史底蕴，茅台在白酒行业是顶级的品牌了。作为中国十大奢侈品牌之首，茅台酒一直都是招待贵宾的名酒，在200年前作为朝贡圣品，现在也是招待国家级贵宾的国礼。作为世界三大名酒之一，茅台酒在世界上享有鼎鼎大名。',

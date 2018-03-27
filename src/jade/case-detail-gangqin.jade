@@ -3,9 +3,11 @@ block title
   title 客户案例-珠江钢琴
 block content
   include mixin/render-case-detail.jade
+  include var/get-img-url.jade
   -
     var data = {
     logo: './images/case-detail-gangqin.jpg',
+    banner: getImgUrl('case-detail', 1),
     customerName: '珠江钢琴',
     // 简介
     abstract: '广州珠江钢琴集团股份有限公司（以下简称“珠江钢琴集团”）成立于1956年，是一家集钢琴、数码乐器、音乐教育、文化传媒、互联网科技协同发展的综合乐器文化企业，是国内首家实现A股整体上市的乐器文化集团，具有国际先进水平的产品创新能力和当前全球规模最大的钢琴生产能力，曾荣获“首批制造业单项冠军示范企业”、“国家创新型试点企业”、“中国轻工业研发能力百强企业”、“国家文化出口重点企业”、“国家文化产业示范基地”、“全国质量管理卓越企业”、“国家AAAA级标准化良好行为企业”，是中国乐器行业唯一一家荣获“全国质量奖”、“广东省政府质量奖”的质量效益型企业，以及唯一荣获国际音乐制品协会 “里程碑奖”、“特别贡献奖”等荣誉的民族乐器企业。',

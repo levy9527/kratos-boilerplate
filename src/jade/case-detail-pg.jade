@@ -3,9 +3,11 @@ block title
   title 客户案例-宝洁
 block content
   include mixin/render-case-detail.jade
+  include var/get-img-url.jade
   -
     var data = {
     logo: './images/case-detail-pg.jpg',
+    banner: getImgUrl('case-detail', 1),
     customerName: '宝洁',
     // 简介
     abstract: '宝洁（Procter & Gamble，简称P&G），是全球最大的日用消费品公司之一。宝洁在日用化学品市场上知名度相当高，其产品包括洗发、护发、护肤用品、化妆品、婴儿护理产品、妇女卫生用品、医药、织物、家具护理、个人清洁用品等。',

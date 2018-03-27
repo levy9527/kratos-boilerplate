@@ -3,9 +3,11 @@ block title
   title 客户案例-长安汽车
 block content
   include mixin/render-case-detail.jade
+  include var/get-img-url.jade
   -
     var data = {
     logo: './images/case-detail-changan.jpg',
+    banner: getImgUrl('case-detail', 1),
     customerName: '长安汽车',
     // 简介
     abstract: '长安汽车是中国知名汽车制造企业,中国品牌汽车领导者,拥有CS75、睿骋、逸动、欧诺、悦翔、奔奔等众多知名汽车品牌,并与福特、铃木、马自达、标致雪铁龙建有合资公司。',

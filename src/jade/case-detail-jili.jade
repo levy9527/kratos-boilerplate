@@ -3,9 +3,11 @@ block title
   title 客户案例-吉利汽车
 block content
   include mixin/render-case-detail.jade
+  include var/get-img-url.jade
   -
     var data = {
     logo: './images/case-detail-jili.jpg',
+    banner: getImgUrl('case-detail', 1),
     customerName: '吉利汽车',
     // 简介
     abstract: '',

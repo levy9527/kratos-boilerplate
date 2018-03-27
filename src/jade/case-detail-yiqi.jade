@@ -3,9 +3,11 @@ block title
   title 客户案例-中国一汽
 block content
   include mixin/render-case-detail.jade
+  include var/get-img-url.jade
   -
     var data = {
     logo: './images/case-detail-yiqi.jpg',
+    banner: getImgUrl('case-detail', 1),
     customerName: '中国一汽',
     // 简介
     abstract: '中国第一汽车集团公司简称“中国一汽”或“一汽”，英文名称为FAW，央企成员，国有特大型汽车生产企业。一汽总部位于吉林省长春市，前身是第一汽车制造厂，毛泽东主席题写厂名。一汽1953年奠基兴建，1956年建成并投产，制造出新中国第一辆解放牌卡车。1958年制造出新中国第一辆东风牌小轿车和第一辆红旗牌高级轿车。一汽的建成，开创了中国汽车工业新的历史。经过五十多年的发展，一汽已经成为国内最大的汽车企业集团之一。',

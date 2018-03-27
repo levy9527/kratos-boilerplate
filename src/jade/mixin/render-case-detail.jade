@@ -2,11 +2,11 @@ mixin renderCaseDetail (data)
   -
     var products = [
       {img: './images/i-sale.png', name: 'i-Sales', href: 'i-sales.html'},
-    {img: './images/i-platform.png', name: 'i-Digital Platform', href: 'i-digital-platform.html'},
-    {img: './images/i-cloud.png', name: 'i-Cloud Platform', href: 'i-cloud-platform.html'},
+      {img: './images/i-platform.png', name: 'i-Digital Platform', href: 'i-digital-platform.html'},
+      {img: './images/i-cloud.png', name: 'i-Cloud Platform', href: 'i-cloud-platform.html'},
     ]
   div.case-detail
-    div.first-sight
+    div.first-sight(style="background: url(" + data.banner + ") #000 center no-repeat; background-size: cover;")
       div.container
         h1.huge-text 客户案例
         div.msg 赋能企业转型，携手企业发展，引领企业创新，成功案例

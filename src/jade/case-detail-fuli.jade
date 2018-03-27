@@ -3,9 +3,11 @@ block title
   title 客户案例-富力地产
 block content
   include mixin/render-case-detail.jade
+  include var/get-img-url.jade
   -
     var data = {
     logo: './images/case-detail-fuli.jpg',
+    banner: getImgUrl('case-detail', 1),
     customerName: '富力地产',
     // 简介
     abstract: '广州富力地产股份有限公司（香港联合交易所上市编号：2777）成立于1994年，注册资金8.06亿人民币，集房地产设计、开发、工程监理、销售、物业管理、房地产中介等业务为一体，拥有国家建设部颁发的一级开发资质、甲级设计资质、甲级工程监理资质、一级物业管理资质及一级房地产中介资质,是中国综合实力最强的房地产企业之一。',

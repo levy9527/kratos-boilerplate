@@ -3,9 +3,11 @@ block title
   title 客户案例-正大天晴
 block content
   include mixin/render-case-detail.jade
+  include var/get-img-url.jade
   -
     var data = {
     logo: './images/case-detail-zhengda.jpg',
+    banner: getImgUrl('case-detail', 1),
     customerName: '正大天晴',
     // 简介
     abstract: '正大天晴始终将科技创新作为企业发展的重要战略，是国内创新药物研究投入较多的药企之一。正大天晴以研究院为创新载体，“江苏省新型肝病药物工程技术研究中心”、“博士后科研工作站”、“国家认定企业技术中心”等高层次研发平台相继建立，自主创新能力不断增强。随着企业的发展和研发能力的提升，正大天晴的研发费用投入已超过10亿元/年，并将逐步向跨国公司看齐。目前，研究院在研项目247个，其中一类新药31个，生物药32个。',

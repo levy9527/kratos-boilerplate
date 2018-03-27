@@ -3,9 +3,11 @@ block title
   title 客户案例-如新中国
 block content
   include mixin/render-case-detail.jade
+  include var/get-img-url.jade
   -
     var data = {
     logo: './images/case-detail-unkown.jpg',
+    banner: getImgUrl('case-detail', 1),
     customerName: '如新中国',
     // 简介
     abstract: '如新集团于1984年创立，从最初以“荟萃优质 纯然无瑕”为诉求生产个人保养产品，发展到今日的营养补充品与其充实积极的善良文化，不仅让无数人活得更有意义，生活质素也更美好，进而迈向“非凡人生 无限延伸”的境界。如新目前已跨越全球近50个市场版图，在全世界拥有超过110万销售人员。',
