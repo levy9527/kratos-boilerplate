@@ -925,6 +925,25 @@ $show-case-padding = 80px
     }
   }
 
+  .second-sight {
+    background-position-x -198px
+    background-position-y -15px
+    background-repeat no-repeat
+  }
+
+  fieldset {
+    background #fff
+  }
+
+  .form-box {
+    background inherit
+    border 0
+
+    button {
+      border 1px solid transparent
+    }
+  }
+
   .container
     margin 60px auto 100px
     display flex
@@ -932,10 +951,14 @@ $show-case-padding = 80px
     align-items center
 
   .first-sight
-    padding 60px 0
+    padding 45px 0
 
   .content-half
     width 50%
+
+    &.pc {
+      padding-top 380px
+    }
 
     img
       width 100%
